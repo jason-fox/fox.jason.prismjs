@@ -4,8 +4,7 @@ Prism-JS for DITA-OT
 [![DITA-OT 3.1](https://img.shields.io/badge/DITA--OT-3.1-blue.svg)](http://www.dita-ot.org/3.1/)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-
-An integration of [PrismJS](https://github.com/PrismJS/prism) into the DITA Open Toolkit engine, enabling static HTML and PDF code highlighting.
+A code highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
 Table of Contents
 =================
@@ -33,7 +32,7 @@ What is PrismJS?
 Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from [Dabblet](http://dabblet.com/).
 
 - Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
-- Highlights inline code as well, not just code blocks
+- Highlights inline code (`<codeph>`) as well, not just code blocks (`<codeblock>`)
 - Highlights nested languages (CSS in HTML, JavaScript in HTML)
 - It doesn’t force you to use any Prism-specific markup
 
@@ -50,7 +49,7 @@ The DITA-OT PrismJS code highlighter has been tested against [DITA-OT 3.x](http:
 Installing DITA-OT
 ------------------
 
-The DITA-OT Splash Screen is a plug-in for the DITA Open Toolkit.
+The DITA-OT PrismJS code highlighter is a plug-in for the DITA Open Toolkit.
 
 -  Full installation instructions for downloading DITA-OT can be found [here](https://www.dita-ot.org/3.2/topics/installing-client.html).
 
@@ -87,7 +86,7 @@ the following languages can be highlighted
 
 - `outputclass="language-markup"` - HTML, XML etc.
 - `outputclass="language-css"` - Cascading Style Sheet highlighting
-- `outputclass="language-clike"` - JavaScript C-language family highlighting
+- `outputclass="language-clike"` - C-language family highlighting
 - `outputclass="language-javascript"` - JavaScript highlighting
 
 e.g.:
@@ -123,7 +122,7 @@ e.g.:
 </topic>
 ```
 
-A test document can be found within the plug-in at: `PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample`
+A test document including HTML, CSS and JavaScript code snippets can be found within the plug-in at: `PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample`
 
 Invocation from the command line
 --------------------------------
@@ -148,10 +147,13 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 Customizing the output
 ----------------------
 
+PrismJS is easily extended to other languages since it purely relies on regular expressions. A large number of additional languages are supported - just look at the list on
+https://github.com/PrismJS/prism/tree/master/components
+
 
 ### Extending to other languages
 
-PrismJS is easily extended to other languages since it purely relies on regular expressions - just
+To extend code highlight to other languages, just pick
 the languages of your choice from the  [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
 the existing `resource/prism.js` file
 
