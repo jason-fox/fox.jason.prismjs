@@ -4,7 +4,7 @@ Prism-JS for DITA-OT
 [![DITA-OT 3.1](https://img.shields.io/badge/DITA--OT-3.1-blue.svg)](http://www.dita-ot.org/3.1/)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
-A code highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+A code highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
 Table of Contents
 =================
@@ -135,6 +135,10 @@ The Plug-in extends the existing PDF and HTML transforms
 PATH-TO-DITA-OT/bin/dita -f pdf -i document.ditamap  -o out
 ```
 
+#### Result
+
+![](https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png)
+
 - to create static HTML with highlighted code snippets run:
 
 ```console
@@ -143,6 +147,7 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 #### Result
 
+![](https://jason-fox.github.io/fox.jason.prismjs/prism-html.png)
 
 Customizing the output
 ----------------------
