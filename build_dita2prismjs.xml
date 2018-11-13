@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+	This file is part of the DITA-OT Prism-JS Plug-in project.
+	See the accompanying LICENSE file for applicable licenses.
+-->
+<project  name="fox.jason.prismjs"  xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+	<target name="prismjs.init">
+	    <taskdef classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="${dita.plugin.fox.jason.prismjs.dir}/lib/xmltask.jar" name="xmltask"/>
+
+
+		<scriptdef language="javascript" name="prismjs">
+			<attribute name="name" />
+			<attribute name="class" />
+			<attribute name="text" />
+			<attribute name="outputclass" />
+			<attribute name="xtrc" />
+			<attribute name="xtrf" />
+			<attribute name="highlighted" />
+		<![CDATA[
+
+var dir =  project.getProperty("dita.plugin.fox.jason.prismjs.dir");
+var outputclass = attributes.get("outputclass");
+var text = attributes.get("text");
+var name = attributes.get("name");
+var xtrc = attributes.get("xtrc");
+var xtrf = attributes.get("xtrf");
+var clazz = attributes.get("class");
+
+eval( '' + org.apache.tools.ant.util.FileUtils.readFully(
+           new java.io.FileReader(dir + '/resource/prism.js' ) ) );
+
+var lang = /\blang(?:uage)?-([\w-]+)\b/i;
+var language = (outputclass.match(lang) || [,''])[1].toLowerCase();
+var grammar = Prism.languages[language];
+var highlight = Prism.highlight(text, grammar, language);
+highlight = highlight.replace(/<span class=/g, '<ph class="- topic/ph " outputclass=').replace(/<\/span>/g, '<\/ph>')
+highlight = '<'+ name + ' class="'+ clazz +'" outputclass="'+ outputclass +'" xtrc="'+ xtrc +'" xtrf="'+ xtrf +'">'+ 
+	highlight + '</'+ name +'>';
+
+
+project.setProperty(attributes.get("highlighted"),highlight);
+        ]]>
+    	</scriptdef>
+	</target>
+
+	<target name="prismjs.css">
+		<condition property="is.html">
+	        <equals arg1="${out.ext}" arg2=".html"/>
+	    </condition>
+	    <copy if:set="is.html" tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
+	</target>
+
+	<target name="prismjs" depends="prismjs.init,prismjs.css">
+		<xmltask source="${dita.temp.dir}${file.separator}.job.xml">
+			<call path="//file[@format='dita']">
+				<param default="" name="path" path="@path"/>
+				<actions>
+					<local name="source"/>
+					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
+					<echo taskname="prismjs" message="Processing ${source}"/>
+					<xmltask source="${source}">
+						<call path="//*[(self::codeblock or self::codeph)]">
+							<param default="" name="text" path="text()"/>
+							<param default="" name="name" path="name()"/>
+							<param default="" name="class" path="@class"/>
+							<param default="" name="outputclass" path="@outputclass"/>
+							<param default="" name="xtrc" path="@xtrc"/>
+							<param default="" name="xtrf" path="@xtrf"/>
+							<param default="" name="default" path="ancestor::body/@outputclass"/>
+							<actions>
+								<local name="lang"/>
+								<local name="highlighted"/>
+								<condition property="lang" value="@{default}" else="@{outputclass}">
+									<equals arg1="@{outputclass}" arg2="" />
+								</condition>
+								<prismjs xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
+								<xmltask outputter="default" indent="false" source="${source}" dest="${source}">
+									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
+								</xmltask>
+							</actions>
+						</call>
+					</xmltask>
+				</actions>
+			</call>
+		</xmltask>
+    </target>
+
+</project>

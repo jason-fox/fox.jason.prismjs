@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="fox.jason.prismjs">
+  
+
+  <!-- HTML5 extension points -->   
+  <feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
+  <feature extension="dita.conductor.html5.param" value="params.xml" type="file"/>
+  
+  <!-- XHTML extension points -->
+  <feature extension="dita.xsl.xhtml" value="xsl/xhtml.xsl" type="file"/>
+  <feature extension="dita.conductor.xhtml.param" value="params.xml" type="file"/>
+  
+  <!-- PDF -->
+  <feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+  <feature extension="dita.conductor.pdf2.param" value="params.xml" type="file"/>
+
+  <feature extension="depend.preprocess.post" value="prismjs"/>
+  <feature extension="ant.import" file="build_dita2prismjs.xml"/>
+
+  <feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
+
+</plugin>
