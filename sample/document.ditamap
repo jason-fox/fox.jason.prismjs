@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+	<chapter navtitle="prism" format="dita" type="topic" href="topics/prism.dita">
+		<topicref navtitle="examples" format="dita" type="topic" href="topics/examples.dita"/>
+		<topicref navtitle="features" format="dita" type="topic" href="topics/features-full.dita"/>
+		<topicref navtitle="basic-usage" format="dita" type="topic" href="topics/basic-usage.dita"/>
+	</chapter>
+</bookmap>

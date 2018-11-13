@@ -7,6 +7,163 @@ Prism-JS for DITA-OT
 
 An integration of [PrismJS](https://github.com/PrismJS/prism) into the DITA Open Toolkit engine, enabling static HTML and PDF code highlighting.
 
+Table of Contents
+=================
+
+- [Background](#background)
+  * [What is PrismJS?](#what-is-prismjs)
+- [Install](#install)
+  * [Installing DITA-OT](#installing-dita-ot)
+  * [Installing the Plug-in](#installing-the-plug-in)
+- [Usage](#usage)
+  * [Invocation from the command line](#invocation-from-the-command-line)
+      - [Result](#result)
+  * [Customizing the output](#customizing-the-output)
+    + [Extending to other languages](#extending-to-other-languages)
+    + [Altering the static HTML look and feel](#altering-the-static-html-look-and-feel)
+    + [Altering the PDF look and feel](#altering-the-pdf-look-and-feel)
+- [License](#license)
+
+Background
+==========
+
+What is PrismJS?
+----------------
+
+Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from [Dabblet](http://dabblet.com/).
+
+- Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
+- Highlights inline code as well, not just code blocks
+- Highlights nested languages (CSS in HTML, JavaScript in HTML)
+- It doesn’t force you to use any Prism-specific markup
+
+You can learn more on http://prismjs.com/.
+
+Why another syntax highlighter?: http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841
+
+
+Install
+=======
+
+The DITA-OT PrismJS code highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is recommended that you upgrade to the latest version.
+
+Installing DITA-OT
+------------------
+
+The DITA-OT Splash Screen is a plug-in for the DITA Open Toolkit.
+
+-  Full installation instructions for downloading DITA-OT can be found [here](https://www.dita-ot.org/3.2/topics/installing-client.html).
+
+    1.  Download the `dita-ot-3.2.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
+    2.  Extract the contents of the package to the directory where you want to install DITA-OT.
+    3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
+This defines the necessary environment variable to run the `dita` command from the command line.
+
+```bash
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.2/dita-ot-3.2.zip
+unzip -q dita-ot-3.2.zip
+rm dita-ot-3.2.zip
+```
+
+Installing the Plug-in
+----------------------
+
+-  Run the plug-in installation command:
+
+```bash
+dita -install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+```
+
+The `dita` command line tool requires no additional configuration.
+
+
+Usage
+=====
+
+To highlight code, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or `<codeblock>` will inherit from it.
+
+With the default PrismJS [download](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)
+the following languages can be highlighted
+
+- `outputclass="language-markup"` - HTML, XML etc.
+- `outputclass="language-css"` - Cascading Style Sheet highlighting
+- `outputclass="language-clike"` - JavaScript C-language family highlighting
+- `outputclass="language-javascript"` - JavaScript highlighting
+
+e.g.:
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="examples">
+  <title>Examples</title>
+  <body  outputclass="language-markup">
+
+  <p>The Prism source, highlighted with Prism:</p>
+  <codeblock outputclass="language-javascript">
+    <coderef href="../src/prism.js"/>
+  </codeblock>
+
+  <p>This page’s CSS code, highlighted with Prism:</p>
+  <codeblock outputclass="language-css">
+    <coderef href="../src/style.css"/>
+  </codeblock>
+
+  <p>This page’s HTML, highlighted with Prism:</p>
+  <codeblock outputclass="language-html">
+    <coderef href="../src/index.html"/>
+  </codeblock>
+
+  <p>This page’s logo (SVG), highlighted with Prism:</p>
+  <codeblock outputclass="language-markup">
+    <coderef href="../src/logo.svg"/>
+  </codeblock>
+  </body>
+</topic>
+```
+
+A test document can be found within the plug-in at: `PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample`
+
+Invocation from the command line
+--------------------------------
+
+The Plug-in extends the existing PDF and HTML transforms
+
+- to create a PDF with highlighted code snippets run:
+
+```console
+PATH-TO-DITA-OT/bin/dita -f pdf -i document.ditamap  -o out
+```
+
+- to create static HTML with highlighted code snippets run:
+
+```console
+PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
+```
+
+#### Result
+
+
+Customizing the output
+----------------------
+
+
+### Extending to other languages
+
+PrismJS is easily extended to other languages since it purely relies on regular expressions - just
+the languages of your choice from the  [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
+the existing `resource/prism.js` file
+
+### Altering the static HTML look and feel
+
+Amend the `resource/style.css` file to alter the look-and-feel of the rendered HTML
+
+### Altering the PDF look and feel
+
+The `cfg/fo/attrs/prismjs-attr.xsl` provides the colors for the PDF output. The names of the attributes match the CSS file.
+
+
 License
 =======
 
