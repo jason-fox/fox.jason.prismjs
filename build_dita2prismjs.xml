@@ -57,7 +57,7 @@ project.setProperty(attributes.get("highlighted"),highlight);
 				<actions>
 					<local name="source"/>
 					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
-					<echo taskname="prismjs" message="Processing ${source}"/>
+					<echo taskname="prismjs" level="verbose" message="Processing ${source}"/>
 					<xmltask source="${source}">
 						<call path="//*[(self::codeblock or self::codeph)]">
 							<param default="" name="text" path="text()"/>
