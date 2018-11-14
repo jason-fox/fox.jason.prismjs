@@ -4,10 +4,14 @@ Prism-JS for DITA-OT
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.prismjs.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![DITA-OT 3.2](https://img.shields.io/badge/DITA--OT-3.2-blue.svg)](http://www.dita-ot.org/3.2/)
 <br/>
+[![Build Status](https://travis-ci.org/jason-fox/fox.jason.prismjs.svg?branch=master)](https://travis-ci.org/jason-fox/fox.jason.prismjs)
+[![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
 
 
 This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [Prism-JS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+
+> ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
 
 Table of Contents
 =================

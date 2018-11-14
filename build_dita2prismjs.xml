@@ -73,8 +73,11 @@ project.setProperty(attributes.get("highlighted"),highlight);
 								<condition property="lang" value="@{default}" else="@{outputclass}">
 									<equals arg1="@{outputclass}" arg2="" />
 								</condition>
-								<prismjs xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
-								<xmltask outputter="default" indent="false" source="${source}" dest="${source}">
+								<echo message="@{xtrf}"/>
+								<echo message="@{xtrc}"/>
+								<echo message="${lang}"/>
+								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
+								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">
 									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
 								</xmltask>
 							</actions>
