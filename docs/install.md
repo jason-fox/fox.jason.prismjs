@@ -1,11 +1,11 @@
 <h1>Install</h1>
 
-The DITA-OT PrismJS code highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is recommended that you upgrade to the latest version.
+The DITA-OT Prism-JS syntax highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is recommended that you upgrade to the latest version.
 
 Installing DITA-OT
 ------------------
 
-The DITA-OT PrismJS code highlighter is a plug-in for the DITA Open Toolkit.
+The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -  Full installation instructions for downloading DITA-OT can be found [here](https://www.dita-ot.org/3.2/topics/installing-client.html).
 

@@ -1,8 +1,8 @@
 <h1>Usage</h1>
 
-To highlight code, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or `<codeblock>` will inherit from it.
+To highlight the syntax within codeblocks, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or `<codeblock>` will inherit from it.
 
-With the default PrismJS [download](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)
+With the default Prism-JS [library](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)
 the following languages can be highlighted
 
 - `outputclass="language-markup"` - HTML, XML etc.
@@ -73,14 +73,14 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 Customizing the output
 ----------------------
 
-PrismJS is easily extended to other languages since it purely relies on regular expressions. A large number of additional languages are supported - just look at the list on
+Prism-JS is easily extended to other languages since it purely relies on regular expressions. A large number of additional languages are supported - just look at the list on
 [https://github.com/PrismJS/prism/tree/master/components](https://github.com/PrismJS/prism/tree/master/components)
 
 
 <h3>Extending to other languages</h3>
 
 To extend code highlight to other languages, just pick
-the languages of your choice from the  [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
+the languages of your choice from the Prism-JS [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
 the existing `resource/prism.js` file
 
 <h3>Altering the static HTML look and feel</h3>

@@ -1,9 +1,9 @@
 <h1>Prism-JS for DITA-OT</h1>
 
-A code highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
-What is PrismJS?
-----------------
+What is Prism-JS?
+-----------------
 
 Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from [Dabblet](http://dabblet.com/).
 
