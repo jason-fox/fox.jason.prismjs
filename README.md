@@ -1,16 +1,19 @@
 Prism-JS for DITA-OT
 =========================
 
-[![DITA-OT 3.1](https://img.shields.io/badge/DITA--OT-3.1-blue.svg)](http://www.dita-ot.org/3.1/)
-[![license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![license](https://img.shields.io/github/license/jason-fox/fox.jason.prismjs.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+[![DITA-OT 3.2](https://img.shields.io/badge/DITA--OT-3.2-blue.svg)](http://www.dita-ot.org/3.2/)
+<br/>
+[![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
 
-A code highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+
+This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [Prism-JS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
 Table of Contents
 =================
 
 - [Background](#background)
-  * [What is PrismJS?](#what-is-prismjs)
+  * [What is Prism-JS?](#what-is-prism-js)
 - [Install](#install)
   * [Installing DITA-OT](#installing-dita-ot)
   * [Installing the Plug-in](#installing-the-plug-in)
@@ -26,7 +29,7 @@ Table of Contents
 Background
 ==========
 
-What is PrismJS?
+What is Prism-JS?
 ----------------
 
 Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from [Dabblet](http://dabblet.com/).
@@ -44,12 +47,12 @@ Why another syntax highlighter?: http://lea.verou.me/2012/07/introducing-prism-a
 Install
 =======
 
-The DITA-OT PrismJS code highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is recommended that you upgrade to the latest version.
+The DITA-OT Prism-JS syntax highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is recommended that you upgrade to the latest version.
 
 Installing DITA-OT
 ------------------
 
-The DITA-OT PrismJS code highlighter is a plug-in for the DITA Open Toolkit.
+The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -  Full installation instructions for downloading DITA-OT can be found [here](https://www.dita-ot.org/3.2/topics/installing-client.html).
 
@@ -79,9 +82,9 @@ The `dita` command line tool requires no additional configuration.
 Usage
 =====
 
-To highlight code, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or `<codeblock>` will inherit from it.
+To highlight the syntax within codeblocks, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or `<codeblock>` will inherit from it.
 
-With the default PrismJS [download](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)
+With the default Prism-JS [library](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript)
 the following languages can be highlighted
 
 - `outputclass="language-markup"` - HTML, XML etc.
@@ -152,14 +155,14 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 Customizing the output
 ----------------------
 
-PrismJS is easily extended to other languages since it purely relies on regular expressions. A large number of additional languages are supported - just look at the list on
+Prism-JS is easily extended to other languages since it purely relies on regular expressions. A large number of additional languages are supported - just look at the list on
 https://github.com/PrismJS/prism/tree/master/components
 
 
 ### Extending to other languages
 
 To extend code highlight to other languages, just pick
-the languages of your choice from the  [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
+the languages of your choice from the Prism-JS [download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace
 the existing `resource/prism.js` file
 
 ### Altering the static HTML look and feel
