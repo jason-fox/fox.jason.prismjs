@@ -1,6 +1,6 @@
-DITA-OT Splash Screen plug-in: Third Party Notices
+Prism-JS for DITA-OT plug-in: Third Party Notices
 
-This Notices file contains certain notices and important information that the DITA-OT Splash Screen Plug-In licensors and contributors (the “Plug-In”) are required to provide to you with respect to certain third party components included in the DITA-OT Splash Screen (the “Program”).
+This Notices file contains certain notices and important information that the Prism-JS for DITA-OT Plug-In licensors and contributors (the “Plug-In”) are required to provide to you with respect to certain third party components included in the Prism-JS for DITA-OT (the “Program”).
 
 Your use of the Program is governed by the license terms set forth in the “LICENSE” file or other license terms and conditions accompanying the Program, and NOT by any terms contained in this Notices file below.  The notices and information below are provided for informational purposes only.
 
