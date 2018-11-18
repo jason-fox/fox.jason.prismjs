@@ -65,7 +65,7 @@ The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
 This defines the necessary environment variable to run the `dita` command from the command line.
 
-```bash
+```console
 curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.2/dita-ot-3.2.zip
 unzip -q dita-ot-3.2.zip
 rm dita-ot-3.2.zip
@@ -76,7 +76,7 @@ Installing the Plug-in
 
 -  Run the plug-in installation command:
 
-```bash
+```console
 dita -install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
 
