@@ -32,7 +32,7 @@ eval( '' + org.apache.tools.ant.util.FileUtils.readFully(
 var lang = /\blang(?:uage)?-([\w-]+)\b/i;
 var language = (outputclass.match(lang) || [,''])[1].toLowerCase();
 var grammar = Prism.languages[language];
-var highlight = Prism.highlight(text, grammar, language);
+var highlight = grammar ? Prism.highlight(text, grammar, language): text;
 highlight = highlight.replace(/<span class=/g, '<ph class="- topic/ph " outputclass=').replace(/<\/span>/g, '<\/ph>')
 highlight = '<'+ name + ' class="'+ clazz +'" outputclass="'+ outputclass +'" xtrc="'+ xtrc +'" xtrf="'+ xtrf +'">'+ 
 	highlight + '</'+ name +'>';
