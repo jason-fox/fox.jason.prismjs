@@ -41,17 +41,26 @@ highlight = '<'+ name + ' class="'+ clazz +'" outputclass="'+ outputclass +'" xt
 project.setProperty(attributes.get("highlighted"),highlight);
         ]]>
     	</scriptdef>
+
+    	<!-- Only run the Highlight transform for HTML or PDF -->
+    	<condition property="is.highlightable">
+			<or>
+        		<isset property="args.xsl"/>
+				<isset property="args.rellinks"/>
+      		</or>
+	    </condition>
+
+	    <condition property="is.html">
+	        <equals arg1="${out.ext}" arg2=".html"/>
+	    </condition>
 	</target>
 
 	<target name="prismjs.css">
-		<condition property="is.html">
-	        <equals arg1="${out.ext}" arg2=".html"/>
-	    </condition>
-	    <copy if:set="is.html" tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
+	    <copy if:set="is.html"  tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
 	</target>
 
-	<target name="prismjs" depends="prismjs.init,prismjs.css">
-		<xmltask source="${dita.temp.dir}${file.separator}.job.xml">
+	<target name="prismjs.highlight">
+		<xmltask if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
 			<call path="//file[@format='dita']">
 				<param default="" name="path" path="@path"/>
 				<actions>
@@ -73,9 +82,9 @@ project.setProperty(attributes.get("highlighted"),highlight);
 								<condition property="lang" value="@{default}" else="@{outputclass}">
 									<equals arg1="@{outputclass}" arg2="" />
 								</condition>
-								<echo message="@{xtrf}"/>
-								<echo message="@{xtrc}"/>
-								<echo message="${lang}"/>
+								<echo taskname="prismjs" message="@{xtrf}" level="verbose"/>
+								<echo taskname="prismjs" message="@{xtrc}" level="verbose"/>
+								<echo taskname="prismjs" message="${lang}" level="verbose"/>
 								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
 								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">
 									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
@@ -87,5 +96,7 @@ project.setProperty(attributes.get("highlighted"),highlight);
 			</call>
 		</xmltask>
     </target>
+
+    <target name="prismjs" depends="prismjs.init,prismjs.highlight,prismjs.css"/>
 
 </project>
