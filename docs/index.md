@@ -1,19 +1,22 @@
 <h1>Prism-JS for DITA-OT</h1>
 
-This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [PrismJS](https://github.com/PrismJS/prism)
+highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets
+which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
 ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
 
-What is Prism-JS?
------------------
+## What is Prism-JS?
 
-Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from [Dabblet](http://dabblet.com/).
+Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from
+[Dabblet](http://dabblet.com/).
 
-- Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
-- Highlights inline code (`<codeph>`) as well, not just code blocks (`<codeblock>`)
-- Highlights nested languages (CSS in HTML, JavaScript in HTML)
-- It doesn’t force you to use any Prism-specific markup
+-   Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
+-   Highlights inline code (`<codeph>`) as well, not just code blocks (`<codeblock>`)
+-   Highlights nested languages (CSS in HTML, JavaScript in HTML)
+-   It doesn’t force you to use any Prism-specific markup
 
 You can learn more on [http://prismjs.com/](http://prismjs.com/).
 
-Why another syntax highlighter?: [http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841](http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841)
+Why another syntax highlighter?:
+[http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841](http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841)
