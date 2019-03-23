@@ -32,7 +32,14 @@ eval( '' + org.apache.tools.ant.util.FileUtils.readFully(
 var lang = /\blang(?:uage)?-([\w-]+)\b/i;
 var language = (outputclass.match(lang) || [,''])[1].toLowerCase();
 var grammar = Prism.languages[language];
-var highlight = grammar ? Prism.highlight(text, grammar, language): text;
+
+if (!grammar){
+	var lang2 = /\b([\w-]+)\b/i;
+	var language2 = (outputclass.match(lang2) || [,''])[1].toLowerCase();
+	grammar = Prism.languages[language2];
+}
+
+var highlight = grammar ? Prism.highlight(text, grammar, language): text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 highlight = highlight.replace(/<span class=/g, '<ph class="- topic/ph " outputclass=').replace(/<\/span>/g, '<\/ph>')
 highlight = '<'+ name + ' class="'+ clazz +'" outputclass="'+ outputclass +'" xtrc="'+ xtrc +'" xtrf="'+ xtrf +'">'+ 
 	highlight + '</'+ name +'>';
@@ -61,7 +68,7 @@ project.setProperty(attributes.get("highlighted"),highlight);
 
 	<target name="prismjs.highlight">
 		<xmltask if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
-			<call path="//file[@format='dita']">
+			<call path="//file[@format='dita' or @format='md' or @format='markdown']">
 				<param default="" name="path" path="@path"/>
 				<actions>
 					<local name="source"/>
@@ -82,10 +89,11 @@ project.setProperty(attributes.get("highlighted"),highlight);
 								<condition property="lang" value="@{default}" else="@{outputclass}">
 									<equals arg1="@{outputclass}" arg2="" />
 								</condition>
-								<echo taskname="prismjs" message="@{xtrf}" level="verbose"/>
-								<echo taskname="prismjs" message="@{xtrc}" level="verbose"/>
-								<echo taskname="prismjs" message="${lang}" level="verbose"/>
+								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrf}" level="debug"/>
+								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrc}" level="debug"/>
+								<echo unless:blank="${lang}" taskname="prismjs" message="${lang}" level="debug"/>
 								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
+
 								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">
 									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
 								</xmltask>

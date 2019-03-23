@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="fox.jason.prismjs">
-
-	<!--
-		Define package details.
-	-->
-	<feature extension="package.version" value="1.0.0"/>
+<plugin id="fox.jason.prismjs" version="1.0.2">
   
 	<!-- HTML5 extension points -->   
 	<feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
