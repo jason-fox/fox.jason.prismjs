@@ -1,7 +1,7 @@
 # Prism-JS for DITA-OT
 
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.prismjs.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 3.2](https://img.shields.io/badge/DITA--OT-3.2-blue.svg)](http://www.dita-ot.org/3.2/) <br/>
+[![DITA-OT 3.3](https://img.shields.io/badge/DITA--OT-3.3-blue.svg)](http://www.dita-ot.org/3.3/) <br/>
 [![Build Status](https://travis-ci.org/jason-fox/fox.jason.prismjs.svg?branch=master)](https://travis-ci.org/jason-fox/fox.jason.prismjs)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
@@ -55,11 +55,11 @@ recommended that you upgrade to the latest version.
 The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -   Full installation instructions for downloading DITA-OT can be found
-    [here](https://www.dita-ot.org/3.2/topics/installing-client.html).
+    [here](https://www.dita-ot.org/3.3/topics/installing-client.html).
 
-        1.  Download the `dita-ot-3.2.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
-        2.  Extract the contents of the package to the directory where you want to install DITA-OT.
-        3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
+    1.  Download the `dita-ot-3.3.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
+    2.  Extract the contents of the package to the directory where you want to install DITA-OT.
+    3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
 
     This defines the necessary environment variable to run the `dita` command from the command line.
 
