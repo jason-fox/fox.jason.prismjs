@@ -1,1 +1,2 @@
-build_dita*.xml linguist-language=Ant Build System
+test/* linguist-vendored
+sample/* linguist-documentation
