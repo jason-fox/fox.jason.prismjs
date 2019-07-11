@@ -5,10 +5,10 @@
 <project  name="fox.jason.prismjs"  xmlns:if="ant:if" xmlns:unless="ant:unless">
 
 	<target name="prismjs.init">
-	    <taskdef classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="${dita.plugin.fox.jason.prismjs.dir}/lib/xmltask.jar" name="xmltask"/>
+		<taskdef classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="${dita.plugin.fox.jason.prismjs.dir}/lib/xmltask.jar" name="xmltask"/>
 
 
-		<scriptdef language="javascript" name="prismjs">
+		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
 			<attribute name="name" />
 			<attribute name="class" />
 			<attribute name="text" />
@@ -16,49 +16,18 @@
 			<attribute name="xtrc" />
 			<attribute name="xtrf" />
 			<attribute name="highlighted" />
-		<![CDATA[
-
-var dir =  project.getProperty("dita.plugin.fox.jason.prismjs.dir");
-var outputclass = attributes.get("outputclass");
-var text = attributes.get("text");
-var name = attributes.get("name");
-var xtrc = attributes.get("xtrc");
-var xtrf = attributes.get("xtrf");
-var clazz = attributes.get("class");
-
-eval( '' + org.apache.tools.ant.util.FileUtils.readFully(
-           new java.io.FileReader(dir + '/resource/prism.js' ) ) );
-
-var lang = /\blang(?:uage)?-([\w-]+)\b/i;
-var language = (outputclass.match(lang) || [,''])[1].toLowerCase();
-var grammar = Prism.languages[language];
-
-if (!grammar){
-	var lang2 = /\b([\w-]+)\b/i;
-	var language2 = (outputclass.match(lang2) || [,''])[1].toLowerCase();
-	grammar = Prism.languages[language2];
-}
-
-var highlight = grammar ? Prism.highlight(text, grammar, language): text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-highlight = highlight.replace(/<span class=/g, '<ph class="- topic/ph " outputclass=').replace(/<\/span>/g, '<\/ph>')
-highlight = '<'+ name + ' class="'+ clazz +'" outputclass="'+ outputclass +'" xtrc="'+ xtrc +'" xtrf="'+ xtrf +'">'+ 
-	highlight + '</'+ name +'>';
-
-
-project.setProperty(attributes.get("highlighted"),highlight);
-        ]]>
-    	</scriptdef>
+		</scriptdef>
 
     	<!-- Only run the Highlight transform for HTML or PDF -->
     	<condition property="is.highlightable">
 			<or>
-        		<isset property="args.xsl"/>
+			<isset property="args.xsl"/>
 				<isset property="args.rellinks"/>
       		</or>
-	    </condition>
+		</condition>
 
-	    <condition property="is.html">
-	        <equals arg1="${out.ext}" arg2=".html"/>
+		<condition property="is.html">
+			<equals arg1="${out.ext}" arg2=".html"/>
 	    </condition>
 	</target>
 
