@@ -1,8 +1,8 @@
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk8
 env:
-  - DITA_OT=3.3
+  - DITA_OT=3.3.2
 
 before_install:
   - zip -r fox.jason.prismjs.zip . -x *.zip* *.git/* *temp/* *out/*
