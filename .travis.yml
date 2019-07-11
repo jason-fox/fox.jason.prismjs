@@ -1,10 +1,12 @@
 language: java
+sudo: required
 jdk:
   - openjdk8
 env:
   - DITA_OT=3.3.2
 
 before_install:
+  - sudo apt-get install ant
   - zip -r fox.jason.prismjs.zip . -x *.zip* *.git/* *temp/* *out/*
   - curl -LO https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT/dita-ot-$DITA_OT.zip
   - unzip -q dita-ot-$DITA_OT.zip
