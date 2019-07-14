@@ -5,6 +5,8 @@ recommended that you upgrade to the latest version.
 
 ## Installing DITA-OT
 
+<a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
+
 The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -   Full installation instructions for downloading DITA-OT can be found
