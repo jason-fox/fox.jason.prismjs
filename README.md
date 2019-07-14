@@ -32,6 +32,9 @@ which are automatically colorized according to language syntax. The plug-in exte
 
 ## What is Prism-JS?
 
+<a href="http://prismjs.com"><img src="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" align="right" height="70"></a>
+
+
 Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from
 [Dabblet](http://dabblet.com/).
 
@@ -44,6 +47,8 @@ You can learn more on http://prismjs.com/.
 
 Why another syntax highlighter?:
 http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/#more-1841
+
+---
 
 # Install
 
