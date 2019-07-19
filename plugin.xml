@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="fox.jason.prismjs" version="1.0.2">
   
 	<!-- HTML5 extension points -->   
@@ -9,11 +10,13 @@
 
 	<!-- PDF -->
 	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+	<!--
+		This plugin requires the XMLTask lib
+	-->
+	<require plugin="org.doctales.xmltask"/>
 
 
 	<feature extension="depend.preprocess.post" value="prismjs"/>
-	<feature extension="ant.import" file="build_dita2prismjs.xml"/>
-
-	<feature extension="dita.conductor.lib.import" file="lib/xmltask.jar"/>
+	<feature extension="ant.import" file="process_prismjs.xml"/>
 
 </plugin>

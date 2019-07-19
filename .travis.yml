@@ -3,7 +3,7 @@ sudo: required
 jdk:
   - openjdk8
 env:
-  - DITA_OT=3.3.2
+  - DITA_OT=3.3.3
 
 before_install:
   - sudo apt-get install ant
@@ -14,6 +14,7 @@ before_install:
 
 install:
   - dita-ot-$DITA_OT/bin/dita --install https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
   - dita-ot-$DITA_OT/bin/dita --install fox.jason.prismjs.zip
 
 before_script:

@@ -5,9 +5,6 @@
 <project  name="fox.jason.prismjs"  xmlns:if="ant:if" xmlns:unless="ant:unless">
 
 	<target name="prismjs.init">
-		<taskdef classname="com.oopsconsultancy.xmltask.ant.XmlTask" classpath="${dita.plugin.fox.jason.prismjs.dir}/lib/xmltask.jar" name="xmltask"/>
-
-
 		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
 			<attribute name="name" />
 			<attribute name="class" />
@@ -36,14 +33,14 @@
 	</target>
 
 	<target name="prismjs.highlight">
-		<xmltask if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
+		<xmltask taskname="read-job.xml" if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
 			<call path="//file[@format='dita' or @format='md' or @format='markdown']">
 				<param default="" name="path" path="@path"/>
 				<actions>
 					<local name="source"/>
 					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
 					<echo taskname="prismjs" level="verbose" message="Processing ${source}"/>
-					<xmltask source="${source}">
+					<xmltask source="${source}" taskname="highlight-code">
 						<call path="//*[(self::codeblock or self::codeph)]">
 							<param default="" name="text" path="text()"/>
 							<param default="" name="name" path="name()"/>
