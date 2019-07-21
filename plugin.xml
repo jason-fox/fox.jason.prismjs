@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
-<plugin id="fox.jason.prismjs" version="1.0.2">
+<plugin id="fox.jason.prismjs" version="2.0.0">
   
 	<!-- HTML5 extension points -->   
 	<feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
