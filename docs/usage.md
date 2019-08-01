@@ -60,7 +60,7 @@ PATH-TO-DITA-OT/bin/dita -f pdf -i document.ditamap  -o out
 
 <h4>PDF Result</h4>
 
-![](https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png)
+<img src="https://jason-fox.github.io/fox.jason.prismjs/prism-pdf.png" align="center" style="border-style:solid; border-width:1px; border-color:#ddd"/>
 
 -   to create static HTML with highlighted code snippets run:
 
@@ -70,7 +70,7 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 <h4>HTML Result</h4>
 
-![](https://jason-fox.github.io/fox.jason.prismjs/prism-html.png)
+<img src="https://jason-fox.github.io/fox.jason.prismjs/prism-html.png" align="center" style="border-style:solid; border-width:1px; border-color:#ddd"/>
 
 ## Customizing the output
 
