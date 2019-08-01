@@ -4,7 +4,7 @@ This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [Pri
 highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets
 which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
-![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
+<img src="https://jason-fox.github.io/fox.jason.prismjs/highlighted.png" align="center" style="border-style:solid; border-width:1px; border-color:#ddd"/>
 
 ## What is Prism-JS?
 
