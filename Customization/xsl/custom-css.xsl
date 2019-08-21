@@ -7,7 +7,10 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs"
     version="2.0">
-  <xsl:include href="../Customization/xsl/custom-css.xsl"/>
-  <xsl:include href="../Customization/xsl/prism-css.xsl"/>
+
+<xsl:template name="gen-user-styles">
+  <xsl:apply-templates select="." mode="gen-user-styles"/>
+  <xsl:apply-templates select="." mode="gen-prism-style"/>
+</xsl:template>
   
 </xsl:stylesheet>
