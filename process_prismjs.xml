@@ -3,14 +3,16 @@
 	See the accompanying LICENSE file for applicable licenses.
 --><project xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net" name="fox.jason.prismjs">
 
-	<target name="prismjs.copyfile">
+	<target name="prismjs.copyfiles">
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.formats.temp.file" suffix=".txt"/>
+		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.css.temp.file" suffix=".css"/>
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
+		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css" toFile="${prismjs.css.temp.file}"/>
 		<echo message="@format='dita' or @format='md' or @format='markdown'" file="${prismjs.formats.temp.file}"/>
 	</target>
 
-	<target name="prismjs.init" depends="prismjs.copyfile">
+	<target name="prismjs.init" depends="prismjs.copyfiles">
 		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
 			<attribute name="name"/>
 			<attribute name="class"/>
@@ -37,8 +39,8 @@
 		
 	</target>
 
-	<target name="prismjs.css">
-	    <copy if:set="is.html" tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
+	<target name="prismjs.css" if:set="is.html">
+	    <copy tofile="${output.dir}/prism.css" file="${prismjs.css.temp.file}"/>
 	</target>
 
 	<target name="prismjs.highlight">
