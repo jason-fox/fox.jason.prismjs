@@ -3,7 +3,6 @@
  *  See the accompanying LICENSE file for applicable licenses.
  */
 
-var dir = project.getProperty("dita.plugin.fox.jason.prismjs.dir");
 var outputclass = attributes.get("outputclass");
 var text = attributes.get("text");
 var name = attributes.get("name");
@@ -15,7 +14,7 @@ var clazz = attributes.get("class");
 eval(
   "" +
     org.apache.tools.ant.util.FileUtils.readFully(
-      new java.io.FileReader(dir + "/resource/prism.js")
+      new java.io.FileReader(project.getProperty("prismjs.temp.file"))
     )
 );
 

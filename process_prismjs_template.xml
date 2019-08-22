@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!--ant--><!--
 	This file is part of the DITA-OT Prism-JS Plug-in project.
 	See the accompanying LICENSE file for applicable licenses.
---><project xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net" name="fox.jason.prismjs">
+-->
+<project  name="fox.jason.prismjs"  xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net">
 
 	<target name="prismjs.copyfile">
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
@@ -10,15 +11,17 @@
 		<echo message="@format='dita' or @format='md' or @format='markdown'" file="${prismjs.formats.temp.file}"/>
 	</target>
 
-	<target name="prismjs.init" depends="prismjs.copyfile">
+	<target name="prismjs.init"
+		dita:depends="prismjs.copyfile, {fox.jason.prismjs.pre}"
+		dita:extension="depends org.dita.dost.platform.InsertDependsAction">
 		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
-			<attribute name="name"/>
-			<attribute name="class"/>
-			<attribute name="text"/>
-			<attribute name="outputclass"/>
-			<attribute name="xtrc"/>
-			<attribute name="xtrf"/>
-			<attribute name="highlighted"/>
+			<attribute name="name" />
+			<attribute name="class" />
+			<attribute name="text" />
+			<attribute name="outputclass" />
+			<attribute name="xtrc" />
+			<attribute name="xtrf" />
+			<attribute name="highlighted" />
 		</scriptdef>
 
     	<!-- Only run the Highlight transform for HTML or PDF -->
@@ -38,7 +41,7 @@
 	</target>
 
 	<target name="prismjs.css">
-	    <copy if:set="is.html" tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
+	    <copy if:set="is.html"  tofile="${output.dir}/prism.css" file="${dita.plugin.fox.jason.prismjs.dir}${file.separator}resource/style.css"/>
 	</target>
 
 	<target name="prismjs.highlight">
@@ -62,7 +65,7 @@
 								<local name="lang"/>
 								<local name="highlighted"/>
 								<condition property="lang" value="@{default}" else="@{outputclass}">
-									<equals arg1="@{outputclass}" arg2=""/>
+									<equals arg1="@{outputclass}" arg2="" />
 								</condition>
 								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrf}" level="debug"/>
 								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrc}" level="debug"/>
