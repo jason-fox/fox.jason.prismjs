@@ -5,14 +5,17 @@
 
 	<target name="prismjs.copyfiles">
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
-		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.formats.temp.file" suffix=".txt"/>
-		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.css.temp.file" suffix=".css"/>
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
+
+
+		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.css.temp.file" suffix=".css"/>
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css" toFile="${prismjs.css.temp.file}"/>
-		<echo message="@format='dita' or @format='md' or @format='markdown'" file="${prismjs.formats.temp.file}"/>
 	</target>
 
 	<target name="prismjs.init" depends="prismjs.copyfiles">
+
+		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
+
 		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
 			<attribute name="name"/>
 			<attribute name="class"/>
@@ -35,8 +38,24 @@
 			<equals arg1="${out.ext}" arg2=".html"/>
 	    </condition>
 
-	    <loadfile property="prism.js.formats" srcFile="${prismjs.formats.temp.file}"/>
-		
+	    <macrodef name="prismjs-append-lang">
+	    	<sequential>
+	    		<local name="prismjs.lang.file"/>
+	    		<local name="prismjs.lang.js"/>
+				<echo  taskname="prismjs" message="${lang}" level="error"/>
+				<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-${lang}.min.js">
+					<and>
+						<not>
+							<resourcecontains resource="${prismjs.temp.file}" substring=".languages.${lang}"/>
+						</not>
+						<available file="${prism.component.dir}/prism-${lang}.min.js"/>
+					</and>
+				</condition>
+
+				<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
+			</sequential>
+	    </macrodef>
+
 	</target>
 
 	<target name="prismjs.css" if:set="is.html">
@@ -45,7 +64,7 @@
 
 	<target name="prismjs.highlight">
 		<xmltask taskname="read-job.xml" if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
-			<call path="//file[${prism.js.formats}]">
+			<call path="//file[@format]">
 				<param default="" name="path" path="@path"/>
 				<actions>
 					<local name="source"/>
@@ -66,9 +85,8 @@
 								<condition property="lang" value="@{default}" else="@{outputclass}">
 									<equals arg1="@{outputclass}" arg2=""/>
 								</condition>
-								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrf}" level="debug"/>
-								<echo unless:blank="${lang}" taskname="prismjs" message="@{xtrc}" level="debug"/>
-								<echo unless:blank="${lang}" taskname="prismjs" message="${lang}" level="debug"/>
+								
+								<prismjs-append-lang unless:blank="${lang}"/>
 								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
 
 								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">

@@ -15,10 +15,6 @@
 	-->
 	<require plugin="org.doctales.xmltask"/>
 
-	<extension-point id="fox.jason.prismjs.pre" name="Extend prismjs pre-processing"/>
 	<feature extension="depend.preprocess.post" value="prismjs"/>
 	<feature extension="ant.import" file="process_prismjs.xml"/>
-
-	  <!-- Add a template file to enable overrides to use extension points -->
-  <template file="process_prismjs_template.xml"/>
 </plugin>
