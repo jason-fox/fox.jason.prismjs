@@ -68,9 +68,13 @@
 				<param default="" name="path" path="@path"/>
 				<actions>
 					<local name="source"/>
+					<local name="source.exists"/>
 					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
-					<echo taskname="prismjs" level="verbose" message="Processing ${source}"/>
-					<xmltask source="${source}" taskname="highlight-code">
+
+					<available property="source.exists" file="${source}"/>
+
+					<echo if:set="source.exists" taskname="prismjs" level="verbose" message="Processing ${source}"/>
+					<xmltask if:set="source.exists" source="${source}" taskname="highlight-code">
 						<call path="//*[(self::codeblock or self::codeph)]">
 							<param default="" name="text" path="text()"/>
 							<param default="" name="name" path="name()"/>
