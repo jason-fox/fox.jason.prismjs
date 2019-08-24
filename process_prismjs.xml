@@ -17,15 +17,6 @@
 
 		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
 
-		<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
-			<attribute name="name"/>
-			<attribute name="class"/>
-			<attribute name="text"/>
-			<attribute name="outputclass"/>
-			<attribute name="xtrc"/>
-			<attribute name="xtrf"/>
-			<attribute name="highlighted"/>
-		</scriptdef>
 
     	<!-- Only run the Highlight transform for HTML or PDF -->
     	<condition property="is.highlightable">
@@ -39,26 +30,8 @@
 			<equals arg1="${out.ext}" arg2=".html"/>
 	    </condition>
 
-	    <macrodef name="prismjs-append-lang">
-	    	<sequential>
-	    		<local name="prismjs.lang.file"/>
-	    		<local name="prismjs.lang.js"/>
-				<echo  taskname="prismjs" message="${lang}" level="debug"/>
-				<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-${lang}.min.js">
-					<and>
-						<not>
-							<resourcecontains resource="${prismjs.temp.file}" substring=".languages.${lang}"/>
-						</not>
-						<available file="${prism.component.dir}/prism-${lang}.min.js"/>
-					</and>
-				</condition>
+	    <typedef file="${dita.plugin.fox.jason.prismjs.dir}/resource/antlib.xml"/>
 
-				<echo if:set="prismjs.lang.file" taskname="prismjs" level="warning" message="Adding ${lang} highlighting"/>
-
-				<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
-				<echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
-			</sequential>
-	    </macrodef>
 	</target>
 
 	<target name="prismjs.highlight">
@@ -84,11 +57,9 @@
 							<param default="" name="default" path="ancestor::body/@outputclass"/>
 							<actions>
 								<local name="lang"/>
+								<local name="short-lang"/>
 								<local name="highlighted"/>
-								<condition property="lang" value="@{default}" else="@{outputclass}">
-									<equals arg1="@{outputclass}" arg2=""/>
-								</condition>
-								
+								<set-short-lang outputclass="@{outputclass}" default="@{default}" property="lang"/>
 								<prismjs-append-lang unless:blank="${lang}"/>
 								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
 

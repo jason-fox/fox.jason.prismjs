@@ -2,6 +2,8 @@
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="fox.jason.prismjs" version="2.1.0">
 	<feature extension="ant.import" file="process_prismjs.xml"/>
+	<!-- Ensure the plugin's error and logging messages are available -->
+	<feature extension="dita.xsl.messages" file="resource/messages.xml"/>
 	<!--
 		This plugin requires the XMLTask lib and extended CSS
 	-->

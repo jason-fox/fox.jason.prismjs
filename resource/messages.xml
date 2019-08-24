@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  This file is part of the DITA-OT Prism-JS DITA Plug-in project.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<messages xmlns:dita="http://dita-ot.sourceforge.net">
+  <message id="PRSM001I" type="INFO">
+    <reason>Adding "%1" code highlighting to prism library</reason>
+    <response/>
+  </message>
+   <message id="PRSM002W" type="WARN">
+    <reason>Unknown code language "%1" detected.</reason>
+    <response>Codeblock will not be highlighted.</response>
+  </message>
+</messages>

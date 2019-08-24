@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--ant-->
+<!--
+	This file is part of the DITA-OT Prism-JS Plug-in project.
+	See the accompanying LICENSE file for applicable licenses.
+-->
+<antlib xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+	<scriptdef language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/invoke-prism.js">
+		<attribute name="name"/>
+		<attribute name="class"/>
+		<attribute name="text"/>
+		<attribute name="outputclass"/>
+		<attribute name="xtrc"/>
+		<attribute name="xtrf"/>
+		<attribute name="highlighted"/>
+	</scriptdef>
+
+	<scriptdef language="javascript" name="set-short-lang" src="${dita.plugin.fox.jason.prismjs.dir}/resource/short-lang.js">
+		<attribute name="outputclass"/>
+		<attribute name="default"/>
+		<attribute name="property"/>
+	</scriptdef>
+
+	<macrodef name="prismjs-append-lang">
+		<sequential>
+			<local name="prismjs.lang.file"/>
+			<local name="prismjs.lang.js"/>
+			<local name="prismjs.lang.known"/>
+			<local name="prismjs.lang.loaded"/>
+
+			<echo taskname="prismjs" message="${lang}" level="debug"/>
+
+			<condition property="prismjs.lang.loaded">
+				<resourcecontains resource="${prismjs.temp.file}" substring=".languages.${lang}="/>
+			</condition>
+
+			<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-${lang}.min.js">
+				<and>
+					<not>
+						<isset property="prismjs.lang.loaded"/>
+					</not>
+					<available file="${prism.component.dir}/prism-${lang}.min.js"/>
+				</and>
+			</condition>
+
+			<condition property="prismjs.lang.known">
+				<or>
+					<isset property="prismjs.lang.file"/>
+					<isset property="prismjs.lang.loaded"/>
+				</or>
+			</condition>
+
+			<dita-ot-echo if:set="prismjs.lang.file" id="PRSM001I">
+				<param name="1" value="${lang}"/>
+			</dita-ot-echo>
+			<dita-ot-echo unless:set="prismjs.lang.known" id="PRSM002W">
+				<param name="1" value="${lang}"/>
+			</dita-ot-echo>
+
+			<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
+			<echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
+			<echo unless:set="prismjs.lang.known" append="true" message="${line.separator}/* .languages.${lang} */" file="${prismjs.temp.file}"/>
+		</sequential>
+	</macrodef>
+
+</antlib>
