@@ -82,7 +82,7 @@ rm dita-ot-3.3.zip
 
 ```console
 dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-dita --install https://github.com/jason-fox/extend.css/archive/master.zip
+dita --install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
 dita --install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
 
@@ -104,6 +104,7 @@ can be highlighted
 -   `outputclass="language-css"` - Cascading Style Sheet highlighting
 -   `outputclass="language-clike"` - C-language family highlighting
 -   `outputclass="language-javascript"` - JavaScript highlighting
+... etc.
 
 e.g.:
 
