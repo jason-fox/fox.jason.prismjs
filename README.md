@@ -82,7 +82,8 @@ rm dita-ot-3.3.zip
 
 ```console
 dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-dita -install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+dita --install https://github.com/jason-fox/extend.css/archive/master.zip
+dita --install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
 
 The `dita` command line tool requires no additional configuration.
@@ -165,14 +166,9 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 ## Customizing the output
 
-Prism-JS is easily extended to other languages since it purely relies on regular expressions. A large number of
+Prism-JS is easily extended to other languages since it purely relies on regular expressions. Additional languages are loaded dynamically during processing. A large number of
 additional languages are supported - just look at the list on https://github.com/PrismJS/prism/tree/master/components
 
-### Extending to other languages
-
-To extend code highlight to other languages, just pick the languages of your choice from the Prism-JS
-[download page](https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript) and replace the
-existing `resource/prism.js` file
 
 ### Altering the static HTML look and feel
 

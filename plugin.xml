@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
-<plugin id="fox.jason.prismjs" version="2.0.0">
-  
-	<!-- HTML5 extension points -->   
-	<feature extension="dita.xsl.html5" value="xsl/xhtml.xsl" type="file"/>
-
-	<!-- XHTML extension points -->
-	<feature extension="dita.xsl.xhtml" value="xsl/xhtml.xsl" type="file"/>
-
+<plugin id="fox.jason.prismjs" version="2.1.0">
+	<feature extension="ant.import" file="process_prismjs.xml"/>
 	<!-- PDF -->
 	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
 	<!--
 		This plugin requires the XMLTask lib
 	-->
 	<require plugin="org.doctales.xmltask"/>
+	<require plugin="fox.jason.extend.css"/>
 
 	<feature extension="depend.preprocess.post" value="prismjs"/>
-	<feature extension="ant.import" file="process_prismjs.xml"/>
+	<feature extension="extend.css.process" value="prismjs.css.copy"/>
 </plugin>

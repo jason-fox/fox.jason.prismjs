@@ -3,16 +3,17 @@
 	See the accompanying LICENSE file for applicable licenses.
 --><project xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net" name="fox.jason.prismjs">
 
-	<target name="prismjs.copyfiles">
+	<target name="prismjs.css.copy">
+		<loadfile property="prism.css" srcFile="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"/>
+		<echo append="true" message="${line.separator}${prism.css}" file="${extend.css.file}"/>
+	</target>
+
+	<target name="prismjs.init">
+
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
 
 
-		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.css.temp.file" suffix=".css"/>
-		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css" toFile="${prismjs.css.temp.file}"/>
-	</target>
-
-	<target name="prismjs.init" depends="prismjs.copyfiles">
 
 		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
 
@@ -42,7 +43,7 @@
 	    	<sequential>
 	    		<local name="prismjs.lang.file"/>
 	    		<local name="prismjs.lang.js"/>
-				<echo  taskname="prismjs" message="${lang}" level="error"/>
+				<echo  taskname="prismjs" message="${lang}" level="debug"/>
 				<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-${lang}.min.js">
 					<and>
 						<not>
@@ -52,14 +53,12 @@
 					</and>
 				</condition>
 
+				<echo if:set="prismjs.lang.file" taskname="prismjs" level="warning" message="Adding ${lang} highlighting"/>
+
 				<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
+				<echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
 			</sequential>
 	    </macrodef>
-
-	</target>
-
-	<target name="prismjs.css" if:set="is.html">
-	    <copy tofile="${output.dir}/prism.css" file="${prismjs.css.temp.file}"/>
 	</target>
 
 	<target name="prismjs.highlight">
@@ -104,6 +103,6 @@
 		</xmltask>
     </target>
 
-    <target name="prismjs" depends="prismjs.init,prismjs.highlight,prismjs.css"/>
+    <target name="prismjs" depends="prismjs.init,prismjs.highlight"/>
 
 </project>
