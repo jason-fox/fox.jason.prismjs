@@ -173,7 +173,31 @@ additional languages are supported - just look at the list on https://github.com
 
 ### Altering the static HTML look and feel
 
-Amend the `resource/style.css` file to alter the look-and-feel of the rendered HTML
+Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amends the `resource/style.css` file to alter the look-and-feel of the rendered HTML
+
+
+#### `plugin.xml` Configuration
+
+```xml
+<plugin id="com.example.prismjs-theme">
+  <feature extension="ant.import" file="theme.xml"/>
+  <require plugin="fox.jason.extend.css"/>
+  <require plugin="fox.jason.prismjs"/>
+  <feature extension="extend.css.process.pre" value="prismjs.override.css"/>
+</plugin>
+```
+
+#### ANT Build file: `theme.xml`
+
+```xml
+<project name="com.example.prismjs-theme">
+  <target name="prismjs.override.css">
+    <property name="prismjs.css.file" value="${dita.plugin.com.example.prismjs-theme.dir}/resource/style.css"/>
+  </target>
+</project>
+```
+
+A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
 ### Altering the PDF look and feel
 
