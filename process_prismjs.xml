@@ -15,9 +15,7 @@
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
 
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
-		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/known.txt" toFile="${prismjs.unknown.file}"/>
-
-
+		<touch file="${prismjs.unknown.file}"/>
 
 		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
 
