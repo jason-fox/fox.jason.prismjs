@@ -4,7 +4,8 @@
 --><project xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net" name="fox.jason.prismjs">
 
 	<target name="prismjs.css.copy">
-		<loadfile property="prism.css" srcFile="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"/>
+		<property name="prismjs.css.file" value="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"/>
+		<loadfile property="prism.css" srcFile="${prismjs.css.file}"/>
 		<echo append="true" message="${line.separator}${prism.css}" file="${extend.css.file}"/>
 	</target>
 
@@ -65,6 +66,7 @@
 
 								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">
 									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
+									<attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
 								</xmltask>
 							</actions>
 						</call>

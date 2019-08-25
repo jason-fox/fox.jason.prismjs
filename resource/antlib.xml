@@ -59,7 +59,7 @@
 
 			<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
 			<echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
-			<echo unless:set="prismjs.lang.known" append="true" message="${line.separator}/* .languages.${lang} */" file="${prismjs.temp.file}"/>
+			<echo unless:set="prismjs.lang.known" append="true" message="${line.separator}/* .languages.${lang}= */" file="${prismjs.temp.file}"/>
 		</sequential>
 	</macrodef>
 
