@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+	This file is part of the DITA-OT Prism-JS Plug-in project.
+	See the accompanying LICENSE file for applicable licenses.
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fo="http://www.w3.org/1999/XSL/Format"
     xmlns:rx="http://www.renderx.com/XSL/Extensions"
