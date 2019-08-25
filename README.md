@@ -173,7 +173,7 @@ additional languages are supported - just look at the list on https://github.com
 
 ### Altering the static HTML look and feel
 
-Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amends the `resource/style.css` file to alter the look-and-feel of the rendered HTML
+Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amend a copy of the `resource/style.css` file to alter the look-and-feel of the rendered HTML
 
 
 #### `plugin.xml` Configuration
@@ -202,7 +202,47 @@ A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://g
 ### Altering the PDF look and feel
 
 The `cfg/fo/attrs/prismjs-attr.xsl` provides the colors for the PDF output. The names of the attributes match the CSS
-file.
+file, copy and amend the `prismjs-attr.xsl` file in your own plug-in.
+
+#### `plugin.xml` Configuration
+
+```xml
+<plugin id="com.example.prismjs-theme">
+  <require plugin="fox.jason.prismjs"/>
+  <feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+</plugin>
+```
+
+#### `xsl/xslfo.xsl` XSL Stylesheet
+
+Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">` template as shown:
+
+```xml
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:fo="http://www.w3.org/1999/XSL/Format"
+    exclude-result-prefixes="xs"
+    version="2.0">
+
+    <xsl:param name="PRISM-THEME" select="'com.example.prismjs-theme'"/>
+
+    <xsl:include href="../cfg/fo/attrs/prismjs-attr.xsl"/>
+
+    <xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">
+      <fo:inline xsl:use-attribute-sets="__codeph__language__">
+        <xsl:call-template name="commonattributes"/>
+        <xsl:call-template name="processPrismAttrSetReflection">
+          <xsl:with-param name="attrSet"
+            select="replace(@outputclass,'token ','__token__')"/>
+          <xsl:with-param name="path" select="concat('../../', concat($PRISM-THEME, '/cfg/fo/attrs/prismjs-attr.xsl'))"/>
+        </xsl:call-template>
+        <xsl:apply-templates/>
+      </fo:inline>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
+A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
 # License
 
