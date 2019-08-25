@@ -24,4 +24,69 @@
         </fo:inline>
     </xsl:template>
 
+    <xsl:template match="*[contains(@class,' pr-d/codeblock ') and starts-with(@outputclass, 'language-')]">
+        <xsl:call-template name="generateAttrLabel"/>
+        <fo:block xsl:use-attribute-sets="__codeblock__language__">
+            <xsl:call-template name="commonattributes"/>
+            <xsl:call-template name="setFrame"/>
+            <xsl:call-template name="setScale"/>
+            <xsl:call-template name="setExpanse"/>
+            <xsl:variable name="codeblock.line-number" as="xs:boolean">
+              <xsl:apply-templates select="." mode="codeblock.generate-line-number"/>
+            </xsl:variable>
+            <xsl:variable name="codeblock.show-whitespace" as="xs:boolean">
+              <xsl:apply-templates select="." mode="codeblock.show-whitespace"/>
+            </xsl:variable>
+            <xsl:variable name="codeblock.whitespace-character.space" as="item()">
+              <xsl:apply-templates select="." mode="codeblock.whitespace-character.space"/>
+            </xsl:variable>
+            <xsl:variable name="codeblock.whitespace-character.tab" as="item()">
+              <xsl:apply-templates select="." mode="codeblock.whitespace-character.tab"/>
+            </xsl:variable>
+            <xsl:choose>
+              <xsl:when test="$codeblock.wrap or $codeblock.line-number or $codeblock.show-whitespace">
+                <xsl:variable name="content" as="node()*">
+                  <xsl:apply-templates/>
+                </xsl:variable>
+                <xsl:choose>
+                  <xsl:when test="$codeblock.line-number">
+                    <xsl:variable name="buf" as="document-node()">
+                      <xsl:document>
+                        <xsl:processing-instruction name="line-number"/>
+                        <xsl:apply-templates select="$content" mode="codeblock.line-number"/>
+                      </xsl:document>
+                    </xsl:variable>
+                    <xsl:variable name="line-count" select="count($buf/descendant::processing-instruction('line-number'))"/>
+                    <xsl:apply-templates select="$buf" mode="codeblock">
+                      <xsl:with-param name="line-count" select="$line-count" tunnel="yes"/>
+                      <xsl:with-param name="codeblock.show-whitespace" select="$codeblock.show-whitespace" tunnel="yes"/>
+                      <xsl:with-param name="codeblock.whitespace-character.space" select="$codeblock.whitespace-character.space" tunnel="yes"/>
+                      <xsl:with-param name="codeblock.whitespace-character.tab" select="$codeblock.whitespace-character.tab" tunnel="yes"/>
+                    </xsl:apply-templates>    
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:apply-templates select="$content" mode="codeblock">
+                      <xsl:with-param name="codeblock.show-whitespace" select="$codeblock.show-whitespace" tunnel="yes"/>
+                      <xsl:with-param name="codeblock.whitespace-character.space" select="$codeblock.whitespace-character.space" tunnel="yes"/>
+                      <xsl:with-param name="codeblock.whitespace-character.tab" select="$codeblock.whitespace-character.tab" tunnel="yes"/>
+                    </xsl:apply-templates>
+                  </xsl:otherwise>
+                </xsl:choose>                
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:apply-templates/>
+              </xsl:otherwise>
+            </xsl:choose>
+        </fo:block>
+    </xsl:template>
+
+    <xsl:template match="*[contains(@class,' pr-d/codeph ') and starts-with(@outputclass, 'language-')]">
+        <fo:inline xsl:use-attribute-sets="__codeph__language__">
+            <xsl:call-template name="commonattributes"/>
+            <xsl:apply-templates/>
+        </fo:inline>
+    </xsl:template>
+
+
+
 </xsl:stylesheet>

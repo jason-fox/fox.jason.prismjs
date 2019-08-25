@@ -49,37 +49,37 @@
         <fo:block>
           <fo:block>Lorem ipsum dolor sit amet consectetur adipiscing, elit porttitor taciti nostra dis potenti donec, fusce gravida primis metus.</fo:block>
           <fo:block>This page&#8217;s logo (SVG), highlighted with Prism:</fo:block>
-          <fo:block background-color="ALICEBLUE" font-family="MONOSPACE" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
-            <fo:inline border-end-width="0pt" color="#900050">
-              <fo:inline border-end-width="0pt" color="#900050">
-                <fo:inline border-end-width="0pt" color="#909090">&lt;</fo:inline>svg</fo:inline>
-              <fo:inline border-end-width="0pt" color="#609000">xmlns</fo:inline>
-              <fo:inline border-end-width="0pt" color="DARKCYAN">
-                <fo:inline border-end-width="0pt" color="#909090">=</fo:inline>
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>http://www.w3.org/2000/svg
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>
+          <fo:block background="LIGHTBLUE" background-color="ALICEBLUE" color="black" font-family="MONOSPACE" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">&lt;</fo:inline>svg</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">xmlns</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">=</fo:inline>
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>http://www.w3.org/2000/svg
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>
               </fo:inline>
-              <fo:inline border-end-width="0pt" color="#609000">viewBox</fo:inline>
-              <fo:inline border-end-width="0pt" color="DARKCYAN">
-                <fo:inline border-end-width="0pt" color="#909090">=</fo:inline>
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>0 0 200 170
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">viewBox</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">=</fo:inline>
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>0 0 200 170
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>
               </fo:inline>
-              <fo:inline border-end-width="0pt" color="#909090">&gt;</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">&gt;</fo:inline>
             </fo:inline>
-            <fo:inline border-end-width="0pt" color="#900050">
-              <fo:inline border-end-width="0pt" color="#900050">
-                <fo:inline border-end-width="0pt" color="#909090">&lt;</fo:inline>path</fo:inline>
-              <fo:inline border-end-width="0pt" color="#609000">fill</fo:inline>
-              <fo:inline border-end-width="0pt" color="DARKCYAN">
-                <fo:inline border-end-width="0pt" color="#909090">=</fo:inline>
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>#fff
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">&lt;</fo:inline>path</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">fill</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">=</fo:inline>
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>#fff
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>
               </fo:inline>
-              <fo:inline border-end-width="0pt" color="#609000">d</fo:inline>
-              <fo:inline border-end-width="0pt" color="DARKCYAN">
-                <fo:inline border-end-width="0pt" color="#909090">=</fo:inline>
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>M55.37 131.5H48.4v9.13h6.97c1.67 0 2.92-.4 3.78-1.22.85
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">d</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">=</fo:inline>
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>M55.37 131.5H48.4v9.13h6.97c1.67 0 2.92-.4 3.78-1.22.85
 	-.8 1.28-1.92 1.28-3.33s-.43-2.54-1.28-3.35c-.86-.8-2.12-1.2-3.78-1.2m29.52
 	6.4c.3-.53.47-1.2.47-2.04 0-1.35-.45-2.4-1.37-3.2-.92-.76-2.14-1.15-3.65
 	-1.15H72.9v8.52h7.32c2.26 0 3.82-.7 4.67-2.1M100 0L0 170h200L100 0M60.86
@@ -99,43 +99,43 @@
 	.3 1.65.65 2.33 1.1 1.53.96 2.28 2.27 2.28 3.94 0 2-.74 3.5-2.22 4.55m28.84
 	1.32v-17.54l-7.84 10.08-7.97-10.08v17.54H133v-21.2h2.78l7.58 10.06 7.45
 	-10.05h2.8v21.2h-2.4
-                <fo:inline border-end-width="0pt" color="#909090">"</fo:inline>
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">"</fo:inline>
               </fo:inline>
-              <fo:inline border-end-width="0pt" color="#909090">/&gt;</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">/&gt;</fo:inline>
             </fo:inline>
-            <fo:inline border-end-width="0pt" color="#900050">
-              <fo:inline border-end-width="0pt" color="#900050">
-                <fo:inline border-end-width="0pt" color="#909090">&lt;/</fo:inline>svg</fo:inline>
-              <fo:inline border-end-width="0pt" color="#909090">&gt;</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#900050">
+                <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">&lt;/</fo:inline>svg</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">&gt;</fo:inline>
             </fo:inline>
           </fo:block>
           <fo:block>Example:</fo:block>
-          <fo:block background-color="ALICEBLUE" font-family="MONOSPACE" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
-            <fo:inline border-end-width="0pt" color="DARKCYAN">var</fo:inline>Prism
-            <fo:inline border-end-width="0pt" color="SIENNA">=</fo:inline>
-            <fo:inline border-end-width="0pt" color="INDIANRED">require</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">(</fo:inline>
-            <fo:inline border-end-width="0pt" color="#609000">'prismjs'</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">)</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">;</fo:inline>
-            <fo:inline border-end-width="0pt" color="slategray">// The code snippet you want to highlight, as a string</fo:inline>
-            <fo:inline border-end-width="0pt" color="DARKCYAN">var</fo:inline>code
-            <fo:inline border-end-width="0pt" color="SIENNA">=</fo:inline>
-            <fo:inline border-end-width="0pt" color="#609000">"var data = 1;"</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">;</fo:inline>
-            <fo:inline border-end-width="0pt" color="slategray">// Returns a highlighted HTML string</fo:inline>
-            <fo:inline border-end-width="0pt" color="DARKCYAN">var</fo:inline>html
-            <fo:inline border-end-width="0pt" color="SIENNA">=</fo:inline>Prism
-            <fo:inline border-end-width="0pt" color="#909090">.</fo:inline>
-            <fo:inline border-end-width="0pt" color="INDIANRED">highlight</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">(</fo:inline>code
-            <fo:inline border-end-width="0pt" color="#909090">,</fo:inline>Prism
-            <fo:inline border-end-width="0pt" color="#909090">.</fo:inline>languages
-            <fo:inline border-end-width="0pt" color="#909090">.</fo:inline>javascript
-            <fo:inline border-end-width="0pt" color="#909090">,</fo:inline>
-            <fo:inline border-end-width="0pt" color="#609000">'javascript'</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">)</fo:inline>
-            <fo:inline border-end-width="0pt" color="#909090">;</fo:inline>
+          <fo:block background="LIGHTBLUE" background-color="ALICEBLUE" color="black" font-family="MONOSPACE" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">var</fo:inline>Prism
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="SIENNA">=</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="INDIANRED">require</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">(</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">'prismjs'</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">)</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">;</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="slategray">// The code snippet you want to highlight, as a string</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">var</fo:inline>code
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="SIENNA">=</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">"var data = 1;"</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">;</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="slategray">// Returns a highlighted HTML string</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="DARKCYAN">var</fo:inline>html
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="SIENNA">=</fo:inline>Prism
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">.</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="INDIANRED">highlight</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">(</fo:inline>code
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">,</fo:inline>Prism
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">.</fo:inline>languages
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">.</fo:inline>javascript
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">,</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#609000">'javascript'</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">)</fo:inline>
+            <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">;</fo:inline>
           </fo:block>
           <fo:block>Requiring
             <fo:inline font-family="MONOSPACE">prismjs</fo:inline>will load the default languages:
@@ -143,10 +143,10 @@
             <fo:inline font-family="MONOSPACE">css</fo:inline>,
             <fo:inline font-family="MONOSPACE">clike</fo:inline>and
             <fo:inline font-family="MONOSPACE">javascript</fo:inline>. You can load more languages with the
-            <fo:inline font-family="MONOSPACE">
-              <fo:inline border-end-width="0pt" color="INDIANRED">loadLanguages</fo:inline>
-              <fo:inline border-end-width="0pt" color="#909090">(</fo:inline>
-              <fo:inline border-end-width="0pt" color="#909090">)</fo:inline>
+            <fo:inline background="LIGHTBLUE" color="black" font-family="MONOSPACE">
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="INDIANRED">loadLanguages</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">(</fo:inline>
+              <fo:inline background="LIGHTBLUE" border-end-width="0pt" color="#909090">)</fo:inline>
             </fo:inline>utility, which will automatically handle any required dependencies.</fo:block>
         </fo:block>
       </fo:block>
