@@ -14,6 +14,9 @@
 		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
 		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
 
+		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
+		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/known.txt" toFile="${prismjs.unknown.file}"/>
+
 
 
 		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
@@ -42,6 +45,8 @@
 				<actions>
 					<local name="source"/>
 					<local name="source.exists"/>
+					<local name="lang.known"/>
+
 					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
 
 					<available property="source.exists" file="${source}"/>
@@ -60,11 +65,13 @@
 								<local name="lang"/>
 								<local name="short-lang"/>
 								<local name="highlighted"/>
+								<local name="lang.known"/>
 								<set-short-lang outputclass="@{outputclass}" default="@{default}" property="lang"/>
-								<prismjs-append-lang unless:blank="${lang}"/>
-								<prismjs unless:blank="${lang}" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
+								<prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
 
-								<xmltask unless:blank="${lang}" outputter="default" indent="false" source="${source}" dest="${source}">
+								<prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
+
+								<xmltask if:set="lang.known" outputter="default" indent="false" source="${source}" dest="${source}">
 									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
 									<attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
 								</xmltask>

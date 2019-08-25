@@ -22,24 +22,27 @@
 	</scriptdef>
 
 	<macrodef name="prismjs-append-lang">
+		<attribute name="lang"/>
+		<attribute name="known"/>
 		<sequential>
 			<local name="prismjs.lang.file"/>
 			<local name="prismjs.lang.js"/>
-			<local name="prismjs.lang.known"/>
 			<local name="prismjs.lang.loaded"/>
+			<local name="prismjs.lang.known"/>
+			<local name="prismjs.lang.raise.error"/>
 
 			<echo taskname="prismjs" message="${lang}" level="debug"/>
 
 			<condition property="prismjs.lang.loaded">
-				<resourcecontains resource="${prismjs.temp.file}" substring=".languages.${lang}="/>
+				<resourcecontains resource="${prismjs.temp.file}" substring=".languages.@{lang}="/>
 			</condition>
 
-			<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-${lang}.min.js">
+			<condition property="prismjs.lang.file" value="${prism.component.dir}/prism-@{lang}.min.js">
 				<and>
 					<not>
 						<isset property="prismjs.lang.loaded"/>
 					</not>
-					<available file="${prism.component.dir}/prism-${lang}.min.js"/>
+					<available file="${prism.component.dir}/prism-@{lang}.min.js"/>
 				</and>
 			</condition>
 
@@ -49,17 +52,32 @@
 					<isset property="prismjs.lang.loaded"/>
 				</or>
 			</condition>
+			<condition property="prismjs.lang.raise.error">
+				<and>
+					<not>
+						<isset property="prismjs.lang.known"/>
+					</not>
+					<not>
+						<resourcecontains resource="${prismjs.unknown.file}" substring=".languages.@{lang}="/>
+					</not>
+				</and>
+			</condition>
 
 			<dita-ot-echo if:set="prismjs.lang.file" id="PRSM001I">
-				<param name="1" value="${lang}"/>
+				<param name="1" value="@{lang}"/>
 			</dita-ot-echo>
-			<dita-ot-echo unless:set="prismjs.lang.known" id="PRSM002W">
-				<param name="1" value="${lang}"/>
+			<dita-ot-echo if:set="prismjs.lang.raise.error" id="PRSM002W">
+				<param name="1" value="@{lang}"/>
 			</dita-ot-echo>
 
 			<loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
 			<echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
-			<echo unless:set="prismjs.lang.known" append="true" message="${line.separator}/* .languages.${lang}= */" file="${prismjs.temp.file}"/>
+			<echo if:set="prismjs.lang.raise.error" append="true" message="${line.separator}/* .languages.${lang}= */" file="${prismjs.unknown.file}"/>
+
+
+			<property if:set="prismjs.lang.known" name="@{known}" value="true"/>
+
+
 		</sequential>
 	</macrodef>
 
