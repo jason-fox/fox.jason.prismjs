@@ -10,9 +10,13 @@ var property = attributes.get("property");
 
 var lang = /\blang(?:uage)?-([\w-]+)\b/i;
 var language = (outputclass.match(lang) || [, ""])[1].toLowerCase();
+var defaultLanguage = (defaultLang.match(lang) || [, ""])[1].toLowerCase();
 
 if (language === ""){
 	language = outputclass;
 }
+if (defaultLanguage === ""){
+	defaultLanguage = defaultLang;
+}
 
-project.setProperty(property, language === "" ? defaultLang : language);
+project.setProperty(property, language === "" ? defaultLanguage : language);
