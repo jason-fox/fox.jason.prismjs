@@ -14,7 +14,7 @@
     </xsl:template>
 
     <xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">
-        <fo:inline xsl:use-attribute-sets="ph">
+        <fo:inline xsl:use-attribute-sets="__codeph__language__">
             <xsl:call-template name="commonattributes"/>
             <xsl:call-template name="processPrismAttrSetReflection">
                 <xsl:with-param name="attrSet" select="replace(@outputclass,'token ','__token__')"/>
@@ -23,6 +23,14 @@
             <xsl:apply-templates/>
         </fo:inline>
     </xsl:template>
+
+    <xsl:template match="*[contains(@class,' pr-d/codeph ') and starts-with(@outputclass, 'language-')]">
+        <fo:inline xsl:use-attribute-sets="__codeph__language__">
+            <xsl:call-template name="commonattributes"/>
+            <xsl:apply-templates/>
+        </fo:inline>
+    </xsl:template>
+
 
     <xsl:template match="*[contains(@class,' pr-d/codeblock ') and starts-with(@outputclass, 'language-')]">
         <xsl:call-template name="generateAttrLabel"/>
@@ -80,13 +88,6 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="*[contains(@class,' pr-d/codeph ') and starts-with(@outputclass, 'language-')]">
-        <fo:inline xsl:use-attribute-sets="__codeph__language__">
-            <xsl:call-template name="commonattributes"/>
-            <xsl:apply-templates/>
-        </fo:inline>
-    </xsl:template>
-
-
+ 
 
 </xsl:stylesheet>
