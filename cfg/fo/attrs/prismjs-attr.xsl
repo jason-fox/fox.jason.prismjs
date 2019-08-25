@@ -7,12 +7,12 @@
 
 	<xsl:attribute-set name="__codeblock__language__" use-attribute-sets="codeblock">
 		<xsl:attribute name="color">black</xsl:attribute>
-		<xsl:attribute name="background-color">#b3d4fc</xsl:attribute>
+		<xsl:attribute name="background-color">#f5f2f0</xsl:attribute>
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__codeph__language__" use-attribute-sets="codeph">
 		<xsl:attribute name="color">black</xsl:attribute>
-		<xsl:attribute name="background-color">#b3d4fc</xsl:attribute>
+		<!--xsl:attribute name="background-color">#f5f2f0</xsl:attribute-->
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 
