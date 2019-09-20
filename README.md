@@ -12,7 +12,8 @@ which are automatically colorized according to language syntax. The plug-in exte
 
 > ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
 
-# Table of Contents
+<details>
+<summary><strong>Table of Contents</strong></summary>
 
 -   [Background](#background)
     -   [What is Prism-JS?](#what-is-prism-js)
@@ -28,9 +29,11 @@ which are automatically colorized according to language syntax. The plug-in exte
         -   [Altering the PDF look and feel](#altering-the-pdf-look-and-feel)
 -   [License](#license)
 
-# Background
+</details>
 
-## What is Prism-JS?
+## Background
+
+### What is Prism-JS?
 
 <a href="http://prismjs.com"><img src="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" align="right" height="70"></a>
 
@@ -50,12 +53,12 @@ http://lea.verou.me/2012/07/introducing-prism-an-awesome-new-syntax-highlighter/
 
 ---
 
-# Install
+## Install
 
 The DITA-OT Prism-JS syntax highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is
 recommended that you upgrade to the latest version.
 
-## Installing DITA-OT
+### Installing DITA-OT
 
 <a href="https://www.dita-ot.org"><img src="https://www.dita-ot.org/images/dita-ot-logo.svg" align="right" height="55"></a>
 
@@ -76,7 +79,7 @@ unzip -q dita-ot-3.3.4.zip
 rm dita-ot-3.3.4.zip
 ```
 
-## Installing the Plug-in
+### Installing the Plug-in
 
 -   Run the plug-in installation commands:
 
@@ -90,7 +93,7 @@ The `dita` command line tool requires no additional configuration.
 
 ---
 
-# Usage
+## Usage
 
 To highlight the syntax within codeblocks, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in
 your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or
@@ -141,7 +144,7 @@ e.g.:
 A test document including HTML, CSS and JavaScript code snippets can be found within the plug-in at:
 `PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample`
 
-## Invocation from the command line
+### Invocation from the command line
 
 The Plug-in extends the existing PDF and HTML transforms
 
@@ -165,18 +168,18 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 ![](https://jason-fox.github.io/fox.jason.prismjs/prism-html.png)
 
-## Customizing the output
+### Customizing the output
 
 Prism-JS is easily extended to other languages since it purely relies on regular expressions. Additional languages are loaded dynamically during processing. A large number of
 additional languages are supported - just look at the list on https://github.com/PrismJS/prism/tree/master/components
 
 
-### Altering the static HTML look and feel
+#### Altering the static HTML look and feel
 
 Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amend a copy of the `resource/style.css` file to alter the look-and-feel of the rendered HTML
 
 
-#### `plugin.xml` Configuration
+##### `plugin.xml` Configuration
 
 ```xml
 <plugin id="com.example.prismjs-theme">
@@ -187,7 +190,7 @@ Extend with an additional plug-in which overrides the default `prismjs.css.file`
 </plugin>
 ```
 
-#### ANT Build file: `theme.xml`
+##### ANT Build file: `theme.xml`
 
 ```xml
 <project name="com.example.prismjs-theme">
@@ -199,12 +202,12 @@ Extend with an additional plug-in which overrides the default `prismjs.css.file`
 
 A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
-### Altering the PDF look and feel
+#### Altering the PDF look and feel
 
 The `cfg/fo/attrs/prismjs-attr.xsl` provides the colors for the PDF output. The names of the attributes match the CSS
 file, copy and amend the `prismjs-attr.xsl` file in your own plug-in.
 
-#### `plugin.xml` Configuration
+##### `plugin.xml` Configuration
 
 ```xml
 <plugin id="com.example.prismjs-theme">
@@ -213,7 +216,7 @@ file, copy and amend the `prismjs-attr.xsl` file in your own plug-in.
 </plugin>
 ```
 
-#### `xsl/xslfo.xsl` XSL Stylesheet
+##### `xsl/xslfo.xsl` XSL Stylesheet
 
 Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">` template as shown:
 
@@ -244,7 +247,7 @@ Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(
 
 A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
-# License
+## License
 
 [Apache 2.0](LICENSE) © 2018-2019 Jason Fox
 
