@@ -3,7 +3,7 @@ sudo: required
 jdk:
   - openjdk8
 env:
-  - DITA_OT=3.3.3
+  - DITA_OT=3.3.4
 
 before_install:
   - sudo apt-get install ant
