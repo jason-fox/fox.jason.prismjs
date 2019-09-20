@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
 
-This is a syntax highlighting DITA-OT Plug-in which integrates the flexible [Prism-JS](https://github.com/PrismJS/prism)
+This is a syntax highlighting [DITA-OT Plug-in](https://www.dita-ot.org/plugins) which integrates the flexible [Prism-JS](https://github.com/PrismJS/prism)
 highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets
 which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
 
@@ -64,7 +64,7 @@ The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 -   Full installation instructions for downloading DITA-OT can be found
     [here](https://www.dita-ot.org/3.3/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.3.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
+    1.  Download the `dita-ot-3.3.4.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
 
