@@ -247,6 +247,8 @@ Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(
 
 A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
+> ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted-dark.png)
+
 ## License
 
 [Apache 2.0](LICENSE) © 2018-2019 Jason Fox
