@@ -20,13 +20,13 @@ eval(
 
 // Get the grammar regex used to apply highlighting.
 var lang = /\blang(?:uage)?-([\w-]+)\b/i;
-var language = (outputclass.match(lang) || [, ""])[1].toLowerCase();
+var language = (outputclass.match(lang) || [null, ""])[1].toLowerCase();
 var grammar = Prism.languages[language];
 
 // If no grammar has been found, try again without the language- prefix.
 if (!grammar) {
   var lang2 = /\b([\w-]+)\b/i;
-  var language2 = (outputclass.match(lang2) || [, ""])[1].toLowerCase();
+  var language2 = (outputclass.match(lang2) || [null, ""])[1].toLowerCase();
   grammar = Prism.languages[language2];
 }
 
