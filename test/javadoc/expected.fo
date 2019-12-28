@@ -356,9 +356,7 @@
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
-                                      <fo:basic-link color="blue" internal-destination="unique_12">
-                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
-                                      </fo:basic-link>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -379,9 +377,7 @@
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
-                                      <fo:basic-link color="blue" internal-destination="unique_12">
-                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
-                                      </fo:basic-link>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -839,9 +835,7 @@
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
-                                      <fo:basic-link color="blue" internal-destination="unique_12">
-                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
-                                      </fo:basic-link>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfig</fo:inline>
                                       <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
@@ -894,9 +888,7 @@
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
                                       <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
-                                      <fo:basic-link color="blue" internal-destination="unique_12">
-                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
-                                      </fo:basic-link>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfigFromText</fo:inline>
                                       <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang

@@ -42,7 +42,9 @@ function getHighlight(text) {
         .replace(/>/g, "&gt;");
   return highlight
     .replace(/<span class=/g, '<ph class="- topic/ph " outputclass=')
-    .replace(/<\/span>/g, "</ph>");
+    .replace(/<\/span>/g, "</ph>")
+    .replace(/&amp;<\/ph>gt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&gt;')
+    .replace(/&amp;<\/ph>lt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&lt;');
 }
 
 function getXML(highlight) {
@@ -54,12 +56,15 @@ if (count > 0) {
   var start = xml.indexOf(">", xml.indexOf('xtrc="'+ xtrc +'"')) + 1;
   var end = xml.indexOf("</"+ name, start);
   var fragment = xml.substring(start, end);
-  var highlightedFragment = ""
+  var highlightedFragment = "";
   var textStart = 0;
   var textEnd = fragment.indexOf("<", textStart);
   while (textStart < fragment.length()) {
-    highlightedFragment += getHighlight(fragment.substring(textStart, textEnd))
+    highlightedFragment +=getHighlight(fragment.substring(textStart, textEnd))
     textStart = fragment.indexOf(">", textEnd)+1;
+    if (fragment.substring(textEnd, textStart).indexOf("<xref") !=-1){
+       textStart =  fragment.indexOf("</xref>", textEnd)+7;
+    }
     highlightedFragment += fragment.substring(textEnd, textStart);
     textEnd = fragment.indexOf("<", textStart);
     if(textEnd == -1){

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic props="javadoc" id="org.casbin.jcasbin.model.Policy" outputclass="class">
+  <title>Class Policy</title>
+  <titlealts>
+    <navtitle>Policy</navtitle>
+    <searchtitle>Policy</searchtitle>
+  </titlealts>
+  <body outputclass="java">
+    <p>
+      <b>Direct Known Subclasses:</b>
+    </p>
+    <ul>
+      <li>
+        <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.model.Model">Model</xref>
+      </li>
+    </ul>
+    <codeblock>public class <b>Policy</b> extends java.lang.Object
+    </codeblock>
+    <section outputclass="fields_summary">
+      <title>Field Summary</title>
+      <table outputclass="field_summary">
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="25%"/>
+          <colspec colname="c2" colnum="2" colwidth="75%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">Modifier and Type</entry>
+              <entry colname="c2" align="left">Field and Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>Map​&lt;java.​lang.​String&gt;​​&lt;Map​&lt;java.​lang.​String&gt;​​&lt;
+                  <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.model.Assertion">Assertion</xref>&gt;​&gt;​
+                </codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/fields_model">model</xref>
+                </codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section outputclass="contructors_summary">
+      <title>Constructor Summary</title>
+      <table outputclass="constructor_summary">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">Constructor and Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/constructors_Policy">Policy</xref>()
+                </codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section outputclass="methods_summary">
+      <title>Method Summary</title>
+      <table outputclass="method_summary">
+        <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="25%"/>
+          <colspec colname="c2" colnum="2" colwidth="75%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">Modifier and Type</entry>
+              <entry colname="c2" align="left">Method and Description</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>boolean</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_addPolicy">addPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)
+                </codeph> - addPolicy adds a policy rule to the model.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>void</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_buildRoleLinks">buildRoleLinks</xref>(
+                  <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.rbac.RoleManager">RoleManager</xref> rm)
+                </codeph> - buildRoleLinks initializes the roles in RBAC.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>void</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_clearPolicy">clearPolicy</xref>()
+                </codeph> - clearPolicy clears all current policy.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>List​&lt;List​&lt;java.​lang.​String&gt;​&gt;​</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_getFilteredPolicy">getFilteredPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex, java.​lang.​String[] fieldValues)
+                </codeph> - getFilteredPolicy gets rules based on field filters from a policy.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>List​&lt;List​&lt;java.​lang.​String&gt;​&gt;​</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_getPolicy">getPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype)
+                </codeph> - getPolicy gets all rules in a policy.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>List​&lt;java.​lang.​String&gt;​</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_getValuesForFieldInPolicy">getValuesForFieldInPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex)
+                </codeph> - getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>boolean</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_hasPolicy">hasPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)
+                </codeph> - hasPolicy determines whether a model has the specified policy rule.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>void</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_printPolicy">printPolicy</xref>()
+                </codeph> - printPolicy prints the policy to log.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>boolean</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_removeFilteredPolicy">removeFilteredPolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex, java.​lang.​String[] fieldValues)
+                </codeph> - removeFilteredPolicy removes policy rules based on field filters from the model.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>boolean</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_removePolicy">removePolicy</xref>(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)
+                </codeph> - removePolicy removes a policy rule from the model.
+              </entry>
+            </row>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>java.​lang.​String</codeph>
+              </entry>
+              <entry colname="c2" align="left">
+                <codeph>
+                  <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.model.Policy/methods_savePolicyToText">savePolicyToText</xref>()
+                </codeph> - savePolicyToText saves the policy to the text.
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">Methods inherited from class java.lang.Object</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</codeph>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </section>
+    <section outputclass="fields" id="org.casbin.jcasbin.model.Policy_fields">
+      <title>Field Detail</title>
+      <table outputclass="field_details" id="fields_model">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">model</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>public Map​&lt;java.​lang.​String&gt;​​&lt;Map​&lt;java.​lang.​String&gt;​​&lt;<xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.model.Assertion">Assertion</xref>&gt;​&gt;​ model
+                </codeph>
+                <p/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+    </section>
+    <section outputclass="constructors" id="org.casbin.jcasbin.model.Policy_constructors">
+      <title>Constructor Detail</title>
+      <table outputclass="constructor_details" id="constructors_Policy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">Policy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeph>Policy()</codeph>
+                <p/>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+    </section>
+    <section outputclass="methods" id="org.casbin.jcasbin.model.Policy_methods">
+      <title>Method Detail</title>
+      <table outputclass="method_details" id="methods_addPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">addPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public boolean addPolicy(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)</codeblock>
+                <p>addPolicy adds a policy rule to the model.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>rule </codeph> - rule the policy rule.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>succeeds or not.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_buildRoleLinks">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">buildRoleLinks</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public void buildRoleLinks(<xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.rbac.RoleManager">RoleManager</xref> rm)
+                </codeblock>
+                <p>buildRoleLinks initializes the roles in RBAC.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>rm </codeph> - rm the role manager.
+                  </li>
+                </ul>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_clearPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">clearPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public void clearPolicy()</codeblock>
+                <p>clearPolicy clears all current policy.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_getFilteredPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">getFilteredPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public List​&lt;List​&lt;java.​lang.​String&gt;​&gt;​ getFilteredPolicy(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex, java.​lang.​String[] fieldValues)</codeblock>
+                <p>getFilteredPolicy gets rules based on field filters from a policy.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>fieldIndex </codeph> - fieldIndex the policy rule's start index to be matched.
+                  </li>
+                  <li>
+                    <codeph>fieldValues </codeph> - fieldValues the field values to be matched, value ""
+          means not to match this field.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>the filtered policy rules of section sec and policy type ptype.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_getPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">getPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public List​&lt;List​&lt;java.​lang.​String&gt;​&gt;​ getPolicy(java.​lang.​String sec, java.​lang.​String ptype)</codeblock>
+                <p>getPolicy gets all rules in a policy.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>the policy rules of section sec and policy type ptype.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_getValuesForFieldInPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">getValuesForFieldInPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public List​&lt;java.​lang.​String&gt;​ getValuesForFieldInPolicy(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex)</codeblock>
+                <p>getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>fieldIndex </codeph> - fieldIndex the policy rule's index.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>the field values specified by fieldIndex.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_hasPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">hasPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public boolean hasPolicy(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)</codeblock>
+                <p>hasPolicy determines whether a model has the specified policy rule.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>rule </codeph> - rule the policy rule.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>whether the rule exists.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_printPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">printPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public void printPolicy()</codeblock>
+                <p>printPolicy prints the policy to log.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_removeFilteredPolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">removeFilteredPolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public boolean removeFilteredPolicy(java.​lang.​String sec, java.​lang.​String ptype, int fieldIndex, java.​lang.​String[] fieldValues)</codeblock>
+                <p>removeFilteredPolicy removes policy rules based on field filters from the model.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>fieldIndex </codeph> - fieldIndex the policy rule's start index to be matched.
+                  </li>
+                  <li>
+                    <codeph>fieldValues </codeph> - fieldValues the field values to be matched, value ""
+          means not to match this field.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>succeeds or not.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_removePolicy">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">removePolicy</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public boolean removePolicy(java.​lang.​String sec, java.​lang.​String ptype, List​&lt;java.​lang.​String&gt;​ rule)</codeblock>
+                <p>removePolicy removes a policy rule from the model.</p>
+                <p>
+                  <b>Parameters:</b>
+                </p>
+                <ul>
+                  <li>
+                    <codeph>sec </codeph> - sec the section, "p" or "g".
+                  </li>
+                  <li>
+                    <codeph>ptype </codeph> - ptype the policy type, "p", "p2", .. or "g", "g2", ..
+                  </li>
+                  <li>
+                    <codeph>rule </codeph> - rule the policy rule.
+                  </li>
+                </ul>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>succeeds or not.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+      <table outputclass="method_details" id="methods_savePolicyToText">
+        <tgroup cols="1">
+          <colspec colname="c1" colnum="1" colwidth="100%"/>
+          <thead>
+            <row>
+              <entry colname="c1" align="left">savePolicyToText</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry colname="c1" align="left">
+                <codeblock>public java.​lang.​String savePolicyToText()</codeblock>
+                <p>savePolicyToText saves the policy to the text.</p>
+                <p>
+                  <b>Returns:</b>
+                </p>
+                <p>the policy text.</p>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+      <p/>
+    </section>
+  </body>
+</topic>
