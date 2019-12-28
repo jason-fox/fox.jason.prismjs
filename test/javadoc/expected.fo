@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<fo:flow flow-name="xsl-region-body" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:block>
+    <fo:marker marker-class-name="current-topic-number">1</fo:marker>
+    <fo:marker marker-class-name="current-header">codeblock</fo:marker>
+    <fo:block>
+      <fo:block font-weight="bold">Chapter
+        <fo:block font-weight="bold">1</fo:block>
+      </fo:block>
+    </fo:block>
+    <fo:block border-after-color="black" font-family="STANDARD" font-weight="bold">codeblock</fo:block>
+    <fo:table page-break-after="always" table-layout="fixed" width="100%">
+      <fo:table-column column-number="1" column-width="35%"></fo:table-column>
+      <fo:table-column column-number="2" column-width="65%"></fo:table-column>
+      <fo:table-body>
+        <fo:table-row>
+          <fo:table-cell>
+            <fo:block font-family="STANDARD">
+              <fo:block font-family="STANDARD" font-weight="bold">Topics:</fo:block>
+              <fo:list-block provisional-distance-between-starts="18pt" provisional-label-separation="12pt">
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_1">API Reference</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+              </fo:list-block>
+            </fo:block>
+          </fo:table-cell>
+          <fo:table-cell padding-start="10pt">
+            <fo:block></fo:block>
+          </fo:table-cell>
+        </fo:table-row>
+      </fo:table-body>
+    </fo:table>
+    <fo:block>
+      <fo:block>
+        <fo:block border-after-color="black" font-family="STANDARD" font-weight="bold">
+          <fo:block border-end-width="0pt">
+            <fo:marker marker-class-name="current-h2">API Reference</fo:marker>
+            <fo:wrapper></fo:wrapper>
+            <fo:wrapper></fo:wrapper>API Reference</fo:block>
+        </fo:block>
+        <fo:block>
+          <fo:block>
+            <fo:block font-family="STANDARD" font-weight="bold">Packages</fo:block>
+            <fo:block>
+              <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_2">org.casbin.jcasbin.config</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_3">org.casbin.jcasbin.effect</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_4">org.casbin.jcasbin.exception</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_5">org.casbin.jcasbin.main</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_6">org.casbin.jcasbin.model</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_7">org.casbin.jcasbin.persist</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_8">org.casbin.jcasbin.persist.file_adapter</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_9">org.casbin.jcasbin.rbac</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_10">org.casbin.jcasbin.util</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+                <fo:list-item relative-align="baseline">
+                  <fo:list-item-label keep-together.within-line="always">
+                    <fo:block text-align="start">&#8226;</fo:block>
+                  </fo:list-item-label>
+                  <fo:list-item-body>
+                    <fo:block>
+                      <fo:basic-link color="blue" internal-destination="unique_11">org.casbin.jcasbin.util.function</fo:basic-link>
+                    </fo:block>
+                  </fo:list-item-body>
+                </fo:list-item>
+              </fo:list-block>
+            </fo:block>
+          </fo:block>
+        </fo:block>
+        <fo:block>
+          <fo:block>
+            <fo:block font-family="STANDARD" font-weight="bold">
+              <fo:block>
+                <fo:wrapper></fo:wrapper>
+                <fo:wrapper></fo:wrapper>Package org.casbin.jcasbin.config</fo:block>
+            </fo:block>
+            <fo:block>
+              <fo:block>
+                <fo:block font-family="STANDARD" font-weight="bold">Class Summary</fo:block>
+                <fo:block>
+                  <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                    <fo:list-item relative-align="baseline">
+                      <fo:list-item-label keep-together.within-line="always">
+                        <fo:block text-align="start">&#8226;</fo:block>
+                      </fo:list-item-label>
+                      <fo:list-item-body>
+                        <fo:block>
+                          <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
+                        </fo:block>
+                      </fo:list-item-body>
+                    </fo:list-item>
+                  </fo:list-block>
+                </fo:block>
+              </fo:block>
+            </fo:block>
+            <fo:block>
+              <fo:block>
+                <fo:block font-family="STANDARD" font-weight="bold">
+                  <fo:block>
+                    <fo:wrapper></fo:wrapper>
+                    <fo:wrapper></fo:wrapper>Class Config</fo:block>
+                </fo:block>
+                <fo:block>
+                  <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
+                    <fo:inline font-weight="bold">
+                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                    </fo:inline>
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">extends</fo:inline>java
+                    <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
+                    <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
+                    <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Object</fo:inline>
+                  </fo:block>
+                  <fo:block>
+                    <fo:block font-family="STANDARD" font-weight="bold">Method Summary</fo:block>
+                    <fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="25%"></fo:table-column>
+                            <fo:table-column column-number="2" column-width="75%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">Modifier and Type</fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">Method and Description</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_get">get</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_getBool">getBool</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_getFloat">getFloat</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_getInt">getInt</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_getString">getString</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_getStrings">getStrings</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                                      </fo:basic-link>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_newConfig">newConfig</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>- newConfig create an empty configuration representation from file.</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                                      </fo:basic-link>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_newConfigFromText">newConfigFromText</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>- newConfigFromText create an empty configuration representation from text.</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                                <fo:table-cell text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                      <fo:basic-link color="blue" internal-destination="unique_12_Connect_42_methods_set">set</fo:basic-link>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">Methods inherited from class java.lang.Object</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">clone
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>equals
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>finalize
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>getClass
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>hashCode
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>notify
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>notifyAll
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>toString
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>wait
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>wait
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>wait</fo:inline>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                    </fo:block>
+                  </fo:block>
+                  <fo:block>
+                    <fo:block font-family="STANDARD" font-weight="bold">Method Detail</fo:block>
+                    <fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">get</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">get</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">getBool</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getBool</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">getFloat</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getFloat</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">getInt</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getInt</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">getString</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getString</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">getStrings</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getStrings</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>
+                                      <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
+                                        <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">]</fo:inline>
+                                      </fo:inline>
+                                    </fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">newConfig</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                                      </fo:basic-link>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfig</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block>newConfig create an empty configuration representation from file.</fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">confName</fo:inline>- confName the path of the model file.</fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>the constructor of Config.</fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">newConfigFromText</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:basic-link color="blue" internal-destination="unique_12">
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                                      </fo:basic-link>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfigFromText</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block>newConfigFromText create an empty configuration representation from text.</fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">text</fo:inline>- text the model text.</fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Returns:</fo:inline>
+                                    </fo:block>
+                                    <fo:block>the constructor of Config.</fo:block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                      <fo:block-container reference-orientation="0">
+                        <fo:block>
+                          <fo:table border-after-color="black" border-before-color="black" border-end-color="black" border-end-style="solid" border-end-width="1pt" table-layout="fixed" width="100%">
+                            <fo:table-column column-number="1" column-width="100%"></fo:table-column>
+                            <fo:table-header>
+                              <fo:table-row>
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block font-weight="bold" space-after.conditionality="retain" space-before.conditionality="retain">set</fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                              <fo:table-row keep-together.within-page="always">
+                                <fo:table-cell border-before-color="black" text-align="left">
+                                  <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
+                                    <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">set</fo:inline>
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
+                                      <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
+                                    </fo:block>
+                                    <fo:block></fo:block>
+                                    <fo:block>
+                                      <fo:inline font-weight="bold">Parameters:</fo:inline>
+                                    </fo:block>
+                                    <fo:list-block provisional-distance-between-starts="5mm" provisional-label-separation="1mm">
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">key</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                      <fo:list-item relative-align="baseline">
+                                        <fo:list-item-label keep-together.within-line="always">
+                                          <fo:block text-align="start">&#8226;</fo:block>
+                                        </fo:list-item-label>
+                                        <fo:list-item-body>
+                                          <fo:block>
+                                            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">value</fo:inline>
+                                          </fo:block>
+                                        </fo:list-item-body>
+                                      </fo:list-item>
+                                    </fo:list-block>
+                                  </fo:block>
+                                </fo:table-cell>
+                              </fo:table-row>
+                            </fo:table-body>
+                          </fo:table>
+                        </fo:block>
+                      </fo:block-container>
+                      <fo:block></fo:block>
+                    </fo:block>
+                  </fo:block>
+                </fo:block>
+              </fo:block>
+            </fo:block>
+          </fo:block>
+        </fo:block>
+      </fo:block>
+    </fo:block>
+  </fo:block>
+</fo:flow>
+

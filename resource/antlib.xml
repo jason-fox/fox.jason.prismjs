@@ -16,6 +16,8 @@
 		<attribute name="xtrc"/>
 		<attribute name="xtrf"/>
 		<attribute name="highlighted"/>
+		<attribute name="count"/>
+		<attribute name="xml"/>
 	</scriptdef>
 	<!--
 		Obtains the corrected highlighting language from the outputclass
@@ -26,7 +28,6 @@
 	-->
 	<scriptdef language="javascript" name="set-short-lang" src="${dita.plugin.fox.jason.prismjs.dir}/resource/short-lang.js">
 		<attribute name="outputclass"/>
-		<attribute name="default"/>
 		<attribute name="property"/>
 	</scriptdef>
 	<!--
@@ -92,4 +93,30 @@
 		</sequential>
 	</macrodef>
 
+	<macrodef name="add-highlight">
+		<attribute name="text"/>
+		<attribute name="name"/>
+		<attribute name="class"/>
+		<attribute name="outputclass"/>
+		<attribute name="xtrc"/>
+		<attribute name="xtrf"/>
+		<attribute name="count"/>
+		<attribute name="xml"/>
+		<attribute name="source"/>
+		<sequential>
+			<local name="lang"/>
+			<local name="short-lang"/>
+			<local name="highlighted"/>
+			<local name="lang.known"/>
+
+			<set-short-lang outputclass="@{outputclass}" property="lang"/>
+			<prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
+			<prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted" count="@{count}" xml="@{xml}"/>
+
+			<xmltask if:set="lang.known" outputter="default" indent="false" source="@{source}" dest="${source}">
+				<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
+				<attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
+			</xmltask>
+		</sequential>
+	</macrodef>
 </antlib>

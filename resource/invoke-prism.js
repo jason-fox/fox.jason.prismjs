@@ -9,6 +9,8 @@ var name = attributes.get("name");
 var xtrc = attributes.get("xtrc");
 var xtrf = attributes.get("xtrf");
 var clazz = attributes.get("class");
+var count = attributes.get("count");
+var xml = attributes.get("xml");
 
 // Load the Prism.js library at runtime.
 eval(
@@ -30,31 +32,42 @@ if (!grammar) {
   grammar = Prism.languages[language2];
 }
 
-// Run the prism highlighter then replace spans with ph elements
-var highlight = grammar
-  ? Prism.highlight(text, grammar, language)
-  : text
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-highlight = highlight
-  .replace(/<span class=/g, '<ph class="- topic/ph " outputclass=')
-  .replace(/<\/span>/g, "</ph>");
-highlight =
-  "<" +
-  name +
-  ' class="' +
-  clazz +
-  '" outputclass="' +
-  outputclass +
-  '" xtrc="' +
-  xtrc +
-  '" xtrf="' +
-  xtrf +
-  '">' +
-  highlight +
-  "</" +
-  name +
-  ">";
+function getHighlight(text) {
+  // Run the prism highlighter then replace spans with ph elements
+  var highlight = grammar
+    ? Prism.highlight(text, grammar, language)
+    : text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+  return highlight
+    .replace(/<span class=/g, '<ph class="- topic/ph " outputclass=')
+    .replace(/<\/span>/g, "</ph>");
+}
 
-project.setProperty(attributes.get("highlighted"), highlight);
+function getXML(highlight) {
+  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + 
+  '" xtrc="' + xtrc + '" xtrf="' + xtrf + '">' + highlight + "</" + name + ">";
+}
+
+if (count > 0) {
+  var start = xml.indexOf(">", xml.indexOf('xtrc="'+ xtrc +'"')) + 1;
+  var end = xml.indexOf("</"+ name, start);
+  var fragment = xml.substring(start, end);
+  var highlightedFragment = ""
+  var textStart = 0;
+  var textEnd = fragment.indexOf("<", textStart);
+  while (textStart < fragment.length()) {
+    highlightedFragment += getHighlight(fragment.substring(textStart, textEnd))
+    textStart = fragment.indexOf(">", textEnd)+1;
+    highlightedFragment += fragment.substring(textEnd, textStart);
+    textEnd = fragment.indexOf("<", textStart);
+    if(textEnd == -1){
+      highlightedFragment += getHighlight(fragment.substring(textStart, fragment.length()))
+      break;
+    }
+  }
+  project.setProperty(attributes.get("highlighted"), getXML(highlightedFragment));
+} else {
+  project.setProperty(attributes.get("highlighted"), getXML(getHighlight(text)));
+}

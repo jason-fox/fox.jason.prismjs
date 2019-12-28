@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="sample" outputclass="language-java">
+  <title>API Reference</title>
+  <body>
+    <section>
+      <title>Packages</title>
+      <ul>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config">org.casbin.jcasbin.config</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.effect">org.casbin.jcasbin.effect</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.exception">org.casbin.jcasbin.exception</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.main">org.casbin.jcasbin.main</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.model">org.casbin.jcasbin.model</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.persist">org.casbin.jcasbin.persist</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.persist.file_adapter">org.casbin.jcasbin.persist.file_adapter</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.rbac">org.casbin.jcasbin.rbac</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.util">org.casbin.jcasbin.util</xref>
+        </li>
+        <li>
+          <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.util.function">org.casbin.jcasbin.util.function</xref>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <topic id="org.casbin.jcasbin.config" outputclass="package">
+    <title>Package org.casbin.jcasbin.config</title>
+    <titlealts>
+      <navtitle>org.casbin.jcasbin.config</navtitle>
+      <searchtitle>org.casbin.jcasbin.config</searchtitle>
+    </titlealts>
+    <body>
+      <section outputclass="class_summary">
+        <title>Class Summary</title>
+        <ul>
+          <li>
+            <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config.Config">Config</xref>
+          </li>
+        </ul>
+      </section>
+    </body>
+    <topic outputclass="class" id="org.casbin.jcasbin.config.Config">
+      <title>Class Config</title>
+      <titlealts>
+        <navtitle>Config</navtitle>
+        <searchtitle>Config</searchtitle>
+      </titlealts>
+      <body outputclass="language-java">
+        <codeblock>public class <b>Config</b> extends java.lang.Object</codeblock>
+        <section outputclass="methods_summary">
+          <title>Method Summary</title>
+          <table outputclass="method_summary">
+            <tgroup cols="2">
+              <colspec colname="c1" colnum="1" colwidth="25%"/>
+              <colspec colname="c2" colnum="2" colwidth="75%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">Modifier and Type</entry>
+                  <entry colname="c2" align="left">Method and Description</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>java.​lang.​String</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_get">get</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>boolean</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_getBool">getBool</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>float</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_getFloat">getFloat</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>int</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_getInt">getInt</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>java.​lang.​String</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_getString">getString</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>java.​lang.​String</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_getStrings">getStrings</xref>(java.​lang.​String key)
+                    </codeph>
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>static <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config.Config">Config</xref>
+                    </codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_newConfig">newConfig</xref>(java.​lang.​String confName)
+                    </codeph> - newConfig create an empty configuration representation from file.
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>static <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config.Config">Config</xref>
+                    </codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_newConfigFromText">newConfigFromText</xref>(java.​lang.​String text)
+                    </codeph> - newConfigFromText create an empty configuration representation from text.
+                  </entry>
+                </row>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>void</codeph>
+                  </entry>
+                  <entry colname="c2" align="left">
+                    <codeph>
+                      <xref format="dita" scope="local" type="table" href="#org.casbin.jcasbin.config.Config/methods_set">set</xref>(java.​lang.​String key, java.​lang.​String value)
+                    </codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">Methods inherited from class java.lang.Object</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeph>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</codeph>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section outputclass="methods" id="org.casbin.jcasbin.config.Config_methods">
+          <title>Method Detail</title>
+          <table outputclass="method_details" id="methods_get">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">get</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public java.​lang.​String get(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>java.lang.String</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_getBool">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">getBool</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public boolean getBool(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>boolean</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_getFloat">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">getFloat</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public float getFloat(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>float</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_getInt">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">getInt</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public int getInt(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>int</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_getString">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">getString</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public java.​lang.​String getString(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>java.lang.String</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_getStrings">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">getStrings</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public java.​lang.​String getStrings(java.​lang.​String key)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>
+                      <codeph>java.lang.String[]</codeph>
+                    </p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_newConfig">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">newConfig</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public static <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config.Config">Config</xref> newConfig(java.​lang.​String confName)
+                    </codeblock>
+                    <p>newConfig create an empty configuration representation from file.</p>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>confName </codeph> - confName the path of the model file.
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>the constructor of Config.</p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_newConfigFromText">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">newConfigFromText</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public static <xref format="dita" scope="local" type="topic" href="#org.casbin.jcasbin.config.Config">Config</xref> newConfigFromText(java.​lang.​String text)
+                    </codeblock>
+                    <p>newConfigFromText create an empty configuration representation from text.</p>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>text </codeph> - text the model text.
+                      </li>
+                    </ul>
+                    <p>
+                      <b>Returns:</b>
+                    </p>
+                    <p>the constructor of Config.</p>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+          <table outputclass="method_details" id="methods_set">
+            <tgroup cols="1">
+              <colspec colname="c1" colnum="1" colwidth="100%"/>
+              <thead>
+                <row>
+                  <entry colname="c1" align="left">set</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry colname="c1" align="left">
+                    <codeblock>public void set(java.​lang.​String key, java.​lang.​String value)</codeblock>
+                    <p/>
+                    <p>
+                      <b>Parameters:</b>
+                    </p>
+                    <ul>
+                      <li>
+                        <codeph>key </codeph>
+                      </li>
+                      <li>
+                        <codeph>value </codeph>
+                      </li>
+                    </ul>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+          <p/>
+        </section>
+      </body>
+    </topic>
+  </topic>
+</topic>

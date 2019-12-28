@@ -1,84 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?><!--ant--><!--
-	This file is part of the DITA-OT Prism-JS Plug-in project.
-	See the accompanying LICENSE file for applicable licenses.
+  This file is part of the DITA-OT Prism-JS Plug-in project.
+  See the accompanying LICENSE file for applicable licenses.
 --><project xmlns:if="ant:if" xmlns:unless="ant:unless" xmlns:dita="http://dita-ot.sourceforge.net" name="fox.jason.prismjs">
 
-	<target name="prismjs.css.copy">
-		<property name="prismjs.css.file" value="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"/>
-		<loadfile property="prism.css" srcFile="${prismjs.css.file}"/>
-		<echo append="true" message="${line.separator}${prism.css}" file="${extend.css.file}"/>
-	</target>
+  <target name="prismjs.css.copy">
+    <property name="prismjs.css.file" value="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"/>
+    <loadfile property="prism.css" srcFile="${prismjs.css.file}"/>
+    <echo append="true" message="${line.separator}${prism.css}" file="${extend.css.file}"/>
+  </target>
 
-	<target name="prismjs.init">
+  <target name="prismjs.init">
 
-		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
-		<copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
+    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
+    <copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
 
-		<tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
-		<touch file="${prismjs.unknown.file}"/>
+    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
+    <touch file="${prismjs.unknown.file}"/>
 
-		<property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
+    <property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
 
 
-    	<!-- Only run the Highlight transform for HTML or PDF -->
-    	<condition property="is.highlightable">
-			<or>
-			<isset property="args.xsl"/>
-				<isset property="args.rellinks"/>
-      		</or>
-		</condition>
+      <!-- Only run the Highlight transform for HTML or PDF -->
+      <condition property="is.highlightable">
+      <or>
+      <isset property="args.xsl"/>
+        <isset property="args.rellinks"/>
+          </or>
+    </condition>
 
-		<condition property="is.html">
-			<equals arg1="${out.ext}" arg2=".html"/>
-	    </condition>
+    <condition property="is.html">
+      <equals arg1="${out.ext}" arg2=".html"/>
+      </condition>
 
-	    <typedef file="${dita.plugin.fox.jason.prismjs.dir}/resource/antlib.xml"/>
+      <typedef file="${dita.plugin.fox.jason.prismjs.dir}/resource/antlib.xml"/>
 
-	</target>
+  </target>
 
-	<target name="prismjs.highlight">
-		<xmltask taskname="read-job.xml" if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
-			<call path="//file[@format]">
-				<param default="" name="path" path="@path"/>
-				<actions>
-					<local name="source"/>
-					<local name="source.exists"/>
-					<local name="lang.known"/>
+  <target name="prismjs.highlight">
+    <xmltask taskname="read-job.xml" if:set="is.highlightable" source="${dita.temp.dir}${file.separator}.job.xml">
+      <call path="//file[@format]">
+        <param default="" name="path" path="@path"/>
+        <actions>
+          <local name="source"/>
+          <local name="source.exists"/>
+          <local name="source.raw.xml"/>
+          <local name="lang.known"/>
 
-					<property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
+          <property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
 
-					<available property="source.exists" file="${source}"/>
+          <available property="source.exists" file="${source}"/>
 
-					<echo if:set="source.exists" taskname="prismjs" level="verbose" message="Processing ${source}"/>
-					<xmltask if:set="source.exists" source="${source}" taskname="highlight-code">
-						<call path="//*[(self::codeblock or self::codeph)]">
-							<param default="" name="text" path="text()"/>
-							<param default="" name="name" path="name()"/>
-							<param default="" name="class" path="@class"/>
-							<param default="" name="outputclass" path="@outputclass"/>
-							<param default="" name="xtrc" path="@xtrc"/>
-							<param default="" name="xtrf" path="@xtrf"/>
-							<param default="" name="default" path="ancestor::body/@outputclass"/>
-							<actions>
-								<local name="lang"/>
-								<local name="short-lang"/>
-								<local name="highlighted"/>
-								<local name="lang.known"/>
-								<set-short-lang outputclass="@{outputclass}" default="@{default}" property="lang"/>
-								<prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
+          <echo if:set="source.exists" taskname="prismjs" level="verbose" message="Processing ${source}"/>
+          
 
-								<prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted"/>
-
-								<xmltask if:set="lang.known" outputter="default" indent="false" source="${source}" dest="${source}">
-									<replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
-									<attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
-								</xmltask>
-							</actions>
-						</call>
-					</xmltask>
-				</actions>
-			</call>
-		</xmltask>
+          <xmltask if:set="source.exists" source="${source}" taskname="highlight-code">
+            <call path="//*[(self::codeblock or self::codeph) and @xtrc and @outputclass]">
+              <param default="" name="text" path="text()"/>
+              <param name="name" path="name()"/>
+              <param name="class" path="@class"/>
+              <param name="xtrc" path="@xtrc"/>
+              <param default="" name="xtrf" path="@xtrf"/>
+              <param name="outputclass" path="@outputclass"/>
+              <param name="count" path="count(*)"/>
+              <actions>
+                <loadfile unless:set="source.raw.xml" taskname="read-xml-source" property="source.raw.xml" srcFile="${source}"/>
+                <add-highlight text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${source.raw.xml}" source="${source}"/>
+              </actions>
+            </call>
+            <call path="//*[(self::codeblock or self::codeph) and @xtrc and not(@outputclass) and (ancestor::body/@outputclass)]">
+              <param default="" name="text" path="text()"/>
+              <param name="name" path="name()"/>
+              <param name="class" path="@class"/>
+              <param name="xtrc" path="@xtrc"/>
+              <param default="" name="xtrf" path="@xtrf"/>
+              <param name="outputclass" path="ancestor::body/@outputclass"/>
+              <param default="" name="count" path="count(*)"/>
+              <actions>
+                <loadfile unless:set="source.raw.xml" taskname="read-xml-source" property="source.raw.xml" srcFile="${source}"/>
+                <add-highlight text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${source.raw.xml}" source="${source}"/>
+              </actions>
+            </call>
+          </xmltask>
+        </actions>
+      </call>
+    </xmltask>
     </target>
 
     <target name="prismjs" depends="prismjs.init,prismjs.highlight"/>
