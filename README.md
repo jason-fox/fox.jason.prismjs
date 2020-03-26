@@ -13,6 +13,10 @@ which are automatically colorized according to language syntax. The plug-in exte
 
 > ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
 
+:arrow_forward: [Video from DITA-OT Day 2019](https://youtu.be/vobY_ha5nd0)
+
+[![](https://jason-fox.github.io/fox.jason.prismjs/javascript-video.png)](https://youtu.be/vobY_ha5nd0)
+
 <details>
 <summary><strong>Table of Contents</strong></summary>
 
