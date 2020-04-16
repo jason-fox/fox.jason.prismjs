@@ -9,6 +9,7 @@ addons:
   apt:
     packages:
       - ant
+      - nodejs
   sonarcloud:
     organization: "dita-ot-plugins"
     token:
