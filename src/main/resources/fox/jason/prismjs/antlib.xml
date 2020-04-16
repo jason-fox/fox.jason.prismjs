@@ -36,45 +36,46 @@
     <sequential>
      
       <local name="prismjs.out"/>
-     
+      <local name="prismjs.temp.text"/>
+      <local name="prismjs.temp.xml"/>
+      
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.text" suffix=".txt"/>
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.xml" suffix=".xml"/>
 
+      <echo message="@{text}" file="${prismjs.temp.text}" />
+      <echo message="@{xml}" file="${prismjs.temp.xml}" />
       <!-- For Unix run node as an executable -->
-      <exec executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node"
-        outputproperty="prismjs.out">
+      <exec executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node">
         <arg line="${prismjs.node.script}"/>
         <arg line="${prismjs.temp.file}"/>
         <arg line="&quot;@{outputclass}&quot;"/>
-        <arg line="&quot;@{text}&quot;"/>
+        <arg line="&quot;${prismjs.temp.text}&quot;"/>
         <arg line="&quot;@{name}&quot;"/>
         <arg line="&quot;@{xtrc}&quot;"/>
         <arg line="&quot;@{xtrf}&quot;"/>
         <arg line="&quot;@{class}&quot;"/>
         <arg line="&quot;@{count}&quot;"/>
-        <arg line="&quot;@{xml}&quot;"/>
+        <arg line="&quot;${prismjs.temp.xml}&quot;"/>
       </exec>
       <!-- For Windows run from a DOS command -->
-      <exec executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node"
-        outputproperty="prismjs.out">
+      <exec executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node">
         <arg value="/C"/>
-        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;@{text}&quot; &quot;@{name}&quot; &quot;@{xtrc}&quot; &quot;@{xtrf}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;@{xml}&quot;"/>
+        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;${prismjs.temp.text}&quot; &quot;@{name}&quot; &quot;@{xtrc}&quot; &quot;@{xtrf}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;${prismjs.temp.xml}&quot;"/>
       </exec>
 
-      <echo level="error" message="${prismjs.out}" />
-
-
+      <loadfile property="@{highlighted}" srcFile="${prismjs.temp.text}"/>
     </sequential>
   </macrodef>
   <!--
     Obtains the corrected highlighting language from the outputclass
 
     @param  outputclass -   The outputclass of the codeblock
-    @param  default -  The default language of the topic
     @param  property -  The property to set with the corrected highighting language
   -->
-  <scriptdef language="javascript" name="set-short-lang" src="${dita.plugin.fox.jason.prismjs.dir}/resource/short-lang.js">
-    <attribute name="outputclass"/>
-    <attribute name="property"/>
-  </scriptdef>
+  <taskdef classname="fox.jason.prismjs.tasks.ShortLangTask"  name="set-short-lang" onerror="ignore"/>
+
   <!--
     Checks the highlighting language and dynamically adds additonal regexes
 

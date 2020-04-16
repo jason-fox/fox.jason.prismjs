@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
-<plugin id="fox.jason.prismjs" version="2.2.0">
+<plugin id="fox.jason.prismjs" version="3.0.0">
+	<feature extension="dita.conductor.lib.import" file="lib/prismjs-1.0.jar"/>
 	<feature extension="ant.import" file="process_prismjs.xml"/>
 	<!-- Ensure the plugin's error and logging messages are available -->
 	<feature extension="dita.xsl.messages" file="resource/messages.xml"/>
@@ -12,7 +13,8 @@
 	
 	<!-- PDF extension point -->
 	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
-	<!-- Uses the default preprocess.post extension point -->
+	<!-- Uses the default preprocess.pre and post extension points -->
+	<feature extension="depend.preprocess.pre" value="node.check"/>
 	<feature extension="depend.preprocess.post" value="prismjs"/>
 	<!-- Uses the extended CSS extension point -->
 	<feature extension="extend.css.process" value="prismjs.css.copy"/>

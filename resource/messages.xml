@@ -12,4 +12,8 @@
     <reason>Unknown code language "%1" detected.</reason>
     <response>Codeblock will not be highlighted.</response>
   </message>
+  <message id="PRSM003W" type="WARN">
+    <reason>Node has not been installed.</reason>
+    <response>Will use &lt;scriptdef&gt; library as fallback option</response>
+  </message>
 </messages>
