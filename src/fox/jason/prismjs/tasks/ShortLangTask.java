@@ -79,10 +79,9 @@ public class ShortLangTask extends Task {
 
     String language = outputclass.toLowerCase();
     Matcher matcher = regex.matcher(outputclass);
-    while (matcher.find()) {
+    if (matcher.find()) {
       language = matcher.group();
       language = language.substring(language.indexOf('-') + 1, language.length());
-      break;
     }
     getProject().setProperty(property, language);
   }
