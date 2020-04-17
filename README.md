@@ -84,6 +84,18 @@ unzip -q dita-ot-3.4.1.zip
 rm dita-ot-3.4.1.zip
 ```
 
+### Installing the Plug-in
+
+-   Run the plug-in installation commands:
+
+```console
+dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+dita --install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+dita --install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+```
+
+The `dita` command line tool requires no additional configuration.
+
 ### Installing Node.js
 
 <a href="https://nodejs.org/"><img src="https://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_400x400.png" align="right" width="55" height="55"></a>
@@ -97,18 +109,6 @@ to run using [Node.js](https://nodejs.org/) where present on a user's machine. N
 Chrome's V8 JavaScript engine.
 
 To download a copy follow the instructions on the [Install Page](https://nodejs.org/en/download/).
-
-### Installing the Plug-in
-
--   Run the plug-in installation commands:
-
-```console
-dita --install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
-dita --install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
-dita --install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
-```
-
-The `dita` command line tool requires no additional configuration.
 
 ---
 
