@@ -84,6 +84,20 @@ unzip -q dita-ot-3.4.1.zip
 rm dita-ot-3.4.1.zip
 ```
 
+### Installing Node.js
+
+<a href="https://nodejs.org/"><img src="https://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_400x400.png" align="right" width="55" height="55"></a>
+
+Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335)
+any plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java
+11 onwards and above. From Java 15 onwards, these plugins will no longer work.
+
+The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript library, and therefore has been updated
+to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on 
+Chrome's V8 JavaScript engine.
+
+To download a copy follow the instructions on the [Install Page](https://nodejs.org/en/download/).
+
 ### Installing the Plug-in
 
 -   Run the plug-in installation commands:
@@ -256,7 +270,7 @@ A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://g
 
 ## License
 
-[Apache 2.0](LICENSE) © 2018-2019 Jason Fox
+[Apache 2.0](LICENSE) © 2018-2020 Jason Fox
 
 The Program includes the following additional software components which were obtained under license:
 
