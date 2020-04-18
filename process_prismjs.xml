@@ -52,7 +52,7 @@
   </target>
 
 
-  <target name="highlight.init">
+  <target name="highlight.init" >
     <taskdef resource="fox/jason/prismjs/antlib.xml"/>
     <property name="prismjs.node.script"  value="${dita.plugin.fox.jason.prismjs.dir}/resource/node-prism.js"/>
     <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
@@ -66,8 +66,8 @@
    
   </target>
 
-  <target name="highlight" if:set="is.highlightable">
-    <iterate-prismjs src="${dita.temp.dir}${file.separator}.job.xml" />
+  <target name="highlight">
+    <iterate-prismjs if:set="is.highlightable" src="${dita.temp.dir}${file.separator}.job.xml" />
   </target>
 
   <target name="prismjs" depends="highlight.init, highlight"/>
