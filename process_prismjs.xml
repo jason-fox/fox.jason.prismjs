@@ -9,45 +9,8 @@
     <echo append="true" message="${line.separator}${prism.css}" file="${extend.css.file}"/>
   </target>
 
-  <!--
-    Check if Node is installed.
-  -->
-  <target name="node.check">
-    <!-- For Unix run node as an executable -->
-    <exec executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node"
-      resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
-      <arg line="-v"/>
-    </exec>
-    <!-- For Windows run from a DOS command -->
-    <exec executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node"
-      resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
-      <arg value="/C"/>
-      <arg value="node -v"/>
-    </exec>
-
-    <condition property="node.installed">
-      <equals arg1="${node.result}" arg2="0"/>
-    </condition>
-
-    <dita-ot-echo unless:set="node.installed" id="PRSM003W"/>
-    <echo if:set="node.installed"  taskname="node" level="info" message="${node.out}"/>
-
-
-  </target>
-
-  <target name="prismjs.init">
-    <taskdef resource="fox/jason/prismjs/antlib.xml"/>
-    <property name="prismjs.node.script"  value="${dita.plugin.fox.jason.prismjs.dir}/resource/node-prism.js"/>
-    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
-    <copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
-
-    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
-    <touch file="${prismjs.unknown.file}"/>
-
-    <property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
-
-
-    <!-- Only run the Highlight transform for HTML or PDF -->
+  <target name="highlight.check">
+     <!-- Only run the Highlight transform for HTML or PDF -->
     <condition property="is.highlightable">
       <or>
         <isset property="args.xsl"/>
@@ -60,10 +23,55 @@
     </condition>
   </target>
 
-  <target name="prismjs.highlight">
-    <iterate-prismjs src="${dita.temp.dir}${file.separator}.job.xml" if:set="is.highlightable"/>
+
+  <!--
+    Check if Node is installed.
+  -->
+  <target name="node.check">
+    <!-- For Unix run node as an executable -->
+
+    <exec if:set="is.highlightable" executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node"
+      resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
+      <arg line="-v"/>
+    </exec>
+    <!-- For Windows run from a DOS command -->
+    <exec if:set="is.highlightable" executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node"
+      resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
+      <arg value="/C"/>
+      <arg value="node -v"/>
+    </exec>
+
+    <condition property="node.installed">
+      <equals arg1="${node.result}" arg2="0"/>
+    </condition>
+
+    <dita-ot-echo if:set="is.highlightable" unless:set="node.installed" id="PRSM003W"/>
+    <echo if:set="node.installed"  taskname="node" level="info" message="${node.out}"/>
+
+
   </target>
 
-  <target name="prismjs" depends="prismjs.init,prismjs.highlight"/>
+
+  <target name="highlight.init">
+    <taskdef resource="fox/jason/prismjs/antlib.xml"/>
+    <property name="prismjs.node.script"  value="${dita.plugin.fox.jason.prismjs.dir}/resource/node-prism.js"/>
+    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.temp.file" suffix=".js"/>
+    <copy file="${dita.plugin.fox.jason.prismjs.dir}/resource/prism.js" toFile="${prismjs.temp.file}"/>
+
+    <tempfile deleteonexit="true" destdir="${dita.temp.dir}" property="prismjs.unknown.file" suffix=".txt"/>
+    <touch file="${prismjs.unknown.file}"/>
+
+    <property name="prism.component.dir" value="${dita.plugin.fox.jason.prismjs.dir}/resource/components"/>
+
+   
+  </target>
+
+  <target name="highlight" if:set="is.highlightable">
+    <iterate-prismjs src="${dita.temp.dir}${file.separator}.job.xml" />
+  </target>
+
+  <target name="prismjs" depends="highlight.init, highlight"/>
+
+  <target name="prismjs.init" depends="highlight.check, node.check" />
 
 </project>

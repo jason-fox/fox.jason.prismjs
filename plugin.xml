@@ -14,7 +14,7 @@
 	<!-- PDF extension point -->
 	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
 	<!-- Uses the default preprocess.pre and post extension points -->
-	<feature extension="depend.preprocess.pre" value="node.check"/>
+	<feature extension="depend.preprocess.pre" value="prismjs.init"/>
 	<feature extension="depend.preprocess.post" value="prismjs"/>
 	<!-- Uses the extended CSS extension point -->
 	<feature extension="extend.css.process" value="prismjs.css.copy"/>
