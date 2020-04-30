@@ -7,9 +7,10 @@
 [![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fox.jason.prismjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=fox.jason.prismjs)
 
-This is a syntax highlighting [DITA-OT Plug-in](https://www.dita-ot.org/plugins) which integrates the flexible [Prism-JS](https://github.com/PrismJS/prism)
-highlighting library into the DITA Open Toolkit engine. This enables the generation of documents including code snippets
-which are automatically colorized according to language syntax. The plug-in extends both static HTML and PDF transtypes.
+This is a syntax highlighting [DITA-OT Plug-in](https://www.dita-ot.org/plugins) which integrates the flexible
+[Prism-JS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the
+generation of documents including code snippets which are automatically colorized according to language syntax. The
+plug-in extends both static HTML and PDF transtypes.
 
 > ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted.png)
 
@@ -42,7 +43,6 @@ which are automatically colorized according to language syntax. The plug-in exte
 
 <a href="http://prismjs.com"><img src="https://pbs.twimg.com/profile_images/2451426554/Screen_Shot_2012-07-31_at_21.57.03__400x400.png" align="right" height="70"></a>
 
-
 Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from
 [Dabblet](http://dabblet.com/).
 
@@ -72,7 +72,8 @@ The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 -   Full installation instructions for downloading DITA-OT can be found
     [here](https://www.dita-ot.org/3.4/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.4.1.zip` package from the project website at [dita-ot.org/download](https://www.dita-ot.org/download)
+    1.  Download the `dita-ot-3.4.1.zip` package from the project website at
+        [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
 
@@ -100,12 +101,12 @@ The `dita` command line tool requires no additional configuration.
 
 <a href="https://nodejs.org/"><img src="https://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_400x400.png" align="right" width="55" height="55"></a>
 
-Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335)
-any plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java
-11 onwards and above. From Java 15 onwards, these plugins will no longer work.
+Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335) any
+plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java 11 onwards
+and above. From Java 15 onwards, these plugins will no longer work.
 
 The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript library, and therefore has been updated
-to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on 
+to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on
 Chrome's V8 JavaScript engine.
 
 To download a copy follow the instructions on the [Install Page](https://nodejs.org/en/download/).
@@ -125,8 +126,7 @@ can be highlighted
 -   `outputclass="language-markup"` - HTML, XML etc.
 -   `outputclass="language-css"` - Cascading Style Sheet highlighting
 -   `outputclass="language-clike"` - C-language family highlighting
--   `outputclass="language-javascript"` - JavaScript highlighting
-... etc.
+-   `outputclass="language-javascript"` - JavaScript highlighting ... etc.
 
 e.g.:
 
@@ -189,14 +189,14 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 ### Customizing the output
 
-Prism-JS is easily extended to other languages since it purely relies on regular expressions. Additional languages are loaded dynamically during processing. A large number of
-additional languages are supported - just look at the list on https://github.com/PrismJS/prism/tree/master/components
-
+Prism-JS is easily extended to other languages since it purely relies on regular expressions. Additional languages are
+loaded dynamically during processing. A large number of additional languages are supported - just look at the list on
+https://github.com/PrismJS/prism/tree/master/components
 
 #### Altering the static HTML look and feel
 
-Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amend a copy of the `resource/style.css` file to alter the look-and-feel of the rendered HTML
-
+Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amend a copy of the
+`resource/style.css` file to alter the look-and-feel of the rendered HTML
 
 ##### `plugin.xml` Configuration
 
@@ -219,7 +219,8 @@ Extend with an additional plug-in which overrides the default `prismjs.css.file`
 </project>
 ```
 
-A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
+A working example can be found in the
+[Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
 #### Altering the PDF look and feel
 
@@ -237,7 +238,8 @@ file, copy and amend the `prismjs-attr.xsl` file in your own plug-in.
 
 ##### `xsl/xslfo.xsl` XSL Stylesheet
 
-Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">` template as shown:
+Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">` template as
+shown:
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -264,7 +266,8 @@ Override the `<xsl:template match="*[contains(@class,' topic/ph ') and contains(
 </xsl:stylesheet>
 ```
 
-A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
+A working example can be found in the
+[Dark Theme CSS DITA-OT plug-in](https://github.com/jason-fox/fox.jason.prismjs.dark-theme)
 
 > ![](https://jason-fox.github.io/fox.jason.prismjs/highlighted-dark.png)
 
@@ -275,4 +278,5 @@ A working example can be found in the [Dark Theme CSS DITA-OT plug-in](https://g
 The Program includes the following additional software components which were obtained under license:
 
 -   prism.js - https://github.com/PrismJS/prism/ - **MIT license**
--   xmltask.jar - http://www.oopsconsultancy.com/software/xmltask/ - **Apache 1.1 license** (within `org.doctales.xmltask` plug-in)
+-   xmltask.jar - http://www.oopsconsultancy.com/software/xmltask/ - **Apache 1.1 license** (within
+    `org.doctales.xmltask` plug-in)
