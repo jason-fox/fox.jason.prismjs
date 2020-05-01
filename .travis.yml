@@ -1,0 +1,44 @@
+language: java
+sudo: required
+dist: bionic
+
+jdk:
+  - openjdk11
+
+addons:
+  apt:
+    packages:
+      - ant
+      - nodejs
+  sonarcloud:
+    organization: "dita-ot-plugins"
+    token:
+      secure: "mfKB6yY6dn3cQqNQ0lQSDGkgvPIDq00r3t1X7Zk44RoD7B5lWyBKEbCctvPAmcxYrYK7YFJmrvjiuPDFW11GS1SA05R0VvgeS1jb2camuS+5H8yKSZV5lejmmlwK8IztjwPlvwLbqaSdojURi9EoLLS6AU6o1C5sPpRgYZkyYJN/xH9dRIiggAZBbbEqaz0U6VAyMiipGt/NTtPJC6+kJSKqC7xaoSKysR4vVAwvby2KkdDnqJj+pAeWZfZ/CQu8206MqP4nK1jc9im6j4MwnSwHr2FYZsREx0Xbqy9YPmtyUwrpu8FqdpfU0rnoIFpnjq7BypQERG/sdzt/IiCFh9KeUEuAiTmuxgldwBXA+0SqRSP/F58T/7AfYTqRF0BHiaurp8/QFJrpDuVhBnOkr2nwWoi2SvJMHP3PuJZ2d+5gBN/TzNYERMnnOiW2bZZsEd+myFlH9dTMNFkw6zUiyTyaG2eDC7Wh9QwKCgI1si+SIXHAtALT7/IK2oN6Y3krgai3vgbNlABe7OW/zS9huYaBcyDa1W2Px967F+3JtwKt1sembPu5RzFIfvx3rJpxddnB9jDov9pGJZpuV58DrgaB+gJz3VhD/3pQ2Nw1C5ECuJtTA2Dj2mRNIXH25Fm/Ekp22iMVX+KnkxjMljcqiLLO6A95WoImi3l78PMJkoo="
+
+env:
+  - DITA_OT=3.5
+
+before_install:
+  - zip -r fox.jason.prismjs.zip . -x *.zip* *.git/* *temp/* *out/*
+  - curl -LO https://github.com/dita-ot/dita-ot/releases/download/$DITA_OT/dita-ot-$DITA_OT.zip
+  - unzip -q dita-ot-$DITA_OT.zip
+  - chmod +x dita-ot-$DITA_OT/bin/dita
+
+install:
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/jason-fox/fox.jason.unit-test/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+  - dita-ot-$DITA_OT/bin/dita install fox.jason.prismjs.zip
+
+before_script:
+  - dita-ot-$DITA_OT/bin/dita --input dita-ot-$DITA_OT/plugins/fox.jason.prismjs -f xsl-instrument
+
+script:
+  - dita-ot-$DITA_OT/bin/dita --input dita-ot-$DITA_OT/plugins/fox.jason.prismjs -f unit-test --output . -v
+
+after_success:
+  - mvn clean compile
+  - cp dita-ot-$DITA_OT/plugins/fox.jason.unit-test/resource/pom.xml pom.xml
+  - mvn org.eluder.coveralls:coveralls-maven-plugin:report
+  - rm -rf dita-ot-$DITA_OT
+  - sonar-scanner 
