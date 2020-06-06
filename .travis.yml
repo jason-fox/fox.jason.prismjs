@@ -16,7 +16,7 @@ addons:
       secure: "mfKB6yY6dn3cQqNQ0lQSDGkgvPIDq00r3t1X7Zk44RoD7B5lWyBKEbCctvPAmcxYrYK7YFJmrvjiuPDFW11GS1SA05R0VvgeS1jb2camuS+5H8yKSZV5lejmmlwK8IztjwPlvwLbqaSdojURi9EoLLS6AU6o1C5sPpRgYZkyYJN/xH9dRIiggAZBbbEqaz0U6VAyMiipGt/NTtPJC6+kJSKqC7xaoSKysR4vVAwvby2KkdDnqJj+pAeWZfZ/CQu8206MqP4nK1jc9im6j4MwnSwHr2FYZsREx0Xbqy9YPmtyUwrpu8FqdpfU0rnoIFpnjq7BypQERG/sdzt/IiCFh9KeUEuAiTmuxgldwBXA+0SqRSP/F58T/7AfYTqRF0BHiaurp8/QFJrpDuVhBnOkr2nwWoi2SvJMHP3PuJZ2d+5gBN/TzNYERMnnOiW2bZZsEd+myFlH9dTMNFkw6zUiyTyaG2eDC7Wh9QwKCgI1si+SIXHAtALT7/IK2oN6Y3krgai3vgbNlABe7OW/zS9huYaBcyDa1W2Px967F+3JtwKt1sembPu5RzFIfvx3rJpxddnB9jDov9pGJZpuV58DrgaB+gJz3VhD/3pQ2Nw1C5ECuJtTA2Dj2mRNIXH25Fm/Ekp22iMVX+KnkxjMljcqiLLO6A95WoImi3l78PMJkoo="
 
 env:
-  - DITA_OT=3.5
+  - DITA_OT=3.5.1
 
 before_install:
   - zip -r fox.jason.prismjs.zip . -x *.zip* *.git/* *temp/* *out/*
