@@ -159,7 +159,7 @@
       <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
       <prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted" count="@{count}" xml="@{xml}"/>
 
-      <xmltask if:set="lang.known" outputter="default" indent="false" source="@{source}" dest="${source}">
+      <xmltask if:set="lang.known" outputter="default" encoding="UTF-8" indent="false" source="@{source}" dest="${source}">
         <replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
         <attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
       </xmltask>
