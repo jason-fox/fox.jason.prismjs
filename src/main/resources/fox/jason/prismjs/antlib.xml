@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--ant-->
+<!--
+  This file is part of the DITA-OT Prism-JS Plug-in project.
+  See the accompanying LICENSE file for applicable licenses.
+-->
+<antlib xmlns:if="ant:if" xmlns:unless="ant:unless">
+
+  <!--
+    Invokes the prismjs library using a scriptdef and returns the result
+  -->
+  <scriptdef unless:set="node.installed" language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/script-prism.js">
+    <attribute name="name"/>
+    <attribute name="class"/>
+    <attribute name="text"/>
+    <attribute name="outputclass"/>
+    <attribute name="xtrc"/>
+    <attribute name="xtrf"/>
+    <attribute name="highlighted"/>
+    <attribute name="count"/>
+    <attribute name="xml"/>
+  </scriptdef>
+
+  <!--
+    Invokes the prismjs library via node and returns the result
+  -->
+  <macrodef if:set="node.installed" name="prismjs" >
+    <attribute name="name"/>
+    <attribute name="class"/>
+    <attribute name="text"/>
+    <attribute name="outputclass"/>
+    <attribute name="xtrc"/>
+    <attribute name="xtrf"/>
+    <attribute name="highlighted"/>
+    <attribute name="count"/>
+    <attribute name="xml"/>
+    <sequential>
+     
+      <local name="prismjs.out"/>
+      <local name="prismjs.temp.text"/>
+      <local name="prismjs.temp.xml"/>
+      
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.text" suffix=".txt"/>
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.xml" suffix=".xml"/>
+
+      <echo message="@{text}" file="${prismjs.temp.text}" />
+      <echo message="@{xml}" file="${prismjs.temp.xml}" />
+      <!-- For Unix run node as an executable -->
+      <exec executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node">
+        <arg line="${prismjs.node.script}"/>
+        <arg line="${prismjs.temp.file}"/>
+        <arg line="&quot;@{outputclass}&quot;"/>
+        <arg line="&quot;${prismjs.temp.text}&quot;"/>
+        <arg line="&quot;@{name}&quot;"/>
+        <arg line="&quot;@{xtrc}&quot;"/>
+        <arg line="&quot;@{xtrf}&quot;"/>
+        <arg line="&quot;@{class}&quot;"/>
+        <arg line="&quot;@{count}&quot;"/>
+        <arg line="&quot;${prismjs.temp.xml}&quot;"/>
+      </exec>
+      <!-- For Windows run from a DOS command -->
+      <exec executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node">
+        <arg value="/C"/>
+        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;${prismjs.temp.text}&quot; &quot;@{name}&quot; &quot;@{xtrc}&quot; &quot;@{xtrf}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;${prismjs.temp.xml}&quot;"/>
+      </exec>
+
+      <loadfile property="@{highlighted}" srcFile="${prismjs.temp.text}"/>
+    </sequential>
+  </macrodef>
+  <!--
+    Obtains the corrected highlighting language from the outputclass
+
+    @param  outputclass -   The outputclass of the codeblock
+    @param  property -  The property to set with the corrected highighting language
+  -->
+  <taskdef classname="fox.jason.prismjs.tasks.ShortLangTask"  name="set-short-lang" onerror="ignore"/>
+
+  <!--
+    Checks the highlighting language and dynamically adds additonal regexes
+
+    @param  lang -   The language to use to highlight
+    @param  known -  A property to set to flag if the language is known
+  -->
+  <macrodef name="prismjs-append-lang">
+    <attribute name="lang"/>
+    <attribute name="known"/>
+    <sequential>
+      <local name="prismjs.lang.file"/>
+      <local name="prismjs.lang.js"/>
+      <local name="prismjs.lang.loaded"/>
+      <local name="prismjs.lang.known"/>
+      <local name="prismjs.lang.raise.error"/>
+
+      <echo taskname="prismjs" message="${lang}" level="debug"/>
+
+      <condition property="prismjs.lang.loaded">
+        <resourcecontains resource="${prismjs.temp.file}" substring=".languages.@{lang}="/>
+      </condition>
+
+      <condition property="prismjs.lang.file" value="${prism.component.dir}/prism-@{lang}.min.js">
+        <and>
+          <not>
+            <isset property="prismjs.lang.loaded"/>
+          </not>
+          <available file="${prism.component.dir}/prism-@{lang}.min.js"/>
+        </and>
+      </condition>
+
+      <condition property="prismjs.lang.known">
+        <or>
+          <isset property="prismjs.lang.file"/>
+          <isset property="prismjs.lang.loaded"/>
+        </or>
+      </condition>
+      <condition property="prismjs.lang.raise.error">
+        <and>
+          <not>
+            <isset property="prismjs.lang.known"/>
+          </not>
+          <not>
+            <resourcecontains resource="${prismjs.unknown.file}" substring=".languages.@{lang}="/>
+          </not>
+        </and>
+      </condition>
+
+      <dita-ot-echo if:set="prismjs.lang.file" id="PRSM001I">
+        <param name="1" value="@{lang}"/>
+      </dita-ot-echo>
+      <dita-ot-echo if:set="prismjs.lang.raise.error" id="PRSM002W">
+        <param name="1" value="@{lang}"/>
+      </dita-ot-echo>
+
+      <loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
+      <echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
+      <echo if:set="prismjs.lang.raise.error" append="true" message="${line.separator}/* .languages.${lang}= */" file="${prismjs.unknown.file}"/>
+
+      <property if:set="prismjs.lang.known" name="@{known}" value="true"/>
+    </sequential>
+  </macrodef>
+
+  <macrodef name="add-highlight">
+    <attribute name="text"/>
+    <attribute name="name"/>
+    <attribute name="class"/>
+    <attribute name="outputclass"/>
+    <attribute name="xtrc"/>
+    <attribute name="xtrf"/>
+    <attribute name="count"/>
+    <attribute name="xml"/>
+    <attribute name="source"/>
+    <sequential>
+      <local name="lang"/>
+      <local name="short-lang"/>
+      <local name="highlighted"/>
+      <local name="lang.known"/>
+
+      <set-short-lang outputclass="@{outputclass}" property="lang"/>
+      <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
+      <prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted" count="@{count}" xml="@{xml}"/>
+
+      <xmltask if:set="lang.known" outputter="default" encoding="UTF-8" indent="false" source="@{source}" dest="${source}">
+        <replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
+        <attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
+      </xmltask>
+    </sequential>
+  </macrodef>
+
+
+  <macrodef name="iterate-prismjs">
+    <attribute name="src"/>
+    <sequential>
+      <xmltask taskname="read-job.xml" source="@{src}">
+        <call path="//file[@format]">
+          <param default="" name="path" path="@path"/>
+          <actions>
+            <local name="source"/>
+            <local name="source.exists"/>
+            <local name="source.raw.xml"/>
+            <local name="lang.known"/>
+
+            <property name="source" value="${dita.temp.dir}${file.separator}@{path}"/>
+
+            <available property="source.exists" file="${source}"/>
+
+            <echo if:set="source.exists" taskname="prismjs" level="verbose" message="Processing ${source}"/>
+            
+
+            <xmltask if:set="source.exists" source="${source}" taskname="highlight-code">
+              <call path="//*[(self::codeblock or self::codeph) and @xtrc and @outputclass]">
+                <param default="" name="text" path="text()"/>
+                <param name="name" path="name()"/>
+                <param name="class" path="@class"/>
+                <param name="xtrc" path="@xtrc"/>
+                <param default="" name="xtrf" path="@xtrf"/>
+                <param name="outputclass" path="@outputclass"/>
+                <param name="count" path="count(*)"/>
+                <actions>
+                  <loadfile unless:set="source.raw.xml" taskname="read-xml-source" property="source.raw.xml" srcFile="${source}"/>
+                  <add-highlight text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${source.raw.xml}" source="${source}"/>
+                </actions>
+              </call>
+              <call path="//*[(self::codeblock or self::codeph) and @xtrc and not(@outputclass) and (ancestor::body/@outputclass)]">
+                <param default="" name="text" path="text()"/>
+                <param name="name" path="name()"/>
+                <param name="class" path="@class"/>
+                <param name="xtrc" path="@xtrc"/>
+                <param default="" name="xtrf" path="@xtrf"/>
+                <param name="outputclass" path="ancestor::body/@outputclass"/>
+                <param default="" name="count" path="count(*)"/>
+                <actions>
+                  <loadfile unless:set="source.raw.xml" taskname="read-xml-source" property="source.raw.xml" srcFile="${source}"/>
+                  <add-highlight text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${source.raw.xml}" source="${source}"/>
+                </actions>
+              </call>
+            </xmltask>
+          </actions>
+        </call>
+      </xmltask>
+    </sequential>
+  </macrodef>
+</antlib>
