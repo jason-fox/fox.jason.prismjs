@@ -30,12 +30,12 @@
   <target name="node.check">
     <!-- For Unix run node as an executable -->
 
-    <exec if:set="is.highlightable" executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node"
+    <exec if:set="is.highlightable" executable="node" dir="${dita.dir}" osfamily="unix" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg line="-v"/>
     </exec>
     <!-- For Windows run from a DOS command -->
-    <exec if:set="is.highlightable" executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node"
+    <exec if:set="is.highlightable" executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg value="/C"/>
       <arg value="node -v"/>

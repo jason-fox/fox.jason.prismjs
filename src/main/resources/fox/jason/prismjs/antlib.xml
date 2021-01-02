@@ -47,7 +47,7 @@
       <echo message="@{text}" file="${prismjs.temp.text}" />
       <echo message="@{xml}" file="${prismjs.temp.xml}" />
       <!-- For Unix run node as an executable -->
-      <exec executable="node" dir="${dita.temp.dir}" osfamily="unix" taskname="node">
+      <exec executable="node" dir="${dita.dir}" osfamily="unix" taskname="node">
         <arg line="${prismjs.node.script}"/>
         <arg line="${prismjs.temp.file}"/>
         <arg line="&quot;@{outputclass}&quot;"/>
@@ -60,7 +60,7 @@
         <arg line="&quot;${prismjs.temp.xml}&quot;"/>
       </exec>
       <!-- For Windows run from a DOS command -->
-      <exec executable="cmd" dir="${dita.temp.dir}" osfamily="windows" taskname="node">
+      <exec executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node">
         <arg value="/C"/>
         <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;${prismjs.temp.text}&quot; &quot;@{name}&quot; &quot;@{xtrc}&quot; &quot;@{xtrf}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;${prismjs.temp.xml}&quot;"/>
       </exec>
