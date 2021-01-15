@@ -167,21 +167,35 @@
   </macrodef>
 
 
-  <macrodef name="highlight-document">
-    <attribute name="src"/>
+  <macrodef name="iterate-ditafiles">
+    <attribute name="list" />
+    <element name="call" implicit="yes" />
     <sequential>
-      <xmltask taskname="read-job.xml" source="@{src}">
-        <call path="/job/files/file[@format]">
-          <param default="" name="path" path="@path"/>
-          <actions>
-            <local name="file"/>
-            <local name="file.exists"/>
-            <property name="file" value="${dita.temp.dir}${file.separator}@{path}"/>
-            <available property="file.exists" file="${file}"/>
-            <highlight-dita-file if:set="file.exists" file="${file}"/>
-          </actions>
-        </call>
-      </xmltask>
+      <local name="element" />
+      <local name="tail" />
+      <local name="hasMoreElements" />
+      <!-- unless to not get a error on empty lists -->
+      <loadresource property="element" unless:blank="@{list}">
+        <concat>@{list}</concat>
+        <filterchain>
+          <replaceregex pattern="([^;]*).*" replace="\1" />
+        </filterchain>
+      </loadresource>
+      <!-- call the tasks that handle the element -->
+      <call />
+      <!-- recursion -->
+      <condition property="hasMoreElements">
+        <contains string="@{list}" substring=";" />
+      </condition>
+      <loadresource property="tail" if:true="${hasMoreElements}">
+        <concat>@{list}</concat>
+        <filterchain>
+          <replaceregex pattern="[^;]*;(.*)" replace="\1" />
+        </filterchain>
+      </loadresource>
+      <iterate-ditafiles list="${tail}" if:true="${hasMoreElements}">
+        <call />
+      </iterate-ditafiles>
     </sequential>
   </macrodef>
 
@@ -190,22 +204,24 @@
     <sequential>
       <local name="file.raw.xml"/>
       <local name="lang.known"/>
-      <echo taskname="prismjs" level="verbose" message="Processing ${file}"/>
-
-      <xmltask source="${file}" taskname="add-outputclass">
+      <echo taskname="prismjs" level="verbose" message="Processing @{file}"/>
+      <xmltask source="@{file}" destbuffer="ditafile"/>
+      <xmltask sourcebuffer="ditafile" taskname="add-outputclass">
        <call path="//*[(self::codeblock or self::codeph) and @xtrc and not(@outputclass) and (ancestor::body/@outputclass)]">
           <param name="xtrc" path="@xtrc"/>
           <param name="outputclass" path="ancestor::body/@outputclass"/>
           <actions>
-            <xmltask source="${file}" dest="${file}">
+            <xmltask sourcebuffer="ditafile" destbuffer="ditafile" indent="false">
               <attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="@{outputclass}"/>
             </xmltask>
           </actions>
         </call>
       </xmltask>
+      <xmltask sourcebuffer="ditafile" dest="@{file}"/>
+      <loadfile taskname="read-xml-source" property="file.raw.xml" srcFile="@{file}"/>
 
-      <loadfile taskname="read-xml-source" property="file.raw.xml" srcFile="${file}"/>
-      <xmltask source="${file}" taskname="highlight-code">
+
+      <xmltask sourcebuffer="ditafile" taskname="highlight-code">
         <call path="//*[(self::codeblock or self::codeph) and @xtrc and @outputclass]">
           <param default="" name="text" path="text()"/>
           <param name="name" path="name()"/>
@@ -215,7 +231,7 @@
           <param name="outputclass" path="@outputclass"/>
           <param name="count" path="count(*)"/>
           <actions>
-            <highlight-dita-element text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${file.raw.xml}" source="${file}"/>
+            <highlight-dita-element text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${file.raw.xml}" source="@{file}"/>
           </actions>
         </call>
       </xmltask>

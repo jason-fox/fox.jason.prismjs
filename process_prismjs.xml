@@ -11,7 +11,7 @@
 
   <target name="highlight.check">
      <!-- Only run the Highlight transform for HTML or PDF -->
-    <condition property="is.highlightable">
+    <condition property="prismjs.highlightable">
       <or>
         <isset property="args.xsl"/>
         <isset property="args.rellinks"/>
@@ -26,7 +26,7 @@
       <condition>
         <and>
           <equals arg1="${store-type}" arg2="memory"/>
-          <isset property="is.highlightable"/>
+          <isset property="prismjs.highlightable"/>
         </and>
       </condition>
     </dita-ot-fail>
@@ -39,12 +39,12 @@
   <target name="node.check">
     <!-- For Unix run node as an executable -->
 
-    <exec if:set="is.highlightable" executable="node" dir="${dita.dir}" osfamily="unix" taskname="node"
+    <exec if:set="prismjs.highlightable" executable="node" dir="${dita.dir}" osfamily="unix" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg line="-v"/>
     </exec>
     <!-- For Windows run from a DOS command -->
-    <exec if:set="is.highlightable" executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node"
+    <exec if:set="prismjs.highlightable" executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg value="/C"/>
       <arg value="node -v"/>
@@ -54,10 +54,8 @@
       <equals arg1="${node.result}" arg2="0"/>
     </condition>
 
-    <dita-ot-echo if:set="is.highlightable" unless:set="node.installed" id="PRSM003W"/>
+    <dita-ot-echo if:set="prismjs.highlightable" unless:set="node.installed" id="PRSM003W"/>
     <echo if:set="node.installed"  taskname="node" level="info" message="${node.out}"/>
-
-
   </target>
 
 
@@ -76,7 +74,21 @@
   </target>
 
   <target name="highlight">
-    <highlight-document if:set="is.highlightable" src="${dita.temp.dir}${file.separator}.job.xml" />
+    <ditafileset id="prismjs.ditafileset" processingRole="normal"/>
+    <pathconvert property="prismjs.ditafiles"  refid="prismjs.ditafileset" pathsep=";">
+      <map from="file:" to=""/>
+    </pathconvert>
+
+    <iterate-ditafiles if:set="prismjs.highlightable" list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
+      <local name="contains.code"/>
+      <condition property="contains.code">
+          <or>
+            <resourcecontains resource="${element}" substring="&lt;codeblock" />
+            <resourcecontains resource="${element}" substring="&lt;codeph" />
+          </or>
+      </condition>
+      <highlight-dita-file if:set="contains.code" file="${element}" />
+    </iterate-ditafiles>
   </target>
 
   <target name="prismjs" depends="highlight.init, highlight"/>
