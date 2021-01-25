@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+    <title>Prism JS Plug-in</title>
+    <chapter>
+        <topicmeta>
+            <navtitle>prismjs</navtitle>
+        </topicmeta>
+        <topicref format="dita" href="../topics/examples.dita"/>
+        <topicref format="dita" href="../topics/features-full.dita"/>
+        <topicref format="dita" href="../topics/basic-usage.dita"/>
+    </chapter>
+</bookmap>
