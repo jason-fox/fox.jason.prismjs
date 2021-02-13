@@ -199,6 +199,34 @@
     </sequential>
   </macrodef>
 
+  <macrodef name="split-codeblocks">
+    <attribute name="file"/>
+    <sequential>
+      <local name="dita.filename"/>
+      <basename property="dita.filename" file="@{file}"/>
+
+      <pipeline message="Split codeblocks" taskname="prism-codeblocks">
+      <xslt classpathref="dost.class.path" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/split-codeblocks.xsl" in="@{file}" out="@{file}">
+        <param expression="${dita.plugin.fox.jason.prismjs.dir}/code" name="CODE_DEST"/>
+        <param expression="${dita.filename}" name="DITAFILE"/>
+      </xslt>
+    </pipeline>
+
+
+
+     <pipeline message="Rebuild codeblocks" taskname="prism-codeblocks">
+      <xslt classpathref="dost.class.path" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/rebuild-codeblocks.xsl" in="@{file}" out="@{file}">
+        <param expression="UTF-8" name="text-encoding"/>
+        <param expression="${dita.plugin.fox.jason.prismjs.dir}/code" name="CODE_DEST"/>
+        <param expression="${dita.filename}" name="DITAFILE"/>
+      </xslt>
+    </pipeline>
+
+    <copy file="@{file}" todir="${dita.plugin.fox.jason.prismjs.dir}"/>
+
+    </sequential>
+  </macrodef>
+
   <macrodef name="highlight-dita-file">
     <attribute name="file"/>
     <sequential>

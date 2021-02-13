@@ -22,7 +22,7 @@
       <equals arg1="${out.ext}" arg2=".html"/>
     </condition>
 
-    <dita-ot-fail id="PRSM004F">
+    <dita-ot-fail id="PRSM004W">
       <condition>
         <and>
           <equals arg1="${store-type}" arg2="memory"/>
@@ -87,7 +87,9 @@
             <resourcecontains resource="${element}" substring="&lt;codeph" />
           </or>
       </condition>
+      <!--split-codeblocks if:set="contains.code" file="${element}" /-->
       <highlight-dita-file if:set="contains.code" file="${element}" />
+      
     </iterate-ditafiles>
   </target>
 
