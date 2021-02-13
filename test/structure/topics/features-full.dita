@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @format -->
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="features-full">
+    <title>Full list of features</title>
+    <prolog>
+        <metadata>
+            <data name="cover-art">
+                <image href="../src/logo.svg"/>
+            </data>
+        </metadata>
+    </prolog>
+    <body outputclass="language-markup">
+        <ul>
+            <li>
+              <b>Only 2KB</b> minified &amp; gzipped (core). Each language definition adds
+              roughly 300-500 bytes.
+            </li>
+            <li>
+              Encourages good author practices. Other highlighters encourage or even force you
+              to use elements that are semantically wrong, like <codeph>&lt;pre&gt;</codeph>
+              (on its own) or <codeph>&lt;script&gt;</codeph>. Prism forces you to use the
+              correct element for marking up code: <codeph>&lt;code&gt;</codeph>. On its own
+              for inline code, or inside a <codeph>&lt;pre&gt;</codeph> for blocks of code.
+              In addition, the language is defined through the way recommended in the HTML5
+              draft: through a <codeph>language-xxxx</codeph> class.
+            </li>
+            <li>
+              The language definition is inherited. This means that if multiple code snippets
+              have the same language, you can just define it once, in one of their common ancestors.
+            </li>
+            <li>
+              Supports <b>parallelism with Web Workers</b>, if available. Disabled by default
+              (<xref format="html" scope="external" href="https://prismjs.com/faq.html#why-is-asynchronous-highlighting-disabled-by-default">why?</xref>).
+            </li>
+            <li>
+              Very easy to extend without modifying the code, due to Prism’s <xref
+              format="html" scope="external" href="https://prismjs.com/#plugins">plugin architecture</xref>.
+              Multiple hooks are scattered throughout the source.
+            </li>
+            <li>
+              Very easy to <xref format="html" scope="external"
+              href="https://prismjs.com/extending.html#language-definitions">define new languages</xref>.
+              Only thing you need is a good understanding of regular expressions
+            </li>
+            <li>
+              All styling is done through CSS, with <xref format="html" scope="external"
+              href="https://prismjs.com/faq.html#how-do-i-know-which-tokens-i-can-style-for">sensible class names</xref>
+              rather than ugly namespaced abbreviated nonsense.
+            </li>
+            <li>
+              Wide browser support: IE9+, Firefox, Chrome, Safari, <xref format="html"
+              scope="external" href="https://prismjs.com/faq.html#this-page-doesnt-work-in-opera">Opera</xref>,
+              most Mobile browsers
+            </li>
+            <li>
+              Highlights embedded languages (e.g. CSS inside HTML, JavaScript inside HTML)
+            </li>
+            <li>
+              Highlights inline code as well, not just code blocks
+            </li>
+            <li>
+              Highlights nested languages (CSS in HTML, JavaScript in HTML)
+            </li>
+            <li>
+              It doesn’t force you to use any Prism-specific markup, not even a Prism-specific
+              class name, only standard markup you should be using anyway. So, you can just
+              try it for a while, remove it if you don’t like it and leave no traces behind.
+            </li>
+            <li>
+              Highlight specific lines and/or line ranges (requires <xref format="html" scope="external" href="https://prismjs.com/plugins/line-highlight/">plugin</xref>)
+            </li>
+            <li>
+              Show invisible characters like tabs, line breaks etc (requires <xref format="html" scope="external" href="https://prismjs.com/plugins/show-invisibles/">plugin</xref>)
+            </li>
+            <li>
+              Autolink URLs and emails, use Markdown links in comments (requires <xref format="html" scope="external" href="https://prismjs.com/plugins/xrefutolinker/">plugin</xref>)
+            </li>
+        </ul>
+    </body>
+</topic>

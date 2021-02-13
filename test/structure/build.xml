@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="unit-test">
+	<!-- @disabled -->
+	<import file="../bootstrap.xml"/>
+	<description>
+		Expect that one-up DITA files are highlighted correctly
+	</description>
+	<target name="unit-test">
+		<exec-html5 ditamap="ditamap/document.ditamap"/>
+		<!--get-html-article from="topic.html" />
+		<compare-output suffix=".html"/-->
+	</target>
+</project>
