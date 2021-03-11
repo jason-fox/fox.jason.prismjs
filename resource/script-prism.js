@@ -6,8 +6,7 @@
 var outputclass = attributes.get("outputclass");
 var text = attributes.get("text");
 var name = attributes.get("name");
-var xtrc = attributes.get("xtrc");
-var xtrf = attributes.get("xtrf");
+var id = attributes.get("id");
 var clazz = attributes.get("class");
 var count = attributes.get("count");
 var xml = attributes.get("xml");
@@ -48,12 +47,11 @@ function getHighlight(text) {
 }
 
 function getXML(highlight) {
-  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + 
-  '" xtrc="' + xtrc + '" xtrf="' + xtrf + '">' + highlight + "</" + name + ">";
+  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + '">' + highlight + "</" + name + ">";
 }
 
 if (count > 0) {
-  var start = xml.indexOf(">", xml.indexOf('xtrc="'+ xtrc +'"')) + 1;
+  var start = xml.indexOf(">", xml.indexOf('prismId="'+ id +'"')) + 1;
   var end = xml.indexOf("</"+ name, start);
   var fragment = xml.substring(start, end);
   var highlightedFragment = "";

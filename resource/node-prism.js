@@ -11,11 +11,10 @@ const prismjsTempFile = require(myArgs[0]);
 const outputclass = myArgs[1];
 const textFile = myArgs[2];
 const name = myArgs[3];
-const xtrc = myArgs[4];
-const xtrf = myArgs[5];
-const clazz = myArgs[6];
-const count =  myArgs[7];
-const xmlFile =  myArgs[8];
+const id = myArgs[4];
+const clazz = myArgs[5];
+const count =  myArgs[6];
+const xmlFile =  myArgs[7];
 
 
 // Get the grammar regex used to apply highlighting.
@@ -46,13 +45,12 @@ function getHighlight(text) {
 }
 
 function getXML(highlight) {
-  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + 
-  '" xtrc="' + xtrc + '" xtrf="' + xtrf + '">' + highlight + "</" + name + ">";
+  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + '">' + highlight + "</" + name + ">";
 }
 
 if (count > 0) {
   const xml = fs.readFileSync(xmlFile, 'utf8');
-  const start = xml.indexOf(">", xml.indexOf('xtrc="'+ xtrc +'"')) + 1;
+  const start = xml.indexOf(">", xml.indexOf('prismId="'+ id +'"')) + 1;
   const end = xml.indexOf("</"+ name, start);
   let fragment = xml.substring(start, end);
   let highlightedFragment = "";

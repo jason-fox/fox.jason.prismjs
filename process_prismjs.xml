@@ -87,7 +87,17 @@
             <resourcecontains resource="${element}" substring="&lt;codeph" />
           </or>
       </condition>
+      
+
+      <!--local name="prismjs.temp.xml"/>
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.xml" />
+      <xslt if:set="contains.code" taskname="add-code-id" in="${element}" out="${prismjs.temp.xml}" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl">
+      </xslt-->
+
       <highlight-dita-file if:set="contains.code" file="${element}" />
+      <!--copy if:set="contains.code" file="${prismjs.temp.xml}" toFile="${element}"/-->
+
     </iterate-ditafiles>
   </target>
 
