@@ -66,6 +66,10 @@
       </exec>
 
       <loadfile property="@{highlighted}" srcFile="${prismjs.temp.text}"/>
+
+      <delete file="${prismjs.temp.text}"/>
+      <delete file="${prismjs.temp.xml}"/>
+
     </sequential>
   </macrodef>
   <!--
