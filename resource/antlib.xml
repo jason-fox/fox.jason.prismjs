@@ -13,8 +13,7 @@
     <attribute name="class"/>
     <attribute name="text"/>
     <attribute name="outputclass"/>
-    <attribute name="xtrc"/>
-    <attribute name="xtrf"/>
+    <attribute name="id"/>
     <attribute name="highlighted"/>
     <attribute name="count"/>
     <attribute name="xml"/>
@@ -28,8 +27,7 @@
     <attribute name="class"/>
     <attribute name="text"/>
     <attribute name="outputclass"/>
-    <attribute name="xtrc"/>
-    <attribute name="xtrf"/>
+    <attribute name="id"/>
     <attribute name="highlighted"/>
     <attribute name="count"/>
     <attribute name="xml"/>
@@ -53,8 +51,7 @@
         <arg line="&quot;@{outputclass}&quot;"/>
         <arg line="&quot;${prismjs.temp.text}&quot;"/>
         <arg line="&quot;@{name}&quot;"/>
-        <arg line="&quot;@{xtrc}&quot;"/>
-        <arg line="&quot;@{xtrf}&quot;"/>
+        <arg line="&quot;@{id}&quot;"/>
         <arg line="&quot;@{class}&quot;"/>
         <arg line="&quot;@{count}&quot;"/>
         <arg line="&quot;${prismjs.temp.xml}&quot;"/>
@@ -62,7 +59,7 @@
       <!-- For Windows run from a DOS command -->
       <exec executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node">
         <arg value="/C"/>
-        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;${prismjs.temp.text}&quot; &quot;@{name}&quot; &quot;@{xtrc}&quot; &quot;@{xtrf}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;${prismjs.temp.xml}&quot;"/>
+        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;${prismjs.temp.text}&quot; &quot;@{name}&quot; &quot;@{id}&quot; &quot;@{class}&quot; &quot;@{count}&quot; &quot;${prismjs.temp.xml}&quot;"/>
       </exec>
 
       <loadfile property="@{highlighted}" srcFile="${prismjs.temp.text}"/>
@@ -148,8 +145,7 @@
     <attribute name="name"/>
     <attribute name="class"/>
     <attribute name="outputclass"/>
-    <attribute name="xtrc"/>
-    <attribute name="xtrf"/>
+    <attribute name="id"/>
     <attribute name="count"/>
     <attribute name="xml"/>
     <attribute name="source"/>
@@ -161,12 +157,17 @@
 
       <set-short-lang outputclass="@{outputclass}" property="lang"/>
       <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
-      <prismjs if:set="lang.known" xtrc="@{xtrc}" xtrf="@{xtrf}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted" count="@{count}" xml="@{xml}"/>
+      <prismjs if:set="lang.known" id="@{id}" name="@{name}" class="@{class}" text="@{text}" outputclass="${lang}" highlighted="highlighted" count="@{count}" xml="@{xml}"/>
 
       <xmltask if:set="lang.known" outputter="default" encoding="UTF-8" indent="false" source="@{source}" dest="@{source}">
-        <replace path="//*[@xtrc='@{xtrc}']" withXml="${highlighted}"/>
-        <attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="language-${lang}"/>
+        <replace path="//*[@prismId='@{id}']" withXml="${highlighted}"/>
       </xmltask>
+      <xmltask if:set="lang.known" outputter="default" encoding="UTF-8" indent="false" source="@{source}" dest="@{source}">
+        <attr path="//*[@prismId='@{id}']" attr="outputclass" value="language-${lang}"/>
+      </xmltask>
+      <!--xmltask if:set="lang.known" outputter="default" encoding="UTF-8" indent="false" source="@{source}" dest="@{source}">
+        <attr path="//*[@prismId='@{id}']" attr="prismId" remove="true"/>
+      </xmltask-->
     </sequential>
   </macrodef>
 
@@ -237,36 +238,32 @@
       <local name="file.raw.xml"/>
       <local name="lang.known"/>
       <echo taskname="prismjs" level="verbose" message="Processing @{file}"/>
-      <xmltask source="@{file}" destbuffer="ditafile"/>
-      <xmltask sourcebuffer="ditafile" taskname="add-outputclass">
-       <call path="//*[(self::codeblock or self::codeph) and @xtrc and not(@outputclass) and (ancestor::body/@outputclass)]">
-          <param name="xtrc" path="@xtrc"/>
-          <param name="outputclass" path="ancestor::body/@outputclass"/>
-          <actions>
-            <xmltask sourcebuffer="ditafile" destbuffer="ditafile" indent="false">
-              <attr path="//*[@xtrc='@{xtrc}']" attr="outputclass" value="@{outputclass}"/>
-            </xmltask>
-          </actions>
-        </call>
-      </xmltask>
-      <xmltask sourcebuffer="ditafile" dest="@{file}"/>
-      <loadfile taskname="read-xml-source" property="file.raw.xml" srcFile="@{file}"/>
+
+      <local name="prismjs.temp.xml"/>
+      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
+        property="prismjs.temp.xml" />
+      <xslt taskname="add-code-id" in="@{file}" out="${prismjs.temp.xml}" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl">
+      </xslt>
+      <copy file="${prismjs.temp.xml}" toFile="@{file}"/>
+      <loadfile taskname="read-xml-source" property="file.raw.xml" srcFile="${prismjs.temp.xml}"/>
 
 
-      <xmltask sourcebuffer="ditafile" taskname="highlight-code">
-        <call path="//*[(self::codeblock or self::codeph) and @xtrc and @outputclass]">
+      <xmltask source="${prismjs.temp.xml}" taskname="highlight-code">
+        <call path="//*[(self::codeblock or self::codeph)]">
           <param default="" name="text" path="text()"/>
           <param name="name" path="name()"/>
           <param name="class" path="@class"/>
-          <param name="xtrc" path="@xtrc"/>
-          <param default="" name="xtrf" path="@xtrf"/>
+          <param name="prismid" path="@prismId"/>
           <param name="outputclass" path="@outputclass"/>
           <param name="count" path="count(*)"/>
           <actions>
-            <highlight-dita-element text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" xtrc="@{xtrc}" xtrf="@{xtrf}" count="@{count}" xml="${file.raw.xml}" source="@{file}"/>
+            <highlight-dita-element text="@{text}" name="@{name}" class="@{class}" outputclass="@{outputclass}" id="@{prismid}" count="@{count}" xml="${file.raw.xml}" source="@{file}"/>
           </actions>
         </call>
       </xmltask>
+
+
+     
     </sequential>
   </macrodef>
 
