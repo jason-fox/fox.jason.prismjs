@@ -74,20 +74,23 @@
   </target>
 
   <target name="highlight">
-    <ditafileset id="prismjs.ditafileset" processingRole="normal"/>
-    <pathconvert property="prismjs.ditafiles"  refid="prismjs.ditafileset" pathsep=";">
+    <restrict id="prismjs.ditafileset">
+      <ditafileset processingRole="normal">
+        <excludes format="ditamap"/>
+        <excludes format="ditaval"/>
+        <excludes format="image"/>
+      </ditafileset>
+      <or>
+        <contains text="&lt;codeph" />
+        <contains text="&lt;codeblock" />
+      </or>
+    </restrict>
+    <pathconvert property="prismjs.ditafiles" refid="prismjs.ditafileset" pathsep=";">
       <map from="file:" to=""/>
     </pathconvert>
 
     <iterate-ditafiles if:set="prismjs.highlightable" list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
-      <local name="contains.code"/>
-      <condition property="contains.code">
-          <or>
-            <resourcecontains resource="${element}" substring="&lt;codeblock" />
-            <resourcecontains resource="${element}" substring="&lt;codeph" />
-          </or>
-      </condition>
-      <highlight-dita-file if:set="contains.code" file="${element}" />
+      <highlight-dita-file file="${element}" />
     </iterate-ditafiles>
   </target>
 
