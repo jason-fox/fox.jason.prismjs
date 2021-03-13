@@ -22,14 +22,14 @@
       <equals arg1="${out.ext}" arg2=".html"/>
     </condition>
 
-    <dita-ot-fail id="PRSM004W">
-      <condition>
-        <and>
-          <equals arg1="${store-type}" arg2="memory"/>
-          <isset property="prismjs.highlightable"/>
-        </and>
-      </condition>
-    </dita-ot-fail>
+    <condition property="prismjs.memory">
+      <and>
+        <equals arg1="${store-type}" arg2="memory"/>
+        <isset property="prismjs.highlightable"/>
+      </and>
+    </condition>
+
+    <dita-ot-echo id="PRSM004W" if:set="prismjs.memory"/>
   </target>
 
 
@@ -74,22 +74,23 @@
   </target>
 
   <target name="highlight">
-    <ditafileset id="prismjs.ditafileset" processingRole="normal"/>
-    <pathconvert property="prismjs.ditafiles"  refid="prismjs.ditafileset" pathsep=";">
+    <restrict id="prismjs.ditafileset">
+      <ditafileset processingRole="normal">
+        <excludes format="ditamap"/>
+        <excludes format="ditaval"/>
+        <excludes format="image"/>
+      </ditafileset>
+      <or>
+        <contains text="&lt;codeph" />
+        <contains text="&lt;codeblock" />
+      </or>
+    </restrict>
+    <pathconvert property="prismjs.ditafiles" refid="prismjs.ditafileset" pathsep=";">
       <map from="file:" to=""/>
     </pathconvert>
 
     <iterate-ditafiles if:set="prismjs.highlightable" list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
-      <local name="contains.code"/>
-      <condition property="contains.code">
-          <or>
-            <resourcecontains resource="${element}" substring="&lt;codeblock" />
-            <resourcecontains resource="${element}" substring="&lt;codeph" />
-          </or>
-      </condition>
-      <!--split-codeblocks if:set="contains.code" file="${element}" /-->
-      <highlight-dita-file if:set="contains.code" file="${element}" />
-      
+      <highlight-dita-file file="${element}" />
     </iterate-ditafiles>
   </target>
 
