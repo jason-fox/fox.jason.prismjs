@@ -23,8 +23,12 @@ if (!grammar) {
   grammar = Prism.languages[language2];
 }
 
-function getHighlight(text) {
+function getHighlight(xml) {
   // Run the prism highlighter then replace spans with ph elements
+  const text = xml.replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+
   const highlight = grammar
     ? Prism.highlight(text, grammar, language)
     : text;
@@ -37,10 +41,31 @@ function getHighlight(text) {
 
 let text = fs.readFileSync(textFile, 'utf8');
 
-text = text
-        .replace(/&amp;/g, "&")
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">");
+if (text.includes("<")) {
+  let highlightedFragment = "";
+  let textStart = 0;
+  let textEnd = text.indexOf("<", textStart);
+  while (textStart < text.length) {
+    highlightedFragment +=getHighlight(
+      text.substring(textStart, textEnd)
 
-fs.writeFileSync(textFile, getHighlight(text));
+    )
+    textStart = text.indexOf(">", textEnd)+1;
+    if (text.substring(textEnd, textStart).indexOf("<xref") !=-1){
+       textStart =  text.indexOf("</xref>", textEnd)+7;
+    }
+    highlightedFragment += text.substring(textEnd, textStart);
+    textEnd = text.indexOf("<", textStart);
+    if(textEnd == -1){
+      highlightedFragment += getHighlight(
+        text.substring(textStart, text.length)
+      )
+      break;
+    }
+  }
+  fs.writeFileSync(textFile, highlightedFragment);
+} else {
+  text = text
+  fs.writeFileSync(textFile, getHighlight(text));
+}
 
