@@ -4,7 +4,7 @@
  */
 
 var outputclass = attributes.get("outputclass");
-var text = attributes.get("text");
+var codeDITA = attributes.get("text");
 
 // Load the Prism.js library at runtime.
 eval(
@@ -42,30 +42,30 @@ function getHighlight(xml) {
     .replace(/&amp;lt;/g, '&lt;')
 }
 
-if (text.indexOf("<")) {
+if (codeDITA.indexOf("<")) {
   var highlightedFragment = "";
   var textStart = 0;
-  var textEnd = text.indexOf("<", textStart);
-  while (textStart < text.length) {
+  var textEnd = codeDITA.indexOf("<", textStart);
+  while (textStart < codeDITA.length) {
     highlightedFragment +=getHighlight(
-      text.substring(textStart, textEnd)
+      codeDITA.substring(textStart, textEnd)
 
     )
-    textStart = text.indexOf(">", textEnd)+1;
-    if (text.substring(textEnd, textStart).indexOf("<xref") !=-1){
-       textStart =  text.indexOf("</xref>", textEnd)+7;
+    textStart = codeDITA.indexOf(">", textEnd)+1;
+    if (codeDITA.substring(textEnd, textStart).indexOf("<xref") !=-1){
+       textStart =  codeDITA.indexOf("</xref>", textEnd)+7;
     }
-    highlightedFragment += text.substring(textEnd, textStart);
-    textEnd = text.indexOf("<", textStart);
+    highlightedFragment += codeDITA.substring(textEnd, textStart);
+    textEnd = codeDITA.indexOf("<", textStart);
     if(textEnd == -1){
       highlightedFragment += getHighlight(
-        text.substring(textStart, text.length)
+        codeDITA.substring(textStart, codeDITA.length)
       )
       break;
     }
   }
   project.setProperty(attributes.get("highlighted"), highlightedFragment);
 } else {
-  project.setProperty(attributes.get("highlighted"), getHighlight(text));
+  project.setProperty(attributes.get("highlighted"), getHighlight(codeDITA));
 }
 

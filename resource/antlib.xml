@@ -204,6 +204,8 @@
         outputclass="${lang}" 
         highlighted="highlighted"/>
       <property unless:set="lang.known" name="highlighted" value="${xml}"/>
+
+      <replace unless:set="lang.known" file="@{file}" token="outputclass=&quot;language-${outputclass}&quot;" value="outputclass=&quot;${outputclass}&quot;" />
       <replace file="@{file}" token="${token.id}" value="${highlighted}"/>   
     </sequential>
   </macrodef>

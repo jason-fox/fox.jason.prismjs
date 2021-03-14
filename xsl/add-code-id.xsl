@@ -67,7 +67,7 @@
     </xsl:result-document>
 
     <xsl:result-document method="text" href="{$prismjslang}" omit-xml-declaration="true">
-      <xsl:value-of select="$outputclass2"/>
+      <xsl:value-of select="$outputclass"/>
     </xsl:result-document>
    </xsl:template>
 

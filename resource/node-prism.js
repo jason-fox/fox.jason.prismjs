@@ -39,32 +39,32 @@ function getHighlight(xml) {
     .replace(/&amp;lt;/g, '&lt;')
 }
 
-let text = fs.readFileSync(textFile, 'utf8');
+let codeDITA = fs.readFileSync(textFile, 'utf8');
 
-if (text.includes("<")) {
+if (codeDITA.includes("<")) {
   let highlightedFragment = "";
   let textStart = 0;
-  let textEnd = text.indexOf("<", textStart);
-  while (textStart < text.length) {
+  let textEnd = codeDITA.indexOf("<", textStart);
+  while (textStart < codeDITA.length) {
     highlightedFragment +=getHighlight(
-      text.substring(textStart, textEnd)
+      codeDITA.substring(textStart, textEnd)
 
     )
-    textStart = text.indexOf(">", textEnd)+1;
-    if (text.substring(textEnd, textStart).indexOf("<xref") !=-1){
-       textStart =  text.indexOf("</xref>", textEnd)+7;
+    textStart = codeDITA.indexOf(">", textEnd)+1;
+    if (codeDITA.substring(textEnd, textStart).indexOf("<xref") !=-1){
+       textStart =  codeDITA.indexOf("</xref>", textEnd)+7;
     }
-    highlightedFragment += text.substring(textEnd, textStart);
-    textEnd = text.indexOf("<", textStart);
+    highlightedFragment += codeDITA.substring(textEnd, textStart);
+    textEnd = codeDITA.indexOf("<", textStart);
     if(textEnd == -1){
       highlightedFragment += getHighlight(
-        text.substring(textStart, text.length)
+        codeDITA.substring(textStart, codeDITA.length)
       )
       break;
     }
   }
   fs.writeFileSync(textFile, highlightedFragment);
 } else {
-  fs.writeFileSync(textFile, getHighlight(text));
+  fs.writeFileSync(textFile, getHighlight(codeDITA));
 }
 
