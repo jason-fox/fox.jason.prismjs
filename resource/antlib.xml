@@ -9,7 +9,8 @@
     Invokes the prismjs library using a scriptdef and returns the result
   -->
   <scriptdef unless:set="node.installed" language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/script-prism.js">
-    <attribute name="src"/>
+    <attribute name="text"/>
+    <attribute name="src" />
     <attribute name="outputclass"/>
     <attribute name="highlighted"/>
   </scriptdef>
@@ -18,6 +19,7 @@
     Invokes the prismjs library via node and returns the result
   -->
   <macrodef if:set="node.installed" name="prismjs" >
+    <attribute name="text" default=""/>
     <attribute name="src"/>
     <attribute name="outputclass"/>
     <attribute name="highlighted"/>
@@ -184,6 +186,7 @@
       <local name="id" />
       <local name="token.id"/>
       <local name="outputclass" />
+      <local name="xml" />
       <local name="lang"/>
       <local name="short-lang"/>
       <local name="highlighted"/>
@@ -192,9 +195,15 @@
       <basename property="id" file="@{src}" suffix=".xml"/>
       <property name="token.id">@@@@@@${id}@@@@@@</property>
       <loadfile property="outputclass" srcFile="@{dir}/${id}.txt"/>
+      <loadfile property="xml" srcFile="@{dir}/${id}.xml"/>
       <set-short-lang outputclass="${outputclass}" property="lang"/>
       <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
-      <prismjs if:set="lang.known"  src="@{dir}/@{src}" outputclass="${lang}" highlighted="highlighted"/>
+      <prismjs if:set="lang.known"
+        text="${xml}"
+        src="@{dir}/@{src}" 
+        outputclass="${lang}" 
+        highlighted="highlighted"/>
+      <property unless:set="lang.known" name="highlighted" value="${xml}"/>
       <replace file="@{file}" token="${token.id}" value="${highlighted}"/>   
     </sequential>
   </macrodef>

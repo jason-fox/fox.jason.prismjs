@@ -65,7 +65,6 @@ if (text.includes("<")) {
   }
   fs.writeFileSync(textFile, highlightedFragment);
 } else {
-  text = text
   fs.writeFileSync(textFile, getHighlight(text));
 }
 

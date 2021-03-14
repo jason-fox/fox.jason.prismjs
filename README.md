@@ -90,7 +90,6 @@ rm dita-ot-3.6.zip
 -   Run the plug-in installation commands:
 
 ```console
-dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
 dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
 dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
@@ -273,10 +272,8 @@ A working example can be found in the
 
 ## License
 
-[Apache 2.0](LICENSE) © 2018-2020 Jason Fox
+[Apache 2.0](LICENSE) © 2018-2021 Jason Fox
 
 The Program includes the following additional software components which were obtained under license:
 
 -   prism.js - https://github.com/PrismJS/prism/ - **MIT license**
--   xmltask.jar - http://www.oopsconsultancy.com/software/xmltask/ - **Apache 1.1 license** (within
-    `org.doctales.xmltask` plug-in)

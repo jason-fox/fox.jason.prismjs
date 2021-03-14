@@ -6,9 +6,8 @@
 	<!-- Ensure the plugin's error and logging messages are available -->
 	<feature extension="dita.xsl.messages" file="resource/messages.xml"/>
 	<!--
-		This plugin requires the XMLTask lib and extended CSS
+		This plugin requires extended CSS
 	-->
-	<require plugin="org.doctales.xmltask"/>
 	<require plugin="fox.jason.extend.css"/>
 	
 	<!-- PDF extension point -->
