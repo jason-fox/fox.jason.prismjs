@@ -10,12 +10,6 @@ const prismjsTempFile = require(myArgs[0]);
 
 const outputclass = myArgs[1];
 const textFile = myArgs[2];
-const name = myArgs[3];
-const id = myArgs[4];
-const clazz = myArgs[5];
-const count =  myArgs[6];
-const xmlFile =  myArgs[7];
-
 
 // Get the grammar regex used to apply highlighting.
 const lang = /\blang(?:uage)?-([\w-]+)\b/i;
@@ -33,44 +27,20 @@ function getHighlight(text) {
   // Run the prism highlighter then replace spans with ph elements
   const highlight = grammar
     ? Prism.highlight(text, grammar, language)
-    : text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+    : text;
   return highlight
     .replace(/<span class=/g, '<ph class="- topic/ph " outputclass=')
     .replace(/<\/span>/g, "</ph>")
-    .replace(/&amp;<\/ph>gt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&gt;')
-    .replace(/&amp;<\/ph>lt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&lt;');
+    .replace(/&amp;gt;/g, '&gt;')
+    .replace(/&amp;lt;/g, '&lt;')
 }
 
-function getXML(highlight) {
-  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + '">' + highlight + "</" + name + ">";
-}
+let text = fs.readFileSync(textFile, 'utf8');
 
-if (count > 0) {
-  const xml = fs.readFileSync(xmlFile, 'utf8');
-  const start = xml.indexOf(">", xml.indexOf('prismId="'+ id +'"')) + 1;
-  const end = xml.indexOf("</"+ name, start);
-  let fragment = xml.substring(start, end);
-  let highlightedFragment = "";
-  let textStart = 0;
-  let textEnd = fragment.indexOf("<", textStart);
-  while (textStart < fragment.length) {
-    highlightedFragment +=getHighlight(fragment.substring(textStart, textEnd))
-    textStart = fragment.indexOf(">", textEnd)+1;
-    if (fragment.substring(textEnd, textStart).indexOf("<xref") !=-1){
-       textStart =  fragment.indexOf("</xref>", textEnd)+7;
-    }
-    highlightedFragment += fragment.substring(textEnd, textStart);
-    textEnd = fragment.indexOf("<", textStart);
-    if(textEnd == -1){
-      highlightedFragment += getHighlight(fragment.substring(textStart, fragment.length))
-      break;
-    }
-  }
-  fs.writeFileSync(textFile, getXML(highlightedFragment));
-} else {
-  const text = fs.readFileSync(textFile, 'utf8');
-  fs.writeFileSync(textFile, getXML(getHighlight(text)));
-}
+text = text
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">");
+
+fs.writeFileSync(textFile, getHighlight(text));
+

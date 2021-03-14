@@ -138,11 +138,11 @@
             <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
           </fo:block>
           <fo:block>Requiring
-            <fo:inline font-family="MONOSPACE">prismjs</fo:inline>will load the default languages:
-            <fo:inline font-family="MONOSPACE">markup</fo:inline>,
-            <fo:inline font-family="MONOSPACE">css</fo:inline>,
-            <fo:inline font-family="MONOSPACE">clike</fo:inline>and
-            <fo:inline font-family="MONOSPACE">javascript</fo:inline>. You can load more languages with the
+            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">prismjs</fo:inline>will load the default languages:
+            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">markup</fo:inline>,
+            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">css</fo:inline>,
+            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">clike</fo:inline>and
+            <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">javascript</fo:inline>. You can load more languages with the
             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">loadLanguages</fo:inline>
               <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
