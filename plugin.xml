@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="fox.jason.prismjs" version="3.1.0">
-	<feature extension="dita.conductor.lib.import" file="lib/prismjs-1.3.jar"/>
+	<feature extension="dita.conductor.lib.import" file="lib/prismjs-1.4.jar"/>
 	<feature extension="ant.import" file="process_prismjs.xml"/>
 	<!-- Ensure the plugin's error and logging messages are available -->
 	<feature extension="dita.xsl.messages" file="resource/messages.xml"/>
 	<!--
-		This plugin requires the XMLTask lib and extended CSS
+		This plugin requires extended CSS
 	-->
-	<require plugin="org.doctales.xmltask"/>
 	<require plugin="fox.jason.extend.css"/>
 	
 	<!-- PDF extension point -->

@@ -10,13 +10,6 @@ const prismjsTempFile = require(myArgs[0]);
 
 const outputclass = myArgs[1];
 const textFile = myArgs[2];
-const name = myArgs[3];
-const xtrc = myArgs[4];
-const xtrf = myArgs[5];
-const clazz = myArgs[6];
-const count =  myArgs[7];
-const xmlFile =  myArgs[8];
-
 
 // Get the grammar regex used to apply highlighting.
 const lang = /\blang(?:uage)?-([\w-]+)\b/i;
@@ -30,49 +23,48 @@ if (!grammar) {
   grammar = Prism.languages[language2];
 }
 
-function getHighlight(text) {
+function getHighlight(xml) {
   // Run the prism highlighter then replace spans with ph elements
+  const text = xml.replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+
   const highlight = grammar
     ? Prism.highlight(text, grammar, language)
-    : text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+    : text;
   return highlight
     .replace(/<span class=/g, '<ph class="- topic/ph " outputclass=')
     .replace(/<\/span>/g, "</ph>")
-    .replace(/&amp;<\/ph>gt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&gt;')
-    .replace(/&amp;<\/ph>lt<ph class="- topic\/ph " outputclass="token punctuation">;/g, '&lt;');
+    .replace(/&amp;gt;/g, '&gt;')
+    .replace(/&amp;lt;/g, '&lt;')
 }
 
-function getXML(highlight) {
-  return "<" + name + ' class="' + clazz + '" outputclass="' + outputclass + 
-  '" xtrc="' + xtrc + '" xtrf="' + xtrf + '">' + highlight + "</" + name + ">";
-}
+let text = fs.readFileSync(textFile, 'utf8');
 
-if (count > 0) {
-  const xml = fs.readFileSync(xmlFile, 'utf8');
-  const start = xml.indexOf(">", xml.indexOf('xtrc="'+ xtrc +'"')) + 1;
-  const end = xml.indexOf("</"+ name, start);
-  let fragment = xml.substring(start, end);
+if (text.includes("<")) {
   let highlightedFragment = "";
   let textStart = 0;
-  let textEnd = fragment.indexOf("<", textStart);
-  while (textStart < fragment.length) {
-    highlightedFragment +=getHighlight(fragment.substring(textStart, textEnd))
-    textStart = fragment.indexOf(">", textEnd)+1;
-    if (fragment.substring(textEnd, textStart).indexOf("<xref") !=-1){
-       textStart =  fragment.indexOf("</xref>", textEnd)+7;
+  let textEnd = text.indexOf("<", textStart);
+  while (textStart < text.length) {
+    highlightedFragment +=getHighlight(
+      text.substring(textStart, textEnd)
+
+    )
+    textStart = text.indexOf(">", textEnd)+1;
+    if (text.substring(textEnd, textStart).indexOf("<xref") !=-1){
+       textStart =  text.indexOf("</xref>", textEnd)+7;
     }
-    highlightedFragment += fragment.substring(textEnd, textStart);
-    textEnd = fragment.indexOf("<", textStart);
+    highlightedFragment += text.substring(textEnd, textStart);
+    textEnd = text.indexOf("<", textStart);
     if(textEnd == -1){
-      highlightedFragment += getHighlight(fragment.substring(textStart, fragment.length))
+      highlightedFragment += getHighlight(
+        text.substring(textStart, text.length)
+      )
       break;
     }
   }
-  fs.writeFileSync(textFile, getXML(highlightedFragment));
+  fs.writeFileSync(textFile, highlightedFragment);
 } else {
-  const text = fs.readFileSync(textFile, 'utf8');
-  fs.writeFileSync(textFile, getXML(getHighlight(text)));
+  fs.writeFileSync(textFile, getHighlight(text));
 }
+

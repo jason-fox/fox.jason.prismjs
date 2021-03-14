@@ -16,8 +16,8 @@
     <reason>Node has not been installed.</reason>
     <response>Will use &lt;scriptdef&gt; library as fallback option</response>
   </message>
-  <message id="PRSM004F" type="FATAL">
-    <reason>The Prismjs plugin is not compatible with in-memory processing.</reason>
-    <response>Rerun the transform setting --store-type=file</response>
+  <message id="PRSM004W" type="WARN">
+    <reason>Codeblocks cannot be highlighted using in-memory processing.</reason>
+    <response>Rerun the transform with --store-type=file</response>
   </message>
 </messages>

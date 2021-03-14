@@ -22,14 +22,14 @@
       <equals arg1="${out.ext}" arg2=".html"/>
     </condition>
 
-    <dita-ot-fail id="PRSM004F">
-      <condition>
-        <and>
-          <equals arg1="${store-type}" arg2="memory"/>
-          <isset property="prismjs.highlightable"/>
-        </and>
-      </condition>
-    </dita-ot-fail>
+    <condition property="prismjs.memory">
+      <and>
+        <equals arg1="${store-type}" arg2="memory"/>
+        <isset property="prismjs.highlightable"/>
+      </and>
+    </condition>
+
+    <dita-ot-echo id="PRSM004W" if:set="prismjs.memory"/>
   </target>
 
 
