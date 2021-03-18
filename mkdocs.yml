@@ -1,7 +1,7 @@
 site_name: Syntax highlighting for DITA-OT
 repo_url: 'https://github.com/jason-fox/fox.jason.prismjs'
 repo_name: GitHub
-nav:
+pages:
   - Home: index.md
   - Install: install.md
   - Usage: usage.md
