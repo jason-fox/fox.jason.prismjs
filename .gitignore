@@ -2,6 +2,10 @@
 **/temp/**
 **/tmp/**
 
+target/
+classes/
+lib/ant-*.jar
+lib/ant-launcher-*.jar
 
 *~
 .fuse_hidden*
