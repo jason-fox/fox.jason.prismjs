@@ -1,4 +1,4 @@
-<h1>Usage</h1>
+# Usage
 
 To highlight the syntax within codeblocks, add an `outputclass` attribute to any `<codeph>` or `<codeblock>` elements in
 your `*.dita` files. Alternatively add an `outputclass` attribute to the `<body>` element, and all `<codeph>` or

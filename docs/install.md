@@ -1,4 +1,4 @@
-<h1>Install</h1>
+# Install
 
 The DITA-OT Prism-JS syntax highlighter has been tested against [DITA-OT 3.x](http://www.dita-ot.org/download). It is
 recommended that you upgrade to the latest version.
@@ -10,16 +10,16 @@ recommended that you upgrade to the latest version.
 -   Full installation instructions for downloading DITA-OT can be found
     [here](https://www.dita-ot.org/3.6/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.6.zip` package from the project website at
+    1.  Download the `dita-ot-3.6.1.zip` package from the project website at
         [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable. This defines the
         necessary environment variable to run the `dita` command from the command line.
 
 ```bash
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.6/dita-ot-3.6.zip
-unzip -q dita-ot-3.6.zip
-rm dita-ot-3.6.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.6.1/dita-ot-3.6.1.zip
+unzip -q dita-ot-3.6.1.zip
+rm dita-ot-3.6.1.zip
 ```
 
 ## Installing the Plug-in
@@ -27,7 +27,6 @@ rm dita-ot-3.6.zip
 -   Run the plug-in installation command:
 
 ```bash
-dita install https://github.com/doctales/org.doctales.xmltask/archive/master.zip
 dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
 dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
@@ -43,7 +42,7 @@ any plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will s
 11 onwards and above. From Java 15 onwards, these plugins will no longer work.
 
 The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript library, and therefore has been updated
-to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on 
+to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on
 Chrome's V8 JavaScript engine.
 
 To download a copy follow the instructions on the [Install Page](https://nodejs.org/en/download/).
