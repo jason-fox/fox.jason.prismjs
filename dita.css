@@ -40,6 +40,12 @@
      letter-spacing: 1px;
      font-size: 87.5%;
 }
+ pre {
+     border-width: 1px;
+     border-style: solid;
+     border-color: #c0c7d2;
+     border-radius: .25rem;
+}
  pre code {
      color: #ffffff !important 
 }
