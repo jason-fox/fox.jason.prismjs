@@ -76,6 +76,9 @@
      color: #000 !important;
      margin: 0 0 0 0 !important 
 }
+ .toctree-expand {
+     display: none !important;
+}
  .fa-home:before, .icon-home:before {
      content: None !important 
 }
