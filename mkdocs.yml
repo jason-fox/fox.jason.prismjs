@@ -8,3 +8,6 @@ pages:
 theme: readthedocs
 extra_css:
   - 'https://jason-fox.github.io/fox.jason.prismjs/dita.css'
+display_version: false
+collapse_navigation: true
+navigation_depth: 2

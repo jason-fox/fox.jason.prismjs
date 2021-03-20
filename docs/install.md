@@ -35,7 +35,7 @@ The `dita` command line tool requires no additional configuration.
 
 ## Installing Node.js
 
-<a href="https://nodejs.org/"><img src="https://pbs.twimg.com/profile_images/702185727262482432/n1JRsFeB_400x400.png" align="right" width="55" height="55"></a>
+<a href="https://nodejs.org/"><img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" align="right" width="60" height="60"></a>
 
 Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335)
 any plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java
