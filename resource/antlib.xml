@@ -224,11 +224,20 @@
       <basename property="filename" file="@{file}"/>
       <property name="prism.temp.dir" value="${dita.temp.dir}/code/${filename}"/>
 
+      <pathconvert targetos="unix" property="prism.temp.dir.unix" >
+        <path location="${prism.temp.dir}"/> 
+        <filtermapper> 
+          <replacestring from="\" to="/" /> 
+        </filtermapper> 
+        <map from="C:" to="file:///C:"/> 
+        <map from="D:" to="file:///D:"/>
+      </pathconvert>
+
       <mkdir dir="${prism.temp.dir}" />
       <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
         property="prismjs.temp.xml" />
       <xslt taskname="add-code-id" in="@{file}" out="${prismjs.temp.xml}" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl">
-         <param expression="${prism.temp.dir}" name="CODE_DEST"/>
+         <param expression="${prism.temp.dir.unix}" name="CODE_DEST"/>
       </xslt>
       <copy file="${prismjs.temp.xml}" toFile="@{file}" overwrite="true"/>
 
