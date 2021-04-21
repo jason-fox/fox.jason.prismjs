@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
-<plugin id="fox.jason.prismjs" version="3.2.1">
+<plugin id="fox.jason.prismjs" version="3.2.2">
 	<feature extension="dita.conductor.lib.import" file="lib/prismjs-1.4.jar"/>
 	<feature extension="ant.import" file="process_prismjs.xml"/>
 	<!-- Ensure the plugin's error and logging messages are available -->

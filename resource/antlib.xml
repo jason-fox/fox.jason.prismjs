@@ -196,6 +196,7 @@
       <property name="token.id">@@@@@@${id}@@@@@@</property>
       <loadfile property="outputclass" srcFile="@{dir}/${id}.txt"/>
       <loadfile property="xml" srcFile="@{dir}/${id}.xml"/>
+
       <set-short-lang outputclass="${outputclass}" property="lang"/>
       <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
       <prismjs if:set="lang.known"
@@ -219,6 +220,7 @@
       <local name="prism.temp.dir"/>
       <local name="prismjs.temp.xml"/>
 
+      <local name="prism.temp.dir.unix" />
       <echo taskname="prismjs" level="verbose" message="Processing @{file}"/>
 
       <basename property="filename" file="@{file}"/>
