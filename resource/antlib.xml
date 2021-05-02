@@ -55,7 +55,7 @@
     @param macro - A macro to run.
     @param fileset - A set of files
   -->
-  <taskdef classname="fox.jason.prismjs.tasks.IterateFilesetTask"  name="iterate" onerror="ignore"/>
+  <taskdef classname="fox.jason.prismjs.tasks.IterateFilesetTask"  name="iterate-prismjs" onerror="ignore"/>
 
   <!--
     Checks the highlighting language and dynamically adds additonal regexes
@@ -165,9 +165,9 @@
     <attribute name="dir"/>
     <attribute name="refid"/>
     <sequential>
-      <iterate macro="prism-code-element" dir="@{dir}" file="@{file}" >
+      <iterate-prismjs macro="prism-code-element" dir="@{dir}" file="@{file}" >
         <fileset refid="@{refid}"/>
-      </iterate>
+      </iterate-prismjs>
     </sequential>
   </macrodef>
 
