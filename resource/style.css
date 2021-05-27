@@ -8,7 +8,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 
 code[class*="language-"],
 pre[class*="language-"] {
-    font-family: var( --font-family-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+    font-family: var( --bs-font-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
