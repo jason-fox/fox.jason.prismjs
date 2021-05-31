@@ -92,9 +92,7 @@
           <contains text="&lt;codeph" />
           <contains text="&lt;codeblock" />
         </or>
-        <not>
-          <name name="${args.input.dir}/**/*" />
-        </not>
+        <name regex="${dita.temp.dir}\/.*" />
       </and>
     </restrict>
     <pathconvert property="prismjs.ditafiles" refid="prismjs.ditafileset" pathsep=";">
@@ -102,7 +100,7 @@
     </pathconvert>
 
     <iterate-ditafiles if:set="prismjs.highlightable" list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
-      <highlight-dita-file file="${element}" />
+      <highlight-dita-file file="${element}"/>
     </iterate-ditafiles>
   </target>
 
