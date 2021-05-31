@@ -56,19 +56,35 @@
       </xsl:for-each>
       <xsl:attribute name="outputclass">
         <xsl:value-of select="$outputclass2"/>
+         <xsl:if test="@scale">
+            <xsl:text> scale-</xsl:text>
+            <xsl:value-of select="@scale"/>
+         </xsl:if>
       </xsl:attribute>
-      <xsl:text>@@@</xsl:text>
-      <xsl:value-of select="$prismId"/>
-      <xsl:text>@@@</xsl:text>
+      <xsl:choose>
+        <xsl:when test="$outputclass2='language-none'">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:when test="$outputclass2='language-text'">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>@@@</xsl:text>
+          <xsl:value-of select="$prismId"/>
+          <xsl:text>@@@</xsl:text>
+
+           <xsl:result-document method="xml" href="{$prismjsfile}" omit-xml-declaration="true">
+             <xsl:apply-templates select="node()" mode="copy"/>
+            </xsl:result-document>
+
+            <xsl:result-document method="text" href="{$prismjslang}" omit-xml-declaration="true">
+              <xsl:value-of select="$outputclass"/>
+            </xsl:result-document>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:element>
 
-    <xsl:result-document method="xml" href="{$prismjsfile}" omit-xml-declaration="true">
-     <xsl:apply-templates select="node()" mode="copy"/>
-    </xsl:result-document>
-
-    <xsl:result-document method="text" href="{$prismjslang}" omit-xml-declaration="true">
-      <xsl:value-of select="$outputclass"/>
-    </xsl:result-document>
+   
    </xsl:template>
 
   <xsl:template match="/ | @* | node()" mode="copy">

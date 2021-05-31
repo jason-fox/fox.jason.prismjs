@@ -13,8 +13,14 @@
      <!-- Only run the Highlight transform for HTML or PDF -->
     <condition property="prismjs.highlightable">
       <or>
-        <isset property="args.xsl"/>
-        <isset property="args.rellinks"/>
+        <equals arg1="${out.ext}" arg2=".html"/>
+        <isset property="axf.formatter.output-format"/>
+        <isset property="fop.formatter.output-format"/>
+        <isset property="xep.formatter.output-format"/>
+        <!-- add any additional missing transtypes here -->
+        <contains string="${transtype}" substring="HTML" casesensitive="no"/>
+        <contains string="${transtype}" substring="PDF" casesensitive="no"/>
+        <contains string="${transtype}" substring="eclipsehelp" casesensitive="no"/>
       </or>
     </condition>
 
@@ -74,16 +80,22 @@
   </target>
 
   <target name="highlight">
+    <dirname property="args.input.dir" file="${args.input}"/>
     <restrict id="prismjs.ditafileset">
       <ditafileset processingRole="normal">
         <excludes format="ditamap"/>
         <excludes format="ditaval"/>
         <excludes format="image"/>
       </ditafileset>
-      <or>
-        <contains text="&lt;codeph" />
-        <contains text="&lt;codeblock" />
-      </or>
+      <and>
+        <or>
+          <contains text="&lt;codeph" />
+          <contains text="&lt;codeblock" />
+        </or>
+        <not>
+          <name name="${args.input.dir}/**/*" />
+        </not>
+      </and>
     </restrict>
     <pathconvert property="prismjs.ditafiles" refid="prismjs.ditafileset" pathsep=";">
       <map from="file:" to=""/>
