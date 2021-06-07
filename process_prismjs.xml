@@ -42,15 +42,15 @@
   <!--
     Check if Node is installed.
   -->
-  <target name="node.check">
+  <target name="node.check" if="prismjs.highlightable">
     <!-- For Unix run node as an executable -->
 
-    <exec if:set="prismjs.highlightable" executable="node" dir="${dita.dir}" osfamily="unix" taskname="node"
+    <exec executable="node" dir="${dita.dir}" osfamily="unix" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg line="-v"/>
     </exec>
     <!-- For Windows run from a DOS command -->
-    <exec if:set="prismjs.highlightable" executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node"
+    <exec executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node"
       resultproperty="node.result" outputproperty="node.out" failonerror="false" failifexecutionfails="false">
       <arg value="/C"/>
       <arg value="node -v"/>
@@ -60,7 +60,7 @@
       <equals arg1="${node.result}" arg2="0"/>
     </condition>
 
-    <dita-ot-echo if:set="prismjs.highlightable" unless:set="node.installed" id="PRSM003W"/>
+    <dita-ot-echo unless:set="node.installed" id="PRSM003W"/>
     <echo if:set="node.installed"  taskname="node" level="info" message="${node.out}"/>
   </target>
 
@@ -79,7 +79,7 @@
    
   </target>
 
-  <target name="highlight">
+  <target name="highlight" if="prismjs.highlightable">
     <dirname property="args.input.dir" file="${args.input}"/>
     <restrict id="prismjs.ditafileset">
       <ditafileset processingRole="normal">
@@ -99,7 +99,7 @@
       <map from="file:" to=""/>
     </pathconvert>
 
-    <iterate-ditafiles if:set="prismjs.highlightable" list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
+    <iterate-ditafiles list="${prismjs.ditafiles}" unless:blank="${prismjs.ditafiles}">
       <highlight-dita-file file="${element}"/>
     </iterate-ditafiles>
   </target>

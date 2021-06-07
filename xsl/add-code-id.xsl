@@ -12,6 +12,7 @@
     version="2.0">
 
   <xsl:param as="xs:string" name="CODE_DEST"/> 
+  <xsl:param as="xs:string" name=" PRISM_DEFAULT" select="''"/> 
 
   <!-- IdentityTransform -->
   <xsl:template match="/ | @* | node()">
@@ -34,12 +35,12 @@
           <xsl:value-of select="ancestor::body/@outputclass"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:text>language-markup</xsl:text>
+          <xsl:value-of select="$PRISM_DEFAULT"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:variable name="outputclass2">
+    <xsl:variable name="prismclass">
       <xsl:text>language-</xsl:text>
       <xsl:value-of select="replace(replace($outputclass, 'language-', ''), 'lang-', '')"/>
     </xsl:variable>
@@ -55,19 +56,27 @@
         </xsl:if>
       </xsl:for-each>
       <xsl:attribute name="outputclass">
-        <xsl:value-of select="$outputclass2"/>
+        <xsl:if test="$outputclass != ''">
+          <xsl:value-of select="$prismclass"/>
+        </xsl:if>
          <xsl:if test="@scale">
             <xsl:text> scale-</xsl:text>
             <xsl:value-of select="@scale"/>
          </xsl:if>
       </xsl:attribute>
       <xsl:choose>
-        <xsl:when test="$outputclass2='language-none'">
+        <!-- no styling at all-->
+        <xsl:when test="$outputclass=''">
           <xsl:apply-templates/>
         </xsl:when>
-        <xsl:when test="$outputclass2='language-text'">
+        <!-- text and none have no prism processing -->
+        <xsl:when test="$prismclass='language-none'">
           <xsl:apply-templates/>
         </xsl:when>
+        <xsl:when test="$prismclass='language-text'">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <!-- Normal prism processing of a codeblock -->
         <xsl:otherwise>
           <xsl:text>@@@</xsl:text>
           <xsl:value-of select="$prismId"/>

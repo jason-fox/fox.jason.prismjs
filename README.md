@@ -186,6 +186,10 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 
 ![](https://jason-fox.github.io/fox.jason.prismjs/prism-html.png)
 
+### Parameter Reference
+
+-   `prism.default` - Specifies the default Prism language
+
 ### Customizing the output
 
 Prism-JS is easily extended to other languages since it purely relies on regular expressions. Additional languages are

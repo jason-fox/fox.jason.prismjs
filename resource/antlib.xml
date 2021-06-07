@@ -240,6 +240,7 @@
         property="prismjs.temp.xml" />
       <xslt taskname="add-code-id" in="@{file}" out="${prismjs.temp.xml}" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl">
          <param expression="${prism.temp.dir.unix}" name="CODE_DEST"/>
+         <param expression="${prism.default}" name="PRISM_DEFAULT" if="prism.default"/>
       </xslt>
       <copy file="${prismjs.temp.xml}" toFile="@{file}" overwrite="true"/>
 
