@@ -80,7 +80,7 @@
   </target>
 
   <target name="highlight" if="prismjs.highlightable">
-    <dirname property="args.input.dir" file="${args.input}"/>
+    <basename property="prism.temp.dirname" file="${dita.temp.dir}"/>
     <restrict id="prismjs.ditafileset">
       <ditafileset processingRole="normal">
         <excludes format="ditamap"/>
@@ -92,7 +92,7 @@
           <contains text="&lt;codeph" />
           <contains text="&lt;codeblock" />
         </or>
-        <name regex="${dita.temp.dir}\/.*" />
+        <name regex="\/${prism.temp.dirname}\/" handledirsep="true" />
       </and>
     </restrict>
     <pathconvert property="prismjs.ditafiles" refid="prismjs.ditafileset" pathsep=";">
