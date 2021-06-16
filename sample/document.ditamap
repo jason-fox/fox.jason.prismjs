@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
 <bookmap>
-	<chapter navtitle="prism" format="dita" type="topic" href="topics/prism.dita">
+	<booktitle>
+		<mainbooktitle>Prism-JS</mainbooktitle>
+	</booktitle>
+	<frontmatter deliveryTarget="pdf">
+		<booklists>
+			<toc/>
+		</booklists>
+		<bookabstract format="dita" type="topic" href="topics/prism.dita"/>
+	</frontmatter>
+	<chapter>
+		<topicmeta>
+			<navtitle>Prism</navtitle>
+		</topicmeta>
 		<topicref navtitle="examples" format="dita" type="topic" href="topics/examples.dita"/>
 		<topicref navtitle="features" format="dita" type="topic" href="topics/features-full.dita"/>
 		<topicref navtitle="basic-usage" format="dita" type="topic" href="topics/basic-usage.dita"/>
