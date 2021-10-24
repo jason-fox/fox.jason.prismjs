@@ -20,9 +20,17 @@
 
 
 	<transtype name="pdf" desc="PDF">
-    	<param name="prism.default" desc="Specifies the default Prism language" type="string"/>
+    	<param
+      name="prism.default"
+      desc="Specifies the default Prism language"
+      type="string"
+    />
     </transtype>
     <transtype name="base-html" abstract="true" desc="HTML-based output">
-    	<param name="prism.default" desc="Specifies the default Prism language" type="string"/>
+    	<param
+      name="prism.default"
+      desc="Specifies the default Prism language"
+      type="string"
+    />
 	</transtype>
 </plugin>

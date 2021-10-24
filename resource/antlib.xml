@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--ant-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--ant-->
 <!--
   This file is part of the DITA-OT Prism-JS Plug-in project.
   See the accompanying LICENSE file for applicable licenses.
@@ -8,9 +9,14 @@
   <!--
     Invokes the prismjs library using a scriptdef and returns the result
   -->
-  <scriptdef unless:set="node.installed" language="javascript" name="prismjs" src="${dita.plugin.fox.jason.prismjs.dir}/resource/script-prism.js">
+  <scriptdef
+    unless:set="node.installed"
+    language="javascript"
+    name="prismjs"
+    src="${dita.plugin.fox.jason.prismjs.dir}/resource/script-prism.js"
+  >
     <attribute name="text"/>
-    <attribute name="src" />
+    <attribute name="src"/>
     <attribute name="outputclass"/>
     <attribute name="highlighted"/>
   </scriptdef>
@@ -18,7 +24,7 @@
   <!--
     Invokes the prismjs library via node and returns the result
   -->
-  <macrodef if:set="node.installed" name="prismjs" >
+  <macrodef if:set="node.installed" name="prismjs">
     <attribute name="text" default=""/>
     <attribute name="src"/>
     <attribute name="outputclass"/>
@@ -32,9 +38,16 @@
         <arg line="&quot;@{src}&quot;"/>
       </exec>
       <!-- For Windows run from a DOS command -->
-      <exec executable="cmd" dir="${dita.dir}" osfamily="windows" taskname="node">
+      <exec
+        executable="cmd"
+        dir="${dita.dir}"
+        osfamily="windows"
+        taskname="node"
+      >
         <arg value="/C"/>
-        <arg value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;@{src}&quot;"/>
+        <arg
+          value="node ${prismjs.node.script} &quot;${prismjs.temp.file}&quot; &quot;@{outputclass}&quot; &quot;@{src}&quot;"
+        />
       </exec>
       <loadfile property="@{highlighted}" srcFile="@{src}"/>
     </sequential>
@@ -45,7 +58,11 @@
     @param  outputclass -   The outputclass of the codeblock
     @param  property -  The property to set with the corrected highighting language
   -->
-  <taskdef classname="fox.jason.prismjs.tasks.ShortLangTask"  name="set-short-lang" onerror="ignore"/>
+  <taskdef
+    classname="fox.jason.prismjs.tasks.ShortLangTask"
+    name="set-short-lang"
+    onerror="ignore"
+  />
 
  <!--
     Iterator function to run a given macro against a set of files
@@ -55,7 +72,11 @@
     @param macro - A macro to run.
     @param fileset - A set of files
   -->
-  <taskdef classname="fox.jason.prismjs.tasks.IterateFilesetTask"  name="iterate-prismjs" onerror="ignore"/>
+  <taskdef
+    classname="fox.jason.prismjs.tasks.IterateFilesetTask"
+    name="iterate-prismjs"
+    onerror="ignore"
+  />
 
   <!--
     Checks the highlighting language and dynamically adds additonal regexes
@@ -76,10 +97,16 @@
       <echo taskname="prismjs" message="${lang}" level="debug"/>
 
       <condition property="prismjs.lang.loaded">
-        <resourcecontains resource="${prismjs.temp.file}" substring=".languages.@{lang}="/>
+        <resourcecontains
+          resource="${prismjs.temp.file}"
+          substring=".languages.@{lang}="
+        />
       </condition>
 
-      <condition property="prismjs.lang.file" value="${prism.component.dir}/prism-@{lang}.min.js">
+      <condition
+        property="prismjs.lang.file"
+        value="${prism.component.dir}/prism-@{lang}.min.js"
+      >
         <and>
           <not>
             <isset property="prismjs.lang.loaded"/>
@@ -100,7 +127,10 @@
             <isset property="prismjs.lang.known"/>
           </not>
           <not>
-            <resourcecontains resource="${prismjs.unknown.file}" substring=".languages.@{lang}="/>
+            <resourcecontains
+              resource="${prismjs.unknown.file}"
+              substring=".languages.@{lang}="
+            />
           </not>
         </and>
       </condition>
@@ -112,9 +142,23 @@
         <param name="1" value="@{lang}"/>
       </dita-ot-echo>
 
-      <loadfile if:set="prismjs.lang.file" property="prismjs.lang.js" srcFile="${prismjs.lang.file}"/>
-      <echo if:set="prismjs.lang.file" append="true" message="${line.separator}${prismjs.lang.js}" file="${prismjs.temp.file}"/>
-      <echo if:set="prismjs.lang.raise.error" append="true" message="${line.separator}/* .languages.${lang}= */" file="${prismjs.unknown.file}"/>
+      <loadfile
+        if:set="prismjs.lang.file"
+        property="prismjs.lang.js"
+        srcFile="${prismjs.lang.file}"
+      />
+      <echo
+        if:set="prismjs.lang.file"
+        append="true"
+        message="${line.separator}${prismjs.lang.js}"
+        file="${prismjs.temp.file}"
+      />
+      <echo
+        if:set="prismjs.lang.raise.error"
+        append="true"
+        message="${line.separator}/* .languages.${lang}= */"
+        file="${prismjs.unknown.file}"
+      />
 
       <property if:set="prismjs.lang.known" name="@{known}" value="true"/>
     </sequential>
@@ -122,33 +166,33 @@
 
 
   <macrodef name="iterate-ditafiles">
-    <attribute name="list" />
-    <element name="call" implicit="yes" />
+    <attribute name="list"/>
+    <element name="call" implicit="yes"/>
     <sequential>
-      <local name="element" />
-      <local name="tail" />
-      <local name="hasMoreElements" />
+      <local name="element"/>
+      <local name="tail"/>
+      <local name="hasMoreElements"/>
       <!-- unless to not get a error on empty lists -->
       <loadresource property="element" unless:blank="@{list}">
         <concat>@{list}</concat>
         <filterchain>
-          <replaceregex pattern="([^;]*).*" replace="\1" />
+          <replaceregex pattern="([^;]*).*" replace="\1"/>
         </filterchain>
       </loadresource>
       <!-- call the tasks that handle the element -->
-      <call />
+      <call/>
       <!-- recursion -->
       <condition property="hasMoreElements">
-        <contains string="@{list}" substring=";" />
+        <contains string="@{list}" substring=";"/>
       </condition>
       <loadresource property="tail" if:true="${hasMoreElements}">
         <concat>@{list}</concat>
         <filterchain>
-          <replaceregex pattern="[^;]*;(.*)" replace="\1" />
+          <replaceregex pattern="[^;]*;(.*)" replace="\1"/>
         </filterchain>
       </loadresource>
       <iterate-ditafiles list="${tail}" if:true="${hasMoreElements}">
-        <call />
+        <call/>
       </iterate-ditafiles>
     </sequential>
   </macrodef>
@@ -165,7 +209,7 @@
     <attribute name="dir"/>
     <attribute name="refid"/>
     <sequential>
-      <iterate-prismjs macro="prism-code-element" dir="@{dir}" file="@{file}" >
+      <iterate-prismjs macro="prism-code-element" dir="@{dir}" file="@{file}">
         <fileset refid="@{refid}"/>
       </iterate-prismjs>
     </sequential>
@@ -183,10 +227,10 @@
     <attribute name="dir"/>
     <attribute name="file"/>
     <sequential>
-      <local name="id" />
+      <local name="id"/>
       <local name="token.id"/>
-      <local name="outputclass" />
-      <local name="xml" />
+      <local name="outputclass"/>
+      <local name="xml"/>
       <local name="lang"/>
       <local name="short-lang"/>
       <local name="highlighted"/>
@@ -198,15 +242,26 @@
       <loadfile property="xml" srcFile="@{dir}/${id}.xml"/>
 
       <set-short-lang outputclass="${outputclass}" property="lang"/>
-      <prismjs-append-lang unless:blank="${lang}" lang="${lang}" known="lang.known"/>
-      <prismjs if:set="lang.known"
+      <prismjs-append-lang
+        unless:blank="${lang}"
+        lang="${lang}"
+        known="lang.known"
+      />
+      <prismjs
+        if:set="lang.known"
         text="${xml}"
-        src="@{dir}/@{src}" 
-        outputclass="${lang}" 
-        highlighted="highlighted"/>
+        src="@{dir}/@{src}"
+        outputclass="${lang}"
+        highlighted="highlighted"
+      />
       <property unless:set="lang.known" name="highlighted" value="${xml}"/>
 
-      <replace unless:set="lang.known" file="@{file}" token="outputclass=&quot;language-${outputclass}&quot;" value="outputclass=&quot;${outputclass}&quot;" />
+      <replace
+        unless:set="lang.known"
+        file="@{file}"
+        token="outputclass=&quot;language-${outputclass}&quot;"
+        value="outputclass=&quot;${outputclass}&quot;"
+      />
       <replace file="@{file}" token="${token.id}" value="${highlighted}"/>   
     </sequential>
   </macrodef>
@@ -220,27 +275,42 @@
       <local name="prism.temp.dir"/>
       <local name="prismjs.temp.xml"/>
 
-      <local name="prism.temp.dir.unix" />
+      <local name="prism.temp.dir.unix"/>
       <echo taskname="prismjs" level="verbose" message="Processing @{file}"/>
 
       <basename property="filename" file="@{file}"/>
-      <property name="prism.temp.dir" value="${dita.temp.dir}/code/${filename}"/>
+      <property
+        name="prism.temp.dir"
+        value="${dita.temp.dir}/code/${filename}"
+      />
 
-      <pathconvert targetos="unix" property="prism.temp.dir.unix" >
+      <pathconvert targetos="unix" property="prism.temp.dir.unix">
         <path location="${prism.temp.dir}"/> 
         <filtermapper> 
-          <replacestring from="\" to="/" /> 
+          <replacestring from="\" to="/"/> 
         </filtermapper> 
         <map from="C:" to="file:///C:"/> 
         <map from="D:" to="file:///D:"/>
       </pathconvert>
 
-      <mkdir dir="${prism.temp.dir}" />
-      <tempfile deleteonexit="true" destdir="${dita.temp.dir}" 
-        property="prismjs.temp.xml" />
-      <xslt taskname="add-code-id" in="@{file}" out="${prismjs.temp.xml}" style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl">
+      <mkdir dir="${prism.temp.dir}"/>
+      <tempfile
+        deleteonexit="true"
+        destdir="${dita.temp.dir}"
+        property="prismjs.temp.xml"
+      />
+      <xslt
+        taskname="add-code-id"
+        in="@{file}"
+        out="${prismjs.temp.xml}"
+        style="${dita.plugin.fox.jason.prismjs.dir}/xsl/add-code-id.xsl"
+      >
          <param expression="${prism.temp.dir.unix}" name="CODE_DEST"/>
-         <param expression="${prism.default}" name="PRISM_DEFAULT" if="prism.default"/>
+         <param
+          expression="${prism.default}"
+          name="PRISM_DEFAULT"
+          if="prism.default"
+        />
       </xslt>
       <copy file="${prismjs.temp.xml}" toFile="@{file}" overwrite="true"/>
 
@@ -248,7 +318,11 @@
         <include name="*.xml"/>
       </fileset>
 
-      <prism-code-elements dir="${prism.temp.dir}" file="@{file}" refid="dist.contents"/>
+      <prism-code-elements
+        dir="${prism.temp.dir}"
+        file="@{file}"
+        refid="dist.contents"
+      />
 
       <delete includeEmptyDirs="true">
         <fileset dir="${prism.temp.dir}"/>

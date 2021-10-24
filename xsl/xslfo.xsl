@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format"
-    exclude-result-prefixes="xs"
-    version="2.0">
+<xsl:stylesheet
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  exclude-result-prefixes="xs"
+  version="2.0"
+>
 
     <xsl:import href="../cfg/fo/attrs/prismjs-attr.xsl"/>
 
@@ -64,19 +66,46 @@
                         <xsl:apply-templates select="$content" mode="codeblock.line-number"/>
                       </xsl:document>
                     </xsl:variable>
-                    <xsl:variable name="line-count" select="count($buf/descendant::processing-instruction('line-number'))"/>
+                    <xsl:variable
+                name="line-count"
+                select="count($buf/descendant::processing-instruction('line-number'))"
+              />
                     <xsl:apply-templates select="$buf" mode="codeblock">
                       <xsl:with-param name="line-count" select="$line-count" tunnel="yes"/>
-                      <xsl:with-param name="codeblock.show-whitespace" select="$codeblock.show-whitespace" tunnel="yes"/>
-                      <xsl:with-param name="codeblock.whitespace-character.space" select="$codeblock.whitespace-character.space" tunnel="yes"/>
-                      <xsl:with-param name="codeblock.whitespace-character.tab" select="$codeblock.whitespace-character.tab" tunnel="yes"/>
+                      <xsl:with-param
+                  name="codeblock.show-whitespace"
+                  select="$codeblock.show-whitespace"
+                  tunnel="yes"
+                />
+                      <xsl:with-param
+                  name="codeblock.whitespace-character.space"
+                  select="$codeblock.whitespace-character.space"
+                  tunnel="yes"
+                />
+                      <xsl:with-param
+                  name="codeblock.whitespace-character.tab"
+                  select="$codeblock.whitespace-character.tab"
+                  tunnel="yes"
+                />
                     </xsl:apply-templates>    
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:apply-templates select="$content" mode="codeblock">
-                      <xsl:with-param name="codeblock.show-whitespace" select="$codeblock.show-whitespace" tunnel="yes"/>
-                      <xsl:with-param name="codeblock.whitespace-character.space" select="$codeblock.whitespace-character.space" tunnel="yes"/>
-                      <xsl:with-param name="codeblock.whitespace-character.tab" select="$codeblock.whitespace-character.tab" tunnel="yes"/>
+                      <xsl:with-param
+                  name="codeblock.show-whitespace"
+                  select="$codeblock.show-whitespace"
+                  tunnel="yes"
+                />
+                      <xsl:with-param
+                  name="codeblock.whitespace-character.space"
+                  select="$codeblock.whitespace-character.space"
+                  tunnel="yes"
+                />
+                      <xsl:with-param
+                  name="codeblock.whitespace-character.tab"
+                  select="$codeblock.whitespace-character.tab"
+                  tunnel="yes"
+                />
                     </xsl:apply-templates>
                   </xsl:otherwise>
                 </xsl:choose>                
