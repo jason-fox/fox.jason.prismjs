@@ -311,6 +311,7 @@
           name="PRISM_DEFAULT"
           if="prism.default"
         />
+        <xmlcatalog refid="dita.catalog"/>
       </xslt>
       <copy file="${prismjs.temp.xml}" toFile="@{file}" overwrite="true"/>
 
