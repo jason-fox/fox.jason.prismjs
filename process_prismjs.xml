@@ -14,7 +14,7 @@
   <target name="prismjs.css.copy">
     <property
       name="prismjs.css.file"
-      value="${dita.plugin.fox.jason.prismjs.dir}/resource/style.css"
+      value="${dita.plugin.fox.jason.prismjs.dir}/css/style.css"
     />
     <loadfile property="prism.css" srcFile="${prismjs.css.file}"/>
     <echo
