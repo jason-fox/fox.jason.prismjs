@@ -1,7 +1,7 @@
 # Prism-JS for DITA-OT [<img src="https://jason-fox.github.io/fox.jason.prismjs/prismjs.png" align="right" width="300">](https://prismjsdita-ot.rtfd.io/)
 
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.prismjs.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 3.6](https://img.shields.io/badge/DITA--OT-3.6-blue.svg)](http://www.dita-ot.org/3.6)
+[![DITA-OT 3.7](https://img.shields.io/badge/DITA--OT-3.7-blue.svg)](http://www.dita-ot.org/3.7)
 [![CI](https://github.com/jason-fox/fox.jason.prismjs/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.prismjs/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
@@ -70,9 +70,9 @@ recommended that you upgrade to the latest version.
 The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -   Full installation instructions for downloading DITA-OT can be found
-    [here](https://www.dita-ot.org/3.6/topics/installing-client.html).
+    [here](https://www.dita-ot.org/3.7/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.6.1.zip` package from the project website at
+    1.  Download the `dita-ot-3.7.zip` package from the project website at
         [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
@@ -80,9 +80,9 @@ The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
     This defines the necessary environment variable to run the `dita` command from the command line.
 
 ```console
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.6.1/dita-ot-3.6.1.zip
-unzip -q dita-ot-3.6.1.zip
-rm dita-ot-3.6.1.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.7/dita-ot-3.7.zip
+unzip -q dita-ot-3.7.zip
+rm dita-ot-3.7.zip
 ```
 
 ### Installing the Plug-in
