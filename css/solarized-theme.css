@@ -27,34 +27,29 @@ cyan      #2aa198
 green     #859900
 */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --prism-maintext: #657b83;
-    --prism-background: #073642;
-    --prism-text: #93a1a1;
-    --prism-keywords: #859900;
-    --prism-punctuation: #586e75;
-    --prism-functions: #b58900;
-    --prism-strings:  #2aa198;
-    --prism-namespace:  #2aa198;
-    --prism-names: #268bd2;
-    --prism-symbol: #268bd2;
-    --prism-url: #6c71c4;
-  }
+:root {
+  --prism-maintext: #657b83;
+  --prism-background: #eee8d5;
+  --prism-text: #93a1a1;
+  --prism-keywords: #859900;
+  --prism-punctuation: #586e75;
+  --prism-functions: #b58900;
+  --prism-strings:  #2aa198;
+  --prism-namespace:  #2aa198;
+  --prism-names: #268bd2;
+  --prism-symbol: #268bd2;
+  --prism-url: #6c71c4;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="dark"] {
+  --prism-background: #073642;
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --prism-maintext: #657b83;
+    --prism-background: #073642;
+  }
+  [data-theme="light"] {
     --prism-background: #eee8d5;
-    --prism-text: #93a1a1;
-    --prism-keywords: #859900;
-    --prism-punctuation: #586e75;
-    --prism-functions: #b58900;
-    --prism-strings:  #2aa198;
-    --prism-namespace:  #2aa198;
-    --prism-names: #268bd2;
-    --prism-symbol: #268bd2;
-    --prism-url: #6c71c4;
   }
 }
