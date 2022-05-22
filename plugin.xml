@@ -27,6 +27,10 @@
     />
     </transtype>
     <transtype name="base-html" abstract="true" desc="HTML-based output">
+    	<param 
+    	name="prism.css.theme" 
+    	desc="Specifies the location of a prism .css color theme file relative to the output directory."type="string"
+    />
     	<param
       name="prism.default"
       desc="Specifies the default Prism language"

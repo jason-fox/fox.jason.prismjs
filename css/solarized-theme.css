@@ -1,0 +1,80 @@
+/*
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+
+/*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+
+/*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --prism-maintext: #657b83;
+    --prism-background: #073642;
+    --prism-text: #93a1a1;
+    --prism-keywords: #859900;
+    --prism-punctuation: #586e75;
+    --prism-functions: #b58900;
+    --prism-strings:  #2aa198;
+    --prism-namespace:  #2aa198;
+    --prism-names: #2aa198;
+    --prism-symbol: #268bd2;
+    --prism-url: #2aa198;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --prism-maintext: #657b83;
+    --prism-background: #eee8d5;
+    --prism-text: #93a1a1;
+    --prism-keywords: #859900;
+    --prism-punctuation: #586e75;
+    --prism-functions: #b58900;
+    --prism-strings:  #2aa198;
+    --prism-namespace:  #2aa198;
+    --prism-names: #2aa198;
+    --prism-symbol: #268bd2;
+    --prism-url: #2aa198;
+  }
+}

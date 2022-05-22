@@ -189,6 +189,7 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 ### Parameter Reference
 
 -   `prism.default` - Specifies the default Prism language
+-   `prism.css.theme` - Specifies the location of a prism `.css` color theme file relative to the output directory.
 
 ### Customizing the output
 
@@ -196,10 +197,16 @@ Prism-JS is easily extended to other languages since it purely relies on regular
 loaded dynamically during processing. A large number of additional languages are supported - just look at the list on
 https://github.com/PrismJS/prism/tree/master/components
 
+#### Altering the CSS theme colors
+
+The default theme supports the `prefers-color-scheme` css media query and uses CSS variables to offer separate
+_"light"_ and_"dark"_ modes. This theme can be altered by setting the `prism.css.theme` parameter, a separate
+[solarized](https://ethanschoonover.com/solarized/)  _"light"_/_"dark"_ theme is also included within the plugin.
+
 #### Altering the static HTML look and feel
 
-Extend with an additional plug-in which overrides the default `prismjs.css.file` property and amend a copy of the
-`resource/style.css` file to alter the look-and-feel of the rendered HTML
+For more extensive modifications, extend with an additional plug-in which overrides, the default `prismjs.css.file`
+property and amend a copy of the `css/style.css` file to alter the look-and-feel of the rendered HTML
 
 ##### `plugin.xml` Configuration
 
