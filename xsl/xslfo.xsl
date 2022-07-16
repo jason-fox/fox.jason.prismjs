@@ -9,10 +9,24 @@
 
     <xsl:import href="../cfg/fo/attrs/prismjs-attr.xsl"/>
 
+
     <xsl:template name="processPrismAttrSetReflection">
         <xsl:param name="attrSet"/>
         <xsl:param name="path"/>
-        <xsl:apply-templates select="document($path)//xsl:attribute-set[@name = $attrSet]"/>
+
+        <xsl:for-each select="document($path)//xsl:attribute-set[@name = $attrSet]/xsl:attribute">
+            <xsl:attribute name="{@name}">
+              <xsl:value-of select="."/>
+            </xsl:attribute>
+        </xsl:for-each>
+
+        <xsl:if test="document($path)//xsl:attribute-set[@name = $attrSet]/@use-attribute-sets">
+          <xsl:call-template name="processPrismAttrSetReflection">
+            <xsl:with-param name="attrSet" select="document($path)//xsl:attribute-set[@name = $attrSet]/@use-attribute-sets"/>
+            <xsl:with-param name="path" select="'../cfg/fo/attrs/prismjs-attr.xsl'"/>
+          </xsl:call-template>
+        </xsl:if>
+
     </xsl:template>
 
     <xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">
