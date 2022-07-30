@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="dita-ot/plugin.rnc" type="application/relax-ng-compact-syntax"?>
 <plugin id="fox.jason.prismjs" version="3.3.0">
-	<feature extension="dita.conductor.lib.import" file="lib/prismjs-1.4.jar"/>
-	<feature extension="ant.import" file="process_prismjs.xml"/>
-	<!-- Ensure the plugin's error and logging messages are available -->
-	<feature extension="dita.xsl.messages" file="resource/messages.xml"/>
-	<!--
-		This plugin requires extended CSS
-	-->
-	<require plugin="fox.jason.extend.css"/>
-	
-	<!-- PDF extension point -->
-	<feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
-	<!-- Uses the default preprocess.pre and post extension points -->
-	<feature extension="depend.preprocess.pre" value="prismjs.init"/>
-	<feature extension="depend.preprocess.post" value="prismjs"/>
-	<!-- Uses the extended CSS extension point -->
-	<feature extension="extend.css.process" value="prismjs.css.copy"/>
+  <feature extension="dita.conductor.lib.import" file="lib/prismjs-1.4.jar"/>
+  <feature extension="ant.import" file="process_prismjs.xml"/>
+  <!-- Ensure the plugin's error and logging messages are available -->
+  <feature extension="dita.xsl.messages" file="resource/messages.xml"/>
+  <!--
+  This plugin requires extended CSS
+  -->
+  <require plugin="fox.jason.extend.css"/>
+  
+  <!-- PDF extension point -->
+  <feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+  <!-- Uses the default preprocess.pre and post extension points -->
+  <feature extension="depend.preprocess.pre" value="prismjs.init"/>
+  <feature extension="depend.preprocess.post" value="prismjs"/>
+  <!-- Uses the extended CSS extension point -->
+  <feature extension="extend.css.process" value="prismjs.css.copy"/>
 
 
-	<transtype name="pdf" desc="PDF">
-    	<param
+  <transtype name="pdf" desc="PDF">
+      <param
       name="prism.default"
       desc="Specifies the default Prism language"
       type="string"
     />
     </transtype>
     <transtype name="base-html" abstract="true" desc="HTML-based output">
-    	<param 
-    	name="prism.css.theme" 
-    	desc="Specifies the location of a prism .css color theme file relative to the output directory."
-    	type="string"
+      <param 
+      name="prism.css.theme" 
+      desc="Specifies the location of a custom prism .css color theme file relative to the output directory."
+      type="string"
     />
-    	<param
+    <param 
+      name="prism.use.theme" 
+      desc="Specifies a default prism theme to use."
+      type="string"
+    >
+    	<val desc="Theme based on Bootstrap 5 colors.">bootstrap</val>
+			<val default="true" desc="Default Prism.js theme">default</val>
+			<val desc="Theme based on solarized colors">solarized</val>
+    </param>
+      <param
       name="prism.default"
       desc="Specifies the default Prism language"
       type="string"
     />
-	</transtype>
+  </transtype>
 </plugin>

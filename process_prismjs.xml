@@ -13,8 +13,12 @@
 
   <target name="prismjs.css.copy">
     <property
+      name="prism.use.theme"
+      value="default"
+    />
+    <property
       name="prism.css.theme"
-      value="${dita.plugin.fox.jason.prismjs.dir}/css/default-theme.css"
+      value="${dita.plugin.fox.jason.prismjs.dir}/css/${prism.use.theme}-theme.css"
     />
     <loadfile property="theme.css" srcFile="${prism.css.theme}"/>
     <echo
