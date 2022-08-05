@@ -165,37 +165,11 @@
   </macrodef>
 
 
-  <macrodef name="iterate-ditafiles">
-    <attribute name="list"/>
-    <element name="call" implicit="yes"/>
-    <sequential>
-      <local name="element"/>
-      <local name="tail"/>
-      <local name="hasMoreElements"/>
-      <!-- unless to not get a error on empty lists -->
-      <loadresource property="element" unless:blank="@{list}">
-        <concat>@{list}</concat>
-        <filterchain>
-          <replaceregex pattern="([^;]*).*" replace="\1"/>
-        </filterchain>
-      </loadresource>
-      <!-- call the tasks that handle the element -->
-      <call/>
-      <!-- recursion -->
-      <condition property="hasMoreElements">
-        <contains string="@{list}" substring=";"/>
-      </condition>
-      <loadresource property="tail" if:true="${hasMoreElements}">
-        <concat>@{list}</concat>
-        <filterchain>
-          <replaceregex pattern="[^;]*;(.*)" replace="\1"/>
-        </filterchain>
-      </loadresource>
-      <iterate-ditafiles list="${tail}" if:true="${hasMoreElements}">
-        <call/>
-      </iterate-ditafiles>
-    </sequential>
-  </macrodef>
+  <taskdef
+    classname="fox.jason.prismjs.tasks.IterateDitaFilesTask"
+    name="iterate-ditafiles"
+    onerror="ignore"
+  />
 
   <!--
     highlight an directory containing DITA files

@@ -179,10 +179,9 @@
 
     <iterate-ditafiles
       list="${prismjs.ditafiles}"
+      macro="highlight-dita-file"
       unless:blank="${prismjs.ditafiles}"
-    >
-      <highlight-dita-file file="${element}"/>
-    </iterate-ditafiles>
+    />
   </target>
 
   <target name="prismjs" depends="highlight.init, highlight"/>
