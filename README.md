@@ -4,7 +4,6 @@
 [![DITA-OT 3.7](https://img.shields.io/badge/DITA--OT-3.7-blue.svg)](http://www.dita-ot.org/3.7)
 [![CI](https://github.com/jason-fox/fox.jason.prismjs/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.prismjs/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
-[![Documentation Status](https://readthedocs.org/projects/prismjsdita-ot/badge/?version=latest)](https://prismjsdita-ot.readthedocs.io/en/latest/?badge=latest)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fox.jason.prismjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=fox.jason.prismjs)
 
 This is a syntax highlighting [DITA-OT Plug-in](https://www.dita-ot.org/plugins) which integrates the flexible
