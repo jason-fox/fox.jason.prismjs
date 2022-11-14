@@ -110,13 +110,7 @@
       <equals arg1="${node.result}" arg2="0"/>
     </condition>
 
-    <dita-ot-echo unless:set="node.installed" id="PRSM003W"/>
-    <echo
-      if:set="node.installed"
-      taskname="node"
-      level="info"
-      message="${node.out}"
-    />
+    <dita-ot-fail unless:set="node.installed" id="PRSM003F"/>
   </target>
 
 

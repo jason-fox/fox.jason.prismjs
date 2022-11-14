@@ -36,6 +36,7 @@ jobs:
           dita-ot-version: '4.0'
           plugin: 'fox.jason.prismjs'
           prerequisites: fox.jason.extend.css
+          setup-script: 'test/setup.sh'
         env:
           COVERALLS_TOKEN: ${{ secrets.COVERALLS_TOKEN }}
       - uses: actions/upload-artifact@v3

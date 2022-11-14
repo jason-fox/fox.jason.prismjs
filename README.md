@@ -1,7 +1,7 @@
 # Prism-JS for DITA-OT [<img src="https://jason-fox.github.io/fox.jason.prismjs/prismjs.png" align="right" width="300">](https://prismjsdita-ot.rtfd.io/)
 
 [![license](https://img.shields.io/github/license/jason-fox/fox.jason.prismjs.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![DITA-OT 3.7](https://img.shields.io/badge/DITA--OT-3.7-blue.svg)](http://www.dita-ot.org/3.7)
+[![DITA-OT 4.0](https://img.shields.io/badge/DITA--OT-4.0-green.svg)](http://www.dita-ot.org/4.0)
 [![CI](https://github.com/jason-fox/fox.jason.prismjs/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.prismjs/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fox.jason.prismjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=fox.jason.prismjs)
@@ -69,9 +69,9 @@ recommended that you upgrade to the latest version.
 The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
 
 -   Full installation instructions for downloading DITA-OT can be found
-    [here](https://www.dita-ot.org/3.7/topics/installing-client.html).
+    [here](https://www.dita-ot.org/4.0/topics/installing-client.html).
 
-    1.  Download the `dita-ot-3.7.zip` package from the project website at
+    1.  Download the `dita-ot-4.0.zip` package from the project website at
         [dita-ot.org/download](https://www.dita-ot.org/download)
     2.  Extract the contents of the package to the directory where you want to install DITA-OT.
     3.  **Optional**: Add the absolute path for the `bin` directory to the _PATH_ system variable.
@@ -79,9 +79,9 @@ The DITA-OT Prism-JS syntax highlighter is a plug-in for the DITA Open Toolkit.
     This defines the necessary environment variable to run the `dita` command from the command line.
 
 ```console
-curl -LO https://github.com/dita-ot/dita-ot/releases/download/3.7/dita-ot-3.7.zip
-unzip -q dita-ot-3.7.zip
-rm dita-ot-3.7.zip
+curl -LO https://github.com/dita-ot/dita-ot/releases/download/4.0/dita-ot-4.0.zip
+unzip -q dita-ot-4.0.zip
+rm dita-ot-4.0.zip
 ```
 
 ### Installing the Plug-in
@@ -93,7 +93,6 @@ dita install https://github.com/jason-fox/fox.jason.extend.css/archive/master.zi
 dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 ```
 
-The `dita` command line tool requires no additional configuration.
 
 ### Installing Node.js
 
@@ -101,13 +100,20 @@ The `dita` command line tool requires no additional configuration.
 
 Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335) any
 plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java 11 onwards
-and above. From Java 15 onwards, these plugins will no longer work.
+and above. From Java 15 onwards, these plugins will no longer work. From **DITA-OT 4.0** onward this step is mandatory
 
 The DITA-OT Prism-JS syntax highlighter relies heavily the Prism-JS JavaScript library, and therefore has been updated
 to run using [Node.js](https://nodejs.org/) where present on a user's machine. Node.js is a JavaScript runtime built on
 Chrome's V8 JavaScript engine.
 
 To download a copy follow the instructions on the [Install Page](https://nodejs.org/en/download/).
+
+```console
+apt-get update -q
+export DEBIAN_FRONTEND=noninteractive
+apt-get install -qy --no-install-recommends nodejs
+nodejs -v
+```
 
 ---
 
