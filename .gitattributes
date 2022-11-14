@@ -1,0 +1,5 @@
+test/** linguist-vendored
+sample/** linguist-documentation
+
+process_prismjs.xml linguist-language=Ant-Build-System
+resource/antlib.xml linguist-language=Ant-Build-System
