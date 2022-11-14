@@ -7,24 +7,9 @@
 <antlib xmlns:if="ant:if" xmlns:unless="ant:unless">
 
   <!--
-    Invokes the prismjs library using a scriptdef and returns the result
-  -->
-  <scriptdef
-    unless:set="node.installed"
-    language="javascript"
-    name="prismjs"
-    src="${dita.plugin.fox.jason.prismjs.dir}/resource/script-prism.js"
-  >
-    <attribute name="text"/>
-    <attribute name="src"/>
-    <attribute name="outputclass"/>
-    <attribute name="highlighted"/>
-  </scriptdef>
-
-  <!--
     Invokes the prismjs library via node and returns the result
   -->
-  <macrodef if:set="node.installed" name="prismjs">
+  <macrodef name="prismjs">
     <attribute name="text" default=""/>
     <attribute name="src"/>
     <attribute name="outputclass"/>
