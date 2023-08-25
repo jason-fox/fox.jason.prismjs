@@ -8,20 +8,7 @@
 
 
     <pre>
-
-      <!--xsl:call-template name="commonattributes">
-        <xsl:with-param name="default-output-class">line-numbers</xsl:with-param>
-      </xsl:call-template--> 
-
-      <xsl:call-template name="commonattributes">
-        <xsl:with-param name="default-output-class">xxxx
-        </xsl:with-param>
-      </xsl:call-template>
-      <!--xsl:attribute name="class">
-        <xsl:text>line-numbers </xsl:text>
-        <xsl:value-of select="@outputclass"/>
-      </xsl:attribute-->
-
+      <xsl:call-template name="commonattributes"/>
       <xsl:call-template name="setscale"/>
       <xsl:call-template name="setidaname"/>
       <code>
