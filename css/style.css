@@ -44,19 +44,19 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-pre[class*="language-"].line-numbers {
+pre[class*="language-"].show-line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
 }
 
 
-pre[class*="language-"].line-numbers > code {
+pre[class*="language-"].show-line-numbers > code {
 	position: relative;
 	white-space: inherit;
 }
 
-.line-numbers .line-numbers-rows {
+.show-line-numbers .line-numbers-rows {
 	position: absolute;
 	pointer-events: none;
 	font-size: 100%;

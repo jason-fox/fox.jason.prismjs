@@ -167,6 +167,16 @@ e.g.:
 A test document including HTML, CSS and JavaScript code snippets can be found within the plug-in at:
 `PATH_TO_DITA_OT/plugins/fox.jason.prismjs/sample`
 
+#### Line numbering
+
+To display line numbers in codeblocks in HTML and PDF, add the  `show-line-numbers` `outputclass` to the `<codeblock>`
+
+```xml
+<codeblock outputclass="language-javascript show-line-numbers">
+  <coderef href="../src/prism.js"/>
+</codeblock>
+```
+
 ### Invocation from the command line
 
 The Plug-in extends the existing PDF and HTML transforms

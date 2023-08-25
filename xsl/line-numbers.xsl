@@ -2,7 +2,7 @@
 <xsl:stylesheet version="2.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
-  <xsl:template match="*[contains(@class, ' pr-d/codeblock ') and contains(@otherprops, 'line-numbers')]">
+  <xsl:template match="*[contains(@class, ' pr-d/codeblock ') and contains(@outputclass, 'show-line-numbers')]">
     <xsl:apply-templates select="*[contains(@class, ' ditaot-d/ditaval-startprop ')]" mode="out-of-line"/>
     <xsl:call-template name="spec-title-nospace"/>
 
@@ -45,9 +45,6 @@
    <xsl:template match="text()" mode="line-numbers">
     <xsl:choose>
       <xsl:when test="contains(., '&#10;')">
-        <!--xsl:value-of select="."/>
-        <span class="line-numbers-rows"></span-->
-
         <xsl:for-each select="tokenize(.,'&#10;')">
           <xsl:sequence select="."/>
           <xsl:if test="not(position() eq last())">
@@ -60,10 +57,5 @@
   	   <xsl:value-of select="."/>
      </xsl:otherwise>
    </xsl:choose>
-  </xsl:template>
-
-  <xsl:template match="*[contains(@class, ' pr-d/codeblock ') and contains(@otherprops, 'line-numbers')]" mode="get-output-class">
-    <xsl:text> line-numbers</xsl:text>
-    <xsl:next-match/>
   </xsl:template>
 </xsl:stylesheet>
