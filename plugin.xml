@@ -12,6 +12,13 @@
   
   <!-- PDF extension point -->
   <feature extension="dita.xsl.xslfo" value="xsl/xslfo.xsl" type="file"/>
+
+  <!-- HTML5 extension points -->   
+  <feature extension="dita.xsl.html5" value="xsl/line-numbers.xsl" type="file"/>
+  <!-- XHTML extension points -->
+  <feature extension="dita.xsl.xhtml" value="xsl/line-numbers.xsl" type="file"/>
+
+
   <!-- Uses the default preprocess.pre and post extension points -->
   <feature extension="depend.preprocess.pre" value="prismjs.init"/>
   <feature extension="depend.preprocess.post" value="prismjs"/>
