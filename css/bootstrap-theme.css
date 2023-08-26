@@ -1,5 +1,5 @@
 :root {
-  --prism-maintext: var(--bs-light-text #000);
+  --prism-maintext: var(--bs-gray-500, #000);
   --prism-background: var(--bs-secondary-bg-subtle, #f5f2f0);
   --prism-text: var(--bs-gray, #999);
   --prism-keywords: var(--bs-teal, #07a);
@@ -11,3 +11,8 @@
   --prism-symbol: var(--bs-pink, #DD4A68);
   --prism-url: var(--bs-cyan, #67cdcc);
 }
+
+[data-bs-theme="dark"] {
+  --prism-maintext: var(--bs-body-color, #000);
+}
+
