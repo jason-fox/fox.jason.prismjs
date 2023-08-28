@@ -12,10 +12,9 @@
 >
 
   <target name="prismjs.css.copy">
-    <property
-      name="prism.use.theme"
-      value="default"
-    />
+    <condition property="prism.use.theme" value="bootstrap" else="default">
+       <isset property="dita.plugin.net.infotexture.dita-bootstrap.dir"/>
+    </condition>
     <property
       name="prism.css.theme"
       value="${dita.plugin.fox.jason.prismjs.dir}/css/${prism.use.theme}-theme.css"
