@@ -1,0 +1,28 @@
+:root {
+  --prism-maintext: var(--bs-secondary-text-emphasis, #000);
+  --prism-background: var(--bs-secondary-bg-subtle, #f5f2f0);
+  --prism-text: var(--bs-secondary-text, #999);
+  --prism-keywords: var(--bs-teal, #07a);
+  --prism-punctuation: var(--bs-gray, #999);
+  --prism-functions: var(--bs-orange, #f08d49);
+  --prism-strings: #2ebd64;
+  --prism-namespace:  var(--bs-pink, #e2777a);
+  --prism-names: var(--bs-blue, #6196cc);
+  --prism-symbol: var(--bs-pink, #DD4A68);
+  --prism-url: var(--bs-cyan, #67cdcc);
+}
+
+[data-bs-theme='dark'] {
+  --prism-strings:  var(--bs-green, #2ebd64);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+     --prism-names: #2ebd64;
+  }
+  [data-bs-theme='light'] {
+    --prism-strings:  var(--bs-green, #2ebd64);
+  }
+}
+
+

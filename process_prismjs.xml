@@ -12,6 +12,19 @@
 >
 
   <target name="prismjs.css.copy">
+    <condition property="prism.use.theme" value="bootstrap-contrast">
+      <or>
+        <equals arg1="${bootstrap.theme}" arg2="cerulean"/>
+        <equals arg1="${bootstrap.theme}" arg2="darkly"/>
+        <equals arg1="${bootstrap.theme}" arg2="flatly"/>
+        <equals arg1="${bootstrap.theme}" arg2="sandstone"/>
+        <equals arg1="${bootstrap.theme}" arg2="spacelab"/>
+        <equals arg1="${bootstrap.theme}" arg2="zephyr"/>
+      </or>
+    </condition>
+    <condition property="prism.use.theme" value="bootstrap-vapor">
+      <equals arg1="${bootstrap.theme}" arg2="vapor"/>
+    </condition>
     <condition property="prism.use.theme" value="bootstrap" else="default">
        <isset property="dita.plugin.net.infotexture.dita-bootstrap.dir"/>
     </condition>
