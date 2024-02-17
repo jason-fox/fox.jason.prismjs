@@ -88,7 +88,10 @@
   <!--
     Check if Node is installed.
   -->
-  <target name="node.check" if="prismjs.highlightable">
+  <target 
+    name="node.check" 
+    if="prismjs.highlightable"
+    description="Ensure that Node.js is available">
     <!-- For Unix run node as an executable -->
 
     <exec
@@ -159,7 +162,10 @@
    
   </target>
 
-  <target name="highlight" if="prismjs.highlightable">
+  <target 
+    name="highlight" 
+    if="prismjs.highlightable"
+    description="Highlight codeblocks using Prism.js">
     <basename property="prism.temp.dirname" file="${dita.temp.dir}"/>
     <restrict id="prismjs.ditafileset">
       <ditafileset processingRole="normal">

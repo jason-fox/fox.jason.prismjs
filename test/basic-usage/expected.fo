@@ -51,7 +51,12 @@
             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">prism.css</fo:inline>and
             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">prism.js</fo:inline>files you downloaded in your page. Example:</fo:block>
           <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">
-            <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">&lt;!DOCTYPE html&gt;</fo:inline>
+            <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">
+              <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;!</fo:inline>
+              <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">DOCTYPE</fo:inline>
+              <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">html</fo:inline>
+              <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>
+            </fo:inline>
             <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">
               <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>html</fo:inline>
@@ -67,13 +72,13 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>link</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">href</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>themes/prism.css
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">rel</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>stylesheet
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
@@ -94,7 +99,7 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>script</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">src</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>prism.js
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
@@ -197,7 +202,7 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>code</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>language-css
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
@@ -240,7 +245,7 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>script</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">src</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>prism.js
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>

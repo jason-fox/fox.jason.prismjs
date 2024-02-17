@@ -55,13 +55,13 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>svg</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">xmlns</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>http://www.w3.org/2000/svg
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">viewBox</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>0 0 200 170
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
@@ -72,13 +72,13 @@
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>path</fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">fill</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>#fff
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>
               </fo:inline>
               <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">d</fo:inline>
               <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">
-                <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
+                <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">"</fo:inline>M55.37 131.5H48.4v9.13h6.97c1.67 0 2.92-.4 3.78-1.22.85
 	-.8 1.28-1.92 1.28-3.33s-.43-2.54-1.28-3.35c-.86-.8-2.12-1.2-3.78-1.2m29.52
 	6.4c.3-.53.47-1.2.47-2.04 0-1.35-.45-2.4-1.37-3.2-.92-.76-2.14-1.15-3.65
