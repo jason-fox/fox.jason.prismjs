@@ -96,7 +96,7 @@ dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
 
 ### Installing Node.js
 
-<a href="https://nodejs.org/"><img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg" align="right" width="70" height="70" align="right" width="55" height="55"></a>
+<a href="https://nodejs.org/"><img src="https://simpleicons.org/icons/nodedotjs.svg" align="right" width="70" height="70" align="right" width="55" height="55"></a>
 
 Due to the deprecation and removal of the Nashorn Engine in JDK11-14 [JEP 335](https://openjdk.java.net/jeps/335) any
 plug-in using JavaScript within `<script>` or `<scriptdef>` ANT tasks will start throwing warnings with Java 11 onwards
