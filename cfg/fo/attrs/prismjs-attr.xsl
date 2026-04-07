@@ -10,22 +10,24 @@
   version="2.0"
 >
 
+	<xsl:import href="prismjs-settings.xsl"/>
+
 	<!-- prismjs attribute sets -->
 
 	<xsl:attribute-set name="__codeblock__language__" use-attribute-sets="codeblock">
-		<xsl:attribute name="color">black</xsl:attribute>
-		<xsl:attribute name="background-color">#f5f2f0</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.maintext.color"/></xsl:attribute>
+		<xsl:attribute name="background-color"><xsl:value-of select="$prismjs.background.color"/></xsl:attribute>
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__codeph__language__" use-attribute-sets="codeph">
-		<xsl:attribute name="color">black</xsl:attribute>
-		<!--xsl:attribute name="background-color">#f5f2f0</xsl:attribute-->
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.maintext.color"/></xsl:attribute>
+		<!--xsl:attribute name="background-color"><xsl:value-of select="$prismjs.background.color"/></xsl:attribute-->
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 
 
 	<xsl:attribute-set name="__token__comment">
-		<xsl:attribute name="color">slategray</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.comment.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__prolog" use-attribute-sets="__token__comment">
 	</xsl:attribute-set>
@@ -35,11 +37,11 @@
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="__token__punctuation">
-		<xsl:attribute name="color">#909090</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.punctuation.color"/></xsl:attribute>
 	</xsl:attribute-set>
  
 	<xsl:attribute-set name="__token__property">
-		<xsl:attribute name="color">#900050</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.property.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__tag" use-attribute-sets="__token__property">
 	</xsl:attribute-set>
@@ -55,7 +57,7 @@
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="__token__selector">
-		<xsl:attribute name="color">#609000</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.selector.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__attr-name" use-attribute-sets="__token__selector">
 	</xsl:attribute-set>
@@ -69,7 +71,7 @@
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="__token__operator">
-		<xsl:attribute name="color">#9a6e3a</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.operator.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__entity" use-attribute-sets="__token__operator">
 	</xsl:attribute-set>
@@ -77,7 +79,7 @@
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="__token__atrule">
-		<xsl:attribute name="color">#0070a0</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.atrule.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__attr-value" use-attribute-sets="__token__atrule">
 	</xsl:attribute-set>
@@ -85,13 +87,13 @@
 	</xsl:attribute-set>
 
 	<xsl:attribute-set name="__token__function">
-		<xsl:attribute name="color">#dd4a68</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.function.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__class-name" use-attribute-sets="__token__function">
 	</xsl:attribute-set>
 	
 	<xsl:attribute-set name="__token__regex">
-		<xsl:attribute name="color">#e09000</xsl:attribute>
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.token.regex.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__important" use-attribute-sets="__token__regex">
 	</xsl:attribute-set>

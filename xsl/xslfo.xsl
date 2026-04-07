@@ -16,7 +16,18 @@
 
         <xsl:for-each select="document($path)//xsl:attribute-set[@name = $attrSet]/xsl:attribute">
             <xsl:attribute name="{@name}">
-              <xsl:value-of select="."/>
+                <xsl:for-each select="node()">
+                    <xsl:choose>
+                        <xsl:when test="self::xsl:value-of">
+                            <xsl:variable name="select" select="@select"/>
+                            <xsl:variable name="varName" select="if (starts-with($select, '$')) then substring-after($select, '$') else $select"/>
+                            <xsl:value-of select="$prismjs-settings/entry[@name = $varName]"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="."/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
             </xsl:attribute>
         </xsl:for-each>
 
