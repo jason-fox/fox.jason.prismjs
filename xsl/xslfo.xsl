@@ -40,6 +40,15 @@
 
     </xsl:template>
 
+    <xsl:template name="prismjs.border">
+        <xsl:apply-templates select="." mode="prismDecoration"/>
+    </xsl:template>
+
+    <xsl:template match="*" mode="prismDecoration">
+        <xsl:next-match/> 
+    </xsl:template>
+
+
     <xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">
         <fo:inline xsl:use-attribute-sets="__codeph__language__">
             <xsl:call-template name="commonattributes"/>
@@ -66,6 +75,7 @@
             <xsl:call-template name="setFrame"/>
             <xsl:call-template name="setScale"/>
             <xsl:call-template name="setExpanse"/>
+            <xsl:call-template name="prismjs.border"/>
             <xsl:variable name="codeblock.line-number" as="xs:boolean">
               <xsl:apply-templates select="." mode="codeblock.generate-line-number"/>
             </xsl:variable>
