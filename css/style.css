@@ -8,7 +8,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: var(--prism-maintext, #ccc);
 	background: none;
-	font-family: var( --bs-font-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+	font-family: var(--bs-font-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
@@ -38,7 +38,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
@@ -51,7 +51,7 @@ pre[class*="language-"].show-line-numbers {
 }
 
 
-pre[class*="language-"].show-line-numbers > code {
+pre[class*="language-"].show-line-numbers>code {
 	position: relative;
 	white-space: inherit;
 }
@@ -61,7 +61,8 @@ pre[class*="language-"].show-line-numbers > code {
 	pointer-events: none;
 	font-size: 100%;
 	left: -3em;
-	width: 2em; /* works for line-numbers below 1000 lines */
+	width: 2em;
+	/* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
 	border-right: 1px solid;
 	border-right-color: var(--prism-text, #999);
@@ -72,7 +73,7 @@ pre[class*="language-"].show-line-numbers > code {
 
 }
 
-span.line-numbers-rows{
+span.line-numbers-rows {
 	display: inline;
 	counter-increment: linenumber;
 }
@@ -97,15 +98,16 @@ span.line-numbers-rows:before {
 	color: var(--prism-punctuation, #ccc);
 }
 
-.token.tag,
+
 .token.attr-name,
 .token.namespace,
 .token.deleted {
 	color: var(--prism-names, #e2777a);
 }
 
+
 .token.function-name {
-	color: var(--prism-punctuation, #6196cc);
+	color: var(--prism-keywords, #6196cc);
 }
 
 .token.boolean,
@@ -129,6 +131,10 @@ span.line-numbers-rows:before {
 	color: var(--prism-keywords, #cc99cd);
 }
 
+.token.tag {
+	color: var(--prism-symbol, #e2777a);
+}
+
 .token.string,
 .token.char,
 .token.attr-value,
@@ -147,6 +153,7 @@ span.line-numbers-rows:before {
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }
