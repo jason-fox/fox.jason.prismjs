@@ -105,17 +105,13 @@ span.line-numbers-rows:before {
 	color: var(--prism-names, #e2777a);
 }
 
-
-.token.function-name {
-	color: var(--prism-keywords, #6196cc);
-}
-
 .token.boolean,
 .token.number,
 .token.function {
 	color: var(--prism-functions, #f08d49);
 }
 
+.token.tag,
 .token.property,
 .token.class-name,
 .token.constant,
@@ -123,16 +119,13 @@ span.line-numbers-rows:before {
 	color: var(--prism-symbol, #f8c555);
 }
 
+.token.function-name,
 .token.selector,
 .token.important,
 .token.atrule,
 .token.keyword,
 .token.builtin {
 	color: var(--prism-keywords, #cc99cd);
-}
-
-.token.tag {
-	color: var(--prism-symbol, #e2777a);
 }
 
 .token.string,
