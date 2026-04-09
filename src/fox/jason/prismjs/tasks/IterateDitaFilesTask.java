@@ -5,13 +5,9 @@
 
 package fox.jason.prismjs.tasks;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.apache.tools.ant.BuildException;
-import org.apache.tools.ant.DirectoryScanner;
 import org.apache.tools.ant.Task;
 import org.apache.tools.ant.taskdefs.MacroInstance;
-import org.apache.tools.ant.types.FileSet;
 
 //
 //    Iterator function to run a given macro against a set of files
