@@ -26,7 +26,10 @@
       <equals arg1="${bootstrap.theme}" arg2="vapor"/>
     </condition>
     <condition property="prism.use.theme" value="bootstrap" else="default">
-       <isset property="dita.plugin.net.infotexture.dita-bootstrap.dir"/>
+       <or>
+        <isset property="dita.plugin.net.infotexture.dita-bootstrap.dir"/>
+        <isset property="dita.plugin.org.dita-bootstrap.html.dir"/>
+      </or>
     </condition>
     <property
       name="prism.css.theme"
