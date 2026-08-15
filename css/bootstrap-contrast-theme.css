@@ -1,6 +1,6 @@
 :root {
   --prism-maintext: var(--bs-theme-fg-emphasis, var(--bs-secondary-text-emphasis, #000));
-  --prism-background: var(--bs-bg-transparent, var(--bs-secondary-bg-subtle, #f5f2f0));
+  --prism-background: var(--bs-theme-bg, var(--bs-bg-transparent, var(--bs-secondary-bg-subtle, #f5f2f0)));
   --prism-text: var(--bs-gray-500, #999);
   --prism-keywords: var(--bs-teal-500, var(--bs-teal, #07a));
   --prism-punctuation: var(--bs-gray-500, var(--bs-gray, #999));
