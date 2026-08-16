@@ -37,7 +37,7 @@ green     #859900
   --prism-strings:  #2aa198;
   --prism-namespace:  #2aa198;
   --prism-names: #268bd2;
-  --prism-symbol: #268bd2;
+  --prism-symbol: #dc322f;
   --prism-url: #6c71c4;
 }
 
@@ -52,4 +52,8 @@ green     #859900
   [data-bs-theme="light"] {
     --prism-background: #eee8d5;
   }
+}
+
+.card:has(pre[class*="language-"]) {
+  background-color: var(--prism-background);
 }
