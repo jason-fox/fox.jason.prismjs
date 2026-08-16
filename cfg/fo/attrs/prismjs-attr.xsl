@@ -25,7 +25,7 @@
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
 	</xsl:attribute-set>
 
-	<!-- comments etc. in grey -->
+	<!-- comments, doctype, cdata, prolog -->
 	<xsl:attribute-set name="__token__comment">
 		<xsl:attribute name="color"><xsl:value-of select="$prismjs.comment.color"/></xsl:attribute>
 	</xsl:attribute-set>
@@ -38,95 +38,87 @@
 	<xsl:attribute-set name="__token__cdata" use-attribute-sets="__token__comment">
 	</xsl:attribute-set>
 
-	<!-- punctuation in dark grey	 -->
+	<!-- punctuation -->
 	<xsl:attribute-set name="__token__punctuation">
 		<xsl:attribute name="color"><xsl:value-of select="$prismjs.punctuation.color"/></xsl:attribute>
 	</xsl:attribute-set>
- 
-	<!-- tags, properties, etc. in red -->
-	<xsl:attribute-set name="__token__property">
+
+	<!-- namespace -->
+	<xsl:attribute-set name="__token__namespace">
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.namespace.color"/></xsl:attribute>
+	</xsl:attribute-set>
+
+	<!-- booleans, constants, numbers, properties, symbols, tags -->
+	<xsl:attribute-set name="__token__tag">
 		<xsl:attribute name="color"><xsl:value-of select="$prismjs.tag.color"/></xsl:attribute>
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__macro" use-attribute-sets="__token__property">
+	<xsl:attribute-set name="__token__macro" use-attribute-sets="__token__tag">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__tag" use-attribute-sets="__token__property">
+	<xsl:attribute-set name="__token__boolean" use-attribute-sets="__token__tag">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__constant" use-attribute-sets="__token__property">
+	<xsl:attribute-set name="__token__constant" use-attribute-sets="__token__tag">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__symbol" use-attribute-sets="__token__property">
+	<xsl:attribute-set name="__token__number" use-attribute-sets="__token__tag">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__class-name" use-attribute-sets="__token__property">
+	<xsl:attribute-set name="__token__property" use-attribute-sets="__token__tag">
 	</xsl:attribute-set>
-	
+	<xsl:attribute-set name="__token__symbol" use-attribute-sets="__token__tag">
+	</xsl:attribute-set>
 
-	<!-- selectors, attributes, strings, etc. in green -->
-	<xsl:attribute-set name="__token__selector">
+	<!-- attr-names, builtins, chars, inserted, selectors, strings, variables -->
+	<xsl:attribute-set name="__token__string">
 		<xsl:attribute name="color"><xsl:value-of select="$prismjs.string.color"/></xsl:attribute>
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__string" use-attribute-sets="__token__selector">
+	<xsl:attribute-set name="__token__attr-name" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__char" use-attribute-sets="__token__selector">
+	<xsl:attribute-set name="__token__builtin" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__builtin" use-attribute-sets="__token__selector">
+	<xsl:attribute-set name="__token__char" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__inserted" use-attribute-sets="__token__selector">
+	<xsl:attribute-set name="__token__inserted" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
-
-	<!-- names and namespaces in pink-->
-	<xsl:attribute-set name="__token__attr-name"> 
-		<xsl:attribute name="color"><xsl:value-of select="$prismjs.name.color"/></xsl:attribute>
+	<xsl:attribute-set name="__token__selector" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__namespace"  use-attribute-sets="__token__attr-name">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__deleted"  use-attribute-sets="__token__attr-name">
+	<xsl:attribute-set name="__token__variable" use-attribute-sets="__token__string">
 	</xsl:attribute-set>
 
-	<!-- operators, urls, etc. in cyan -->
+	<!-- atrules, attr-values, keywords -->
+	<xsl:attribute-set name="__token__keyword">
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.keyword.color"/></xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="__token__atrule" use-attribute-sets="__token__keyword">
+	</xsl:attribute-set>
+	<xsl:attribute-set name="__token__attr-value" use-attribute-sets="__token__keyword">
+	</xsl:attribute-set>
+	<xsl:attribute-set name="__token__directive" use-attribute-sets="__token__keyword">
+	</xsl:attribute-set>
+
+	<!-- class names, functions -->
+	<xsl:attribute-set name="__token__function">
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.type.color"/></xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="__token__class-name" use-attribute-sets="__token__function">
+	</xsl:attribute-set>
+
+	<!-- important, regex -->
+	<xsl:attribute-set name="__token__regex">
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.regex.color"/></xsl:attribute>
+	</xsl:attribute-set>
+	<xsl:attribute-set name="__token__important" use-attribute-sets="__token__regex">
+	</xsl:attribute-set>
+
+	<!-- deleted -->
+	<xsl:attribute-set name="__token__deleted">
+		<xsl:attribute name="color"><xsl:value-of select="$prismjs.deleted.color"/></xsl:attribute>
+	</xsl:attribute-set>
+
+	<!-- operators, entities, urls -->
 	<xsl:attribute-set name="__token__operator">
 		<xsl:attribute name="color"><xsl:value-of select="$prismjs.url.color"/></xsl:attribute>
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__entity" use-attribute-sets="__token__operator">
 	</xsl:attribute-set>
 	<xsl:attribute-set name="__token__url" use-attribute-sets="__token__operator">
-	</xsl:attribute-set>
-
-
-	<!-- functions, class names, etc. in orange -->
-	<xsl:attribute-set name="__token__function">
-		<xsl:attribute name="color"><xsl:value-of select="$prismjs.function.color"/></xsl:attribute>
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__boolean" use-attribute-sets="__token__function">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__number" use-attribute-sets="__token__function">
-	</xsl:attribute-set>
-
-
-	<!-- keywords, etc. in teal -->
-	<xsl:attribute-set name="__token__selector">
-		<xsl:attribute name="color"><xsl:value-of select="$prismjs.keyword.color"/></xsl:attribute>
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__important" use-attribute-sets="__token__selector">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__atrule" use-attribute-sets="__token__selector">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__keyword" use-attribute-sets="__token__selector">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__directive" use-attribute-sets="__token__selector">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__builtin" use-attribute-sets="__token__selector">
-	</xsl:attribute-set>
-	
-	<!-- regex, important, etc. in green -->
-	<xsl:attribute-set name="__token__regex">
-		<xsl:attribute name="color"><xsl:value-of select="$prismjs.string.color"/></xsl:attribute>
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__attr-value" use-attribute-sets="__token__regex">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__char" use-attribute-sets="__token__regex">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__variable" use-attribute-sets="__token__regex">
-	</xsl:attribute-set>
-	<xsl:attribute-set name="__token__string" use-attribute-sets="__token__regex">
 	</xsl:attribute-set>
 
 </xsl:stylesheet>

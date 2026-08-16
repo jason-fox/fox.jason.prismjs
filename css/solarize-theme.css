@@ -31,13 +31,14 @@ green     #859900
   --prism-maintext: #657b83;
   --prism-background: #eee8d5;
   --prism-text: #93a1a1;
-  --prism-keywords: #859900;
   --prism-punctuation: #586e75;
-  --prism-functions: #b58900;
-  --prism-strings:  #2aa198;
-  --prism-namespace:  #2aa198;
-  --prism-names: #268bd2;
+  --prism-namespace: var(--prism-text);
+  --prism-keywords: #859900;
+  --prism-strings: #2aa198;
   --prism-symbol: #dc322f;
+  --prism-type: #d33682;
+  --prism-regex: #cb4b16;
+  --prism-deleted: #dc322f;
   --prism-url: #6c71c4;
 }
 
