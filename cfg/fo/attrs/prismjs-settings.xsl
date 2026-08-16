@@ -18,6 +18,7 @@
   <xsl:variable name="prismjs.regex.color">#e09000</xsl:variable>
   <xsl:variable name="prismjs.deleted.color">red</xsl:variable>
   <xsl:variable name="prismjs.url.color">#9a6e3a</xsl:variable>
+  <xsl:variable name="prismjs.font-weight">bold</xsl:variable>
 
   <!-- PrismJS Styling Variables Map for Reflection (Dynamically picking up overrides) -->
   <xsl:variable name="prismjs-settings">
@@ -33,6 +34,7 @@
     <entry name="prismjs.regex.color"><xsl:value-of select="$prismjs.regex.color"/></entry>
     <entry name="prismjs.deleted.color"><xsl:value-of select="$prismjs.deleted.color"/></entry>
     <entry name="prismjs.url.color"><xsl:value-of select="$prismjs.url.color"/></entry>
+    <entry name="prismjs.font-weight"><xsl:value-of select="$prismjs.font-weight"/></entry>
   </xsl:variable>
 
 </xsl:stylesheet>
