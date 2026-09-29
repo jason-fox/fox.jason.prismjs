@@ -138,20 +138,20 @@ var code = "var data = 1;";
 
 // Returns a highlighted HTML string
 var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
             <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
             <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">require</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
-            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
+            <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
             <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// The code snippet you want to highlight, as a string</fo:inline>
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
             <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
-            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">"var data = 1;"</fo:inline>
+            <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">"var data = 1;"</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
             <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// Returns a highlighted HTML string</fo:inline>
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
             <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>Prism
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
             <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">highlight</fo:inline>
@@ -160,7 +160,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>languages
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>javascript
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'javascript'</fo:inline>
+            <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'javascript'</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
           </fo:block>

@@ -190,15 +190,15 @@
                 </fo:block>
                 <fo:block>
                   <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public class Config extends java.lang.Object
-                    <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                    <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
                     <fo:inline font-weight="bold">
-                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
+                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Config</fo:inline>
                     </fo:inline>
-                    <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">extends</fo:inline>java
+                    <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">extends</fo:inline>java
                     <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
                     <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
-                    <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Object</fo:inline>
+                    <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Object</fo:inline>
                   </fo:block>
                   <fo:block>
                     <fo:block font-family="STANDARD" font-weight="bold">Method Summary</fo:block>
@@ -225,7 +225,7 @@
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -236,7 +236,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -246,7 +246,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -257,7 +257,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -267,7 +267,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -278,7 +278,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -288,7 +288,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -299,7 +299,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -311,7 +311,7 @@
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -322,7 +322,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -334,7 +334,7 @@
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -345,7 +345,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -355,7 +355,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
                                       <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                     </fo:inline>
                                   </fo:block>
@@ -367,7 +367,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>- newConfig create an empty configuration representation from file.</fo:block>
                                 </fo:table-cell>
@@ -376,7 +376,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
                                       <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                     </fo:inline>
                                   </fo:block>
@@ -388,7 +388,7 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>- newConfigFromText create an empty configuration representation from text.</fo:block>
                                 </fo:table-cell>
@@ -397,7 +397,7 @@
                                 <fo:table-cell text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                                     </fo:inline>
                                   </fo:block>
                                 </fo:table-cell>
@@ -408,11 +408,11 @@
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:inline>
                                   </fo:block>
@@ -477,15 +477,15 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public java.&#8203;lang.&#8203;String get(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">get</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -511,7 +511,7 @@
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
-                                        <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                       </fo:inline>
                                     </fo:block>
                                   </fo:block>
@@ -538,13 +538,13 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public boolean getBool(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getBool</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -568,7 +568,7 @@
                                     </fo:block>
                                     <fo:block>
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                        <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                                       </fo:inline>
                                     </fo:block>
                                   </fo:block>
@@ -595,13 +595,13 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public float getFloat(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getFloat</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -625,7 +625,7 @@
                                     </fo:block>
                                     <fo:block>
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                        <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">float</fo:inline>
                                       </fo:inline>
                                     </fo:block>
                                   </fo:block>
@@ -652,13 +652,13 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public int getInt(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getInt</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -682,7 +682,7 @@
                                     </fo:block>
                                     <fo:block>
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                                        <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
+                                        <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>
                                       </fo:inline>
                                     </fo:block>
                                   </fo:block>
@@ -709,15 +709,15 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public java.&#8203;lang.&#8203;String getString(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getString</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -743,7 +743,7 @@
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
-                                        <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                       </fo:inline>
                                     </fo:block>
                                   </fo:block>
@@ -770,15 +770,15 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public java.&#8203;lang.&#8203;String getStrings(java.&#8203;lang.&#8203;String key)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getStrings</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>
@@ -804,7 +804,7 @@
                                       <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
-                                        <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                                        <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
                                         <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>
                                       </fo:inline>
@@ -833,14 +833,14 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public static Config newConfig(java.&#8203;lang.&#8203;String confName)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
                                       <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfig</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>confName
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block>newConfig create an empty configuration representation from file.</fo:block>
@@ -886,14 +886,14 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public static Config newConfigFromText(java.&#8203;lang.&#8203;String text)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">static</fo:inline>
                                       <fo:basic-link color="blue" internal-destination="unique_12">Config</fo:basic-link>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">newConfigFromText</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>text
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block>newConfigFromText create an empty configuration representation from text.</fo:block>
@@ -939,17 +939,17 @@
                                 <fo:table-cell border-before-color="black" text-align="left">
                                   <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                                     <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public void set(java.&#8203;lang.&#8203;String key, java.&#8203;lang.&#8203;String value)
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                                      <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                                      <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                                       <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">set</fo:inline>
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>key
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                                      <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
+                                      <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>value
                                       <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                                     </fo:block>
                                     <fo:block></fo:block>

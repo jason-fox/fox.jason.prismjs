@@ -277,12 +277,12 @@
               <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">$ npm install prismjs$ npm install prismjs</fo:block>
               <fo:block>You can then
                 <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                  <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">import</fo:inline>
+                  <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">import</fo:inline>
                 </fo:inline>into your bundle:</fo:block>
               <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">import Prism from 'prismjs';
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">import</fo:inline>Prism
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">from</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">import</fo:inline>Prism
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">from</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
               </fo:block>
               <fo:block>To make it easy to configure your Prism instance with only the languages and plugins you need, use the babel plugin,
@@ -305,20 +305,20 @@ var code = "var data = 1;";
 
 // Returns a highlighted HTML string
 var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">require</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// The code snippet you want to highlight, as a string</fo:inline>
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">"var data = 1;"</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">"var data = 1;"</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// Returns a highlighted HTML string</fo:inline>
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>Prism
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">highlight</fo:inline>
@@ -327,7 +327,7 @@ var html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>languages
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>javascript
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'javascript'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'javascript'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
               </fo:block>
@@ -352,34 +352,34 @@ var code = "= ['hi', 'there', 'reader!'].join \" \"";
 
 // Returns a highlighted HTML string
 var html = Prism.highlight(code, Prism.languages.haml, 'haml');
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>Prism
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">require</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'prismjs'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>loadLanguages
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>loadLanguages
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">require</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'prismjs/components/'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'prismjs/components/'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">loadLanguages</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'haml'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'haml'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// The code snippet you want to highlight, as a string</fo:inline>
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>code
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">"= ['hi', 'there', 'reader!'].join \" \""</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">"= ['hi', 'there', 'reader!'].join \" \""</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
                 <fo:inline color="#909090" font-family="MONOSPACE" font-weight="bold">// Returns a highlighted HTML string</fo:inline>
-                <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
+                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">var</fo:inline>html
                 <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">=</fo:inline>Prism
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
                 <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">highlight</fo:inline>
@@ -388,7 +388,7 @@ var html = Prism.highlight(code, Prism.languages.haml, 'haml');
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>languages
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>haml
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">'haml'</fo:inline>
+                <fo:inline color="#609000" font-family="MONOSPACE" font-weight="bold">'haml'</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                 <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">;</fo:inline>
               </fo:block>

@@ -63,15 +63,15 @@
             </fo:list-item>
           </fo:list-block>
           <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public class Policy extends java.lang.Object
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">class</fo:inline>
             <fo:inline font-weight="bold">
-              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Policy</fo:inline>
+              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Policy</fo:inline>
             </fo:inline>
-            <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">extends</fo:inline>java
+            <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">extends</fo:inline>java
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>lang
             <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>
-            <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Object</fo:inline>
+            <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Object</fo:inline>
           </fo:block>
           <fo:block>
             <fo:block font-family="STANDARD" font-weight="bold">Field Summary</fo:block>
@@ -96,18 +96,18 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
                               <fo:basic-link color="blue" internal-destination="unique_3">Assertion</fo:basic-link>
@@ -184,7 +184,7 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -195,17 +195,17 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>- addPolicy adds a policy rule to the model.</fo:block>
@@ -215,7 +215,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -233,7 +233,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -250,13 +250,13 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;</fo:inline>
                           </fo:block>
@@ -268,17 +268,17 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>fieldValues
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -289,13 +289,13 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;</fo:inline>
                           </fo:block>
@@ -307,11 +307,11 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>- getPolicy gets all rules in a policy.</fo:block>
                         </fo:table-cell>
@@ -320,11 +320,11 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;</fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -335,13 +335,13 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>- getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.</fo:block>
                         </fo:table-cell>
@@ -350,7 +350,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -361,17 +361,17 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>- hasPolicy determines whether a model has the specified policy rule.</fo:block>
@@ -381,7 +381,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -398,7 +398,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -409,17 +409,17 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>fieldValues
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -430,7 +430,7 @@
                         <fo:table-cell text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -441,17 +441,17 @@
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>- removePolicy removes a policy rule from the model.</fo:block>
@@ -463,7 +463,7 @@
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                             </fo:inline>
                           </fo:block>
                         </fo:table-cell>
@@ -535,19 +535,19 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Map</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
                               <fo:basic-link color="blue" internal-destination="unique_3">Assertion</fo:basic-link>
@@ -583,7 +583,7 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:inline color="black" font-family="MONOSPACE" font-weight="bold">
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">Policy</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">Policy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:inline>
@@ -617,23 +617,23 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public boolean addPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203; rule)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">addPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:block>
@@ -698,8 +698,8 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public void buildRoleLinks(RoleManager rm)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">buildRoleLinks</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                               <fo:basic-link color="blue" internal-destination="unique_4">RoleManager</fo:basic-link>rm
@@ -744,8 +744,8 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public void clearPolicy()
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">clearPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -775,31 +775,31 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public List&#8203;&lt;List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203;&gt;&#8203; getFilteredPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, int fieldIndex, java.&#8203;lang.&#8203;String[] fieldValues)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getFilteredPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>fieldValues
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -875,25 +875,25 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public List&#8203;&lt;List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203;&gt;&#8203; getPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:block>
                             <fo:block>getPolicy gets all rules in a policy.</fo:block>
@@ -948,24 +948,24 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203; getValuesForFieldInPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, int fieldIndex)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203;
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">getValuesForFieldInPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:block>
                             <fo:block>getValuesForFieldInPolicy gets all values for a field for all rules in a policy, duplicated values are removed.</fo:block>
@@ -1029,23 +1029,23 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public boolean hasPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203; rule)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">hasPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:block>
@@ -1110,8 +1110,8 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public void printPolicy()
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">void</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">printPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -1141,23 +1141,23 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public boolean removeFilteredPolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, int fieldIndex, java.&#8203;lang.&#8203;String[] fieldValues)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">removeFilteredPolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">int</fo:inline>fieldIndex
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">[</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">]</fo:inline>fieldValues
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
@@ -1233,23 +1233,23 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public boolean removePolicy(java.&#8203;lang.&#8203;String sec, java.&#8203;lang.&#8203;String ptype, List&#8203;&lt;java.&#8203;lang.&#8203;String&gt;&#8203; rule)
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">boolean</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">removePolicy</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>sec
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>ptype
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">,</fo:inline>
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">List</fo:inline>&#8203;
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&lt;</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="SIENNA" font-family="MONOSPACE" font-weight="bold">&gt;</fo:inline>&#8203; rule
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
                             </fo:block>
@@ -1314,10 +1314,10 @@
                         <fo:table-cell border-before-color="black" text-align="left">
                           <fo:block space-after.conditionality="retain" space-before.conditionality="retain">
                             <fo:block background-color="ALICEBLUE" color="black" font-family="MONOSPACE" font-weight="bold" hyphenation-character="&#9658;" keep-with-previous.within-page="always" linefeed-treatment="preserve" padding="6pt" white-space-collapse="false" white-space-treatment="preserve" wrap-option="wrap">public java.&#8203;lang.&#8203;String savePolicyToText()
-                              <fo:inline color="#e09000" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
+                              <fo:inline color="DARKCYAN" font-family="MONOSPACE" font-weight="bold">public</fo:inline>java
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;lang
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">.</fo:inline>&#8203;
-                              <fo:inline color="#900050" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
+                              <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">String</fo:inline>
                               <fo:inline color="INDIANRED" font-family="MONOSPACE" font-weight="bold">savePolicyToText</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">(</fo:inline>
                               <fo:inline color="slategray" font-family="MONOSPACE" font-weight="bold">)</fo:inline>
