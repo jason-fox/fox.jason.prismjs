@@ -13,6 +13,7 @@ env:
         -Dmaven.wagon.http.pool=false
         -Dmaven.wagon.httpconnectionManager.ttlSeconds=120
         
+jobs:
   unit-test:
     name: Unit Tests
     runs-on: ubuntu-latest
