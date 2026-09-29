@@ -4,7 +4,6 @@
 [![DITA-OT 4.2](https://img.shields.io/badge/DITA--OT-4.2-green.svg)](http://www.dita-ot.org/4.2)
 [![CI](https://github.com/jason-fox/fox.jason.prismjs/workflows/CI/badge.svg)](https://github.com/jason-fox/fox.jason.prismjs/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/github/jason-fox/fox.jason.prismjs/badge.svg?branch=master)](https://coveralls.io/github/jason-fox/fox.jason.prismjs?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fox.jason.prismjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=fox.jason.prismjs)
 
 This is a syntax highlighting [DITA-OT Plug-in](https://www.dita-ot.org/plugins) which integrates the flexible
 [Prism-JS](https://github.com/PrismJS/prism) highlighting library into the DITA Open Toolkit engine. This enables the
@@ -304,7 +303,7 @@ A working example can be found in the
 
 ## License
 
-[Apache 2.0](LICENSE) © 2018 - 2024 Jason Fox
+[Apache 2.0](LICENSE) © 2018 - 2026 Jason Fox
 
 The Program includes the following additional software components which were obtained under license:
 
