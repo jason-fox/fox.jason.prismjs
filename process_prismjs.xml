@@ -38,7 +38,7 @@
 
   <target name="highlight.check">
      <!-- Only run the Highlight transform for HTML or PDF -->
-    <condition property="prismjs.highlightable">
+    <condition property="prismjs.highlightable.transforms">
       <or>
         <equals arg1="${out.ext}" arg2=".html"/>
         <isset property="axf.formatter.output-format"/>
@@ -55,14 +55,17 @@
       </or>
     </condition>
 
-    <condition property="is.html">
-      <equals arg1="${out.ext}" arg2=".html"/>
+    <condition property="prismjs.highlightable">
+      <or>
+        <isset property="prismjs.highlightable.transforms"/>
+        <isset property="code.languages.file"/>
+      </or>
     </condition>
 
     <condition property="prismjs.memory">
       <and>
         <equals arg1="${store-type}" arg2="memory"/>
-        <isset property="prismjs.highlightable"/>
+        <isset property="prismjs.highlightable.transforms"/>
       </and>
     </condition>
 
@@ -75,7 +78,7 @@
   -->
   <target 
     name="node.check" 
-    if="prismjs.highlightable"
+    if="prismjs.highlightable.transforms"
     description="Ensure that Node.js is available">
     <!-- For Unix run node as an executable -->
 
@@ -147,10 +150,7 @@
    
   </target>
 
-  <target 
-    name="highlight" 
-    if="prismjs.highlightable"
-    description="Highlight codeblocks using Prism.js">
+  <target name="highlight.files" if="prismjs.highlightable">
     <basename property="prism.temp.dirname" file="${dita.temp.dir}"/>
     <restrict id="prismjs.ditafileset">
       <ditafileset processingRole="normal">
@@ -173,7 +173,17 @@
     >
       <map from="file:" to=""/>
     </pathconvert>
+    <pathconvert
+      property="prismjs.ditafile.uris"
+      refid="prismjs.ditafileset"
+      pathsep=";"
+    />
+  </target>
 
+  <target
+    name="highlight"
+    depends="highlight.files"
+    if="prismjs.highlightable.transforms">
     <iterate-ditafiles
       list="${prismjs.ditafiles}"
       macro="highlight-dita-file"
@@ -181,7 +191,29 @@
     />
   </target>
 
-  <target name="prismjs" depends="highlight.init, highlight"/>
+  <target
+    name="highlight.langs.to.file"
+    depends="highlight.files"
+    if="code.languages.file"
+  >
+    <xslt
+      unless:blank="${prismjs.ditafile.uris}"
+      taskname="prismjs"
+      in="${dita.plugin.fox.jason.prismjs.dir}/plugin.xml"
+      out="${code.languages.file}"
+      style="${dita.plugin.fox.jason.prismjs.dir}/xsl/list-languages.xsl"
+    >
+      <param name="FILES" expression="${prismjs.ditafile.uris}"/>
+      <param
+        name="PRISM_DEFAULT"
+        expression="${prism.default}"
+        if:set="prism.default"
+      />
+      <xmlcatalog refid="dita.catalog"/>
+    </xslt>
+  </target>
+
+  <target name="prismjs" depends="highlight.init, highlight, highlight.langs.to.file"/>
 
   <target name="prismjs.init" depends="highlight.check, node.check"/>
 
