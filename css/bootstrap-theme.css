@@ -10,5 +10,5 @@
   --prism-type: var(--bs-red-500, var(--bs-red, #dd4a68));
   --prism-regex: var(--bs-orange-500, var(--bs-orange, #e90));
   --prism-deleted: var(--bs-red-500, var(--bs-red, red));
-  --prism-url: var(--bs-yellow-500, var(--bs-yellow, #9a6e3a));
+  --prism-url: var(--bs-warning-text-emphasis, #9a6e3a);
 }

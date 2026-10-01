@@ -33,7 +33,7 @@
             name="short"
             select="if ($tagged) then lower-case(substring-after($tagged, '-')) else lower-case(normalize-space($outputclass))"
           />
-          <xsl:if test="$short != '' and not($short = ('none', 'text'))">
+          <xsl:if test="matches($short, '^[\w-]+$') and not($short = ('none', 'text'))">
             <xsl:sequence select="$short"/>
           </xsl:if>
         </xsl:for-each>
