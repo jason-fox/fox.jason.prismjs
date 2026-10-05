@@ -270,6 +270,11 @@
           name="PRISM_DEFAULT"
           if="prism.default"
         />
+         <param
+          expression="${prism.ignore}"
+          name="PRISM_IGNORE"
+          if="prism.ignore"
+        />
         <xmlcatalog refid="dita.catalog"/>
       </xslt>
       <copy file="${prismjs.temp.xml}" toFile="@{file}" overwrite="true"/>

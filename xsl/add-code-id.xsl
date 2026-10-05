@@ -15,6 +15,7 @@
 
   <xsl:param as="xs:string" name="CODE_DEST"/> 
   <xsl:param as="xs:string" name=" PRISM_DEFAULT" select="''"/> 
+  <xsl:param as="xs:string" name="PRISM_IGNORE" select="'swagger-'"/>
 
   <!-- IdentityTransform -->
   <xsl:template match="/ | @* | node()">
@@ -42,6 +43,11 @@
       </xsl:choose>
     </xsl:variable>
 
+    <xsl:variable
+      name="ignored"
+      select="some $prefix in tokenize($PRISM_IGNORE, '[,\s]+')[. != ''] satisfies starts-with($outputclass, $prefix)"
+    />
+
     <xsl:variable name="prismclass">
       <xsl:text>language-</xsl:text>
       <xsl:value-of select="replace(replace($outputclass, 'language-', ''), 'lang-', '')"/>
@@ -59,7 +65,7 @@
       </xsl:for-each>
       <xsl:attribute name="outputclass">
         <xsl:if test="$outputclass != ''">
-          <xsl:value-of select="$prismclass"/>
+          <xsl:value-of select="if ($ignored) then $outputclass else $prismclass"/>
         </xsl:if>
          <xsl:if test="@scale">
             <xsl:text> scale-</xsl:text>
@@ -69,6 +75,10 @@
       <xsl:choose>
         <!-- no styling at all-->
         <xsl:when test="$outputclass=''">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <!-- outputclass values reserved for other plug-ins are not languages -->
+        <xsl:when test="$ignored">
           <xsl:apply-templates/>
         </xsl:when>
         <!-- text and none have no prism processing -->

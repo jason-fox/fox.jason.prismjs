@@ -209,6 +209,11 @@
         expression="${prism.default}"
         if:set="prism.default"
       />
+      <param
+        name="PRISM_IGNORE"
+        expression="${prism.ignore}"
+        if:set="prism.ignore"
+      />
       <xmlcatalog refid="dita.catalog"/>
     </xslt>
   </target>

@@ -203,6 +203,8 @@ PATH-TO-DITA-OT/bin/dita -f html5 -i document.ditamap  -o out
 ### Parameter Reference
 
 -   `prism.default` - Specifies the default Prism language
+-   `prism.ignore` - Comma-separated `outputclass` prefixes which are not Prism languages, and are therefore not highlighted.
+    Defaults to `swagger-`.
 -   `prism.use.theme` - Specifies which of the three included themes to use.
 -   `prism.css.theme` - Specifies the location of a custom color theme file relative to the output directory.
 

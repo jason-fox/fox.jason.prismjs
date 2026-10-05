@@ -12,6 +12,7 @@
 
   <xsl:param as="xs:string" name="FILES"/>
   <xsl:param as="xs:string" name="PRISM_DEFAULT" select="''"/>
+  <xsl:param as="xs:string" name="PRISM_IGNORE" select="'swagger-'"/>
 
   <xsl:output method="xml" indent="yes"/>
 
@@ -33,7 +34,9 @@
             name="short"
             select="if ($tagged) then lower-case(substring-after($tagged, '-')) else lower-case(normalize-space($outputclass))"
           />
-          <xsl:if test="matches($short, '^[\w-]+$') and not($short = ('none', 'text'))">
+          <xsl:if
+            test="matches($short, '^[\w-]+$') and not($short = ('none', 'text')) and not(some $prefix in tokenize($PRISM_IGNORE, '[,\s]+')[. != ''] satisfies starts-with($short, $prefix))"
+          >
             <xsl:sequence select="$short"/>
           </xsl:if>
         </xsl:for-each>

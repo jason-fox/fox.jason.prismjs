@@ -32,6 +32,11 @@
       desc="Specifies the default Prism language"
       type="string"
     />
+      <param
+      name="prism.ignore"
+      desc="Comma-separated outputclass prefixes which are not Prism languages. Defaults to swagger-"
+      type="string"
+    />
     </transtype>
     <transtype name="base-html" abstract="true" desc="HTML-based output">
       <param 
@@ -51,6 +56,11 @@
       <param
       name="prism.default"
       desc="Specifies the default Prism language"
+      type="string"
+    />
+      <param
+      name="prism.ignore"
+      desc="Comma-separated outputclass prefixes which are not Prism languages. Defaults to swagger-"
       type="string"
     />
   </transtype>
