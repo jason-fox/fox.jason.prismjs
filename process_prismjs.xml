@@ -157,6 +157,7 @@
         <excludes format="ditamap"/>
         <excludes format="ditaval"/>
         <excludes format="image"/>
+        <excludes format="coderef"/>
       </ditafileset>
       <and>
         <or>
