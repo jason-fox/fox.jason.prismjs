@@ -23,3 +23,7 @@
   --prism-skew: white;
   --prism-bg-skew: black;
 }
+
+.card pre[class*="language-"] {
+  border: none;
+}
