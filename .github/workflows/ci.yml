@@ -1,0 +1,34 @@
+name: CI
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+    MAVEN_OPTS: >-
+        -Dhttp.keepAlive=false
+        -Dmaven.wagon.http.pool=false
+        -Dmaven.wagon.httpconnectionManager.ttlSeconds=120
+        
+jobs:
+  unit-test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v7
+      - name: Run DITA-OT Unit Test
+        uses: jason-fox/dita-unit-test-action@master
+        with:
+          dita-ot-version: '4.4'
+          plugin: 'fox.jason.prismjs'
+          prerequisites: fox.jason.extend.css
+          setup-script: 'test/setup.sh'
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: test-results
+          path: test-results.html
