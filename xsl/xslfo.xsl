@@ -50,7 +50,7 @@
 
 
     <xsl:template match="*[contains(@class,' topic/ph ') and contains(@outputclass, 'token')]">
-        <fo:inline xsl:use-attribute-sets="__codeph__language__">
+        <fo:inline xsl:use-attribute-sets="__token__language__">
             <xsl:call-template name="commonattributes"/>
             <xsl:for-each select="tokenize(@outputclass, '\s+')">
                 <xsl:if test=". != 'token' and . != 'ph' and . != ''">

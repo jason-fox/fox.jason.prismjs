@@ -50,8 +50,9 @@
       type="string"
     >
     	<val desc="Theme based on Bootstrap 5 colors.">bootstrap</val>
-			<val default="true" desc="Default Prism.js theme">default</val>
-			<val desc="Theme based on solarized colors">solarized</val>
+      <val default="true" desc="Default Prism.js theme">default</val>
+      <val desc="Theme based on solarized colors">solarized</val>
+      <val desc="Theme based on solarized colors">solarize</val>
     </param>
       <param
       name="prism.default"
